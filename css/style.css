@@ -1,0 +1,183 @@
+/*
+	Author: Pavel Keyzik;
+	E-mail: pavel.keyzik@gmail.com;
+	GitHub: http:://skew4eg.github.io;
+*/
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+	font-family: "Roboto-Thin";
+	src: url("../fonts/Roboto-Thin.ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+nav,
+header {
+	font-family: "Roboto-Thin";
+}
+
+.about {
+	font-family: "Roboto-Regular";
+}
+
+body {
+	background: #f2f2f2;
+	margin-top: 45px;
+}
+nav {
+	background: #41a9f1;
+	line-height: 45px;
+	text-align: center;
+	color: #fff;
+	font-size: 8pt;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+header {
+	background: #dedede;
+	display: block;
+	width: 100%;
+	line-height: 180px;
+	text-align: center;
+}
+.about {
+	text-align: center;
+}
+.about span {
+	display: block;
+	border-bottom: 1px solid #B9B9B9;
+	padding-bottom: 10px;
+	margin: 10px 40px;
+}
+.about p {
+	font-size: 13pt;
+	padding: 0 15px;
+	line-height: 30px;
+	color: #474747;
+}
+.aboutImg {
+	background: #949494;
+	width: 100px;
+	margin: 20px auto;
+	height: 100px;
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+}
+.button {
+	background: #1895EC;
+	width: 185px;
+	margin: 10px auto;
+	line-height: 45px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.button a {
+	color: #fff;
+	text-decoration: none;
+	font-family: "Roboto-Thin"; 
+	display: block;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+.wrapper .cols {
+	float: left;
+}
+
+.blockPreArticle {
+	margin: 10px 0;
+	background: #f9f9f9;
+	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.blockPreArticleTitle {
+	font-size: 18pt;
+	font-family: Roboto-Regular;
+	padding: 15px 20px;
+}
+
+.blockPreArticleImg {
+	background: #E7E7E7;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	height: 200px;
+}
+
+.blockPreArticleDescription {
+	font-size: 13pt;
+	line-height: 30px;
+	padding: 10px 20px;
+	color: #4F4F4F;
+	font-family: Roboto-Regular;
+}
+
+footer {
+	text-align: center;
+	font-family: Roboto-Regular;
+	color: #ABABAB;
+	padding: 20px 0;
+}
+
+.wrapper .cols.col-1,
+.wrapper .cols.col-2,
+.wrapper .cols.col-3,
+.wrapper .cols.col-4,
+.wrapper .cols.col-5,
+.wrapper .cols.col-6,
+.wrapper .cols.col-7,
+.wrapper .cols.col-8,
+.wrapper .cols.col-9,
+.wrapper .cols.col-10,
+.wrapper .cols.col-11,
+.wrapper .cols.col-12 { width: 100%; }
+
+.wrapper:before,
+.wrapper:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+	content: " ";
+	display: table;
+
+	word-wrap: break-word;
+}
+
+.wrapper:after,
+.row:after,
+.clear:after {
+	clear: both;
+}
+
+@media screen and (min-width: 321px) {
+
+	.wrapper .cols.col-1 { width: 8.333333%; }
+	.wrapper .cols.col-2 { width: 16.666666%; }
+	.wrapper .cols.col-3 { width: 25%; }
+	.wrapper .cols.col-4 { width: 33.333333%; }
+	.wrapper .cols.col-5 { width: 41.666666%; }
+	.wrapper .cols.col-6 { width: 450%; }
+	.wrapper .cols.col-7 { width: 58.333333%; }
+	.wrapper .cols.col-8 { width: 66.666666%; }
+	.wrapper .cols.col-9 { width: 75%; }
+	.wrapper .cols.col-10 { width: 83.333333%; }
+	.wrapper .cols.col-11 { width: 91.666666%; }
+	.wrapper .cols.col-12 { width: 100%; }
+}
