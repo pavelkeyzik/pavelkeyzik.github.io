@@ -31,9 +31,10 @@ body {
 }
 nav {
 	background: #41a9f1;
-	height: 45px; /* <-- ДИЧЬ */
-	vertical-align: middle; /* <--- ДИЧЬ */
-	line-height: 45px;
+	/*height: 45px; <-- ДИЧЬ */
+	/*vertical-align: middle; <--- ДИЧЬ */
+	/*line-height: 45px;*/
+	padding: 15px 0;
 	text-align: center;
 	color: #fff;
 	font-size: 8pt;
