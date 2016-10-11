@@ -18,22 +18,20 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 nav,
 header {
 	font-family: "Roboto-Thin";
 }
-
 .about {
 	font-family: "Roboto-Regular";
 }
-
 body {
 	background: #f2f2f2;
 	margin-top: 45px;
 }
 nav {
 	background: #41a9f1;
+	height: 45px;
 	line-height: 45px;
 	text-align: center;
 	color: #fff;
@@ -44,11 +42,15 @@ nav {
 	width: 100%;
 }
 header {
-	background: #dedede;
+	background: url("../images/header.jpg") center;
 	display: block;
 	width: 100%;
+	height: 180px;
 	line-height: 180px;
 	text-align: center;
+}
+header h2 {
+	color: #CFCFCF;
 }
 .about {
 	text-align: center;
@@ -66,7 +68,7 @@ header {
 	color: #474747;
 }
 .aboutImg {
-	background: #949494;
+	background: #f9f9f9;
 	width: 100px;
 	margin: 20px auto;
 	height: 100px;
@@ -78,10 +80,12 @@ header {
 	background: #1895EC;
 	width: 185px;
 	margin: 10px auto;
+	height: 45px;
 	line-height: 45px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 .button a {
 	color: #fff;
@@ -89,37 +93,31 @@ header {
 	font-family: "Roboto-Thin"; 
 	display: block;
 }
-
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
 	word-wrap: break-word;
 }
-
 .wrapper .cols {
 	float: left;
 }
-
 .blockPreArticle {
 	margin: 10px 0;
 	background: #f9f9f9;
 	border-top: 1px solid #E0E0E0;
 	border-bottom: 1px solid #E0E0E0;
 }
-
 .blockPreArticleTitle {
 	font-size: 18pt;
 	font-family: Roboto-Regular;
 	padding: 15px 20px;
 }
-
 .blockPreArticleImg {
 	background: #E7E7E7;
 	border-top: 1px solid #CCCCCC;
 	border-bottom: 1px solid #CCCCCC;
 	height: 200px;
 }
-
 .blockPreArticleDescription {
 	font-size: 13pt;
 	line-height: 30px;
@@ -127,7 +125,6 @@ header {
 	color: #4F4F4F;
 	font-family: Roboto-Regular;
 }
-
 footer {
 	text-align: center;
 	font-family: Roboto-Regular;
