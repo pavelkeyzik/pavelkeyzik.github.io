@@ -135,6 +135,18 @@ footer {
 	padding: 20px 0;
 }
 
+
+.testForOpera {
+	background: #EE4141;
+	display: flex;
+	height: 60px;
+}
+.testForOpera .block {
+	margin: auto;
+	color: #A11C1C;
+}
+
+
 .wrapper .cols.col-1,
 .wrapper .cols.col-2,
 .wrapper .cols.col-3,
