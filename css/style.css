@@ -18,30 +18,36 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-nav,
 header {
 	font-family: "Roboto-Thin";
 }
+nav a,
 .about {
 	font-family: "Roboto-Regular";
 }
 body {
 	background: #f2f2f2;
-	margin-top: 45px;
 }
 nav {
 	background: #41a9f1;
-	/*height: 45px; <-- ДИЧЬ */
-	/*vertical-align: middle; <--- ДИЧЬ */
-	/*line-height: 45px;*/
-	padding: 15px 0;
-	text-align: center;
-	color: #fff;
-	font-size: 8pt;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+	display: flex;
+	height: 55px;
+	align-items: stretch;
+	justify-content: space-between;
+}
+nav a {
+	color: #EDF6FF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+nav .menuBugger {
+	background: #3A9BDE;
+	width: 55px;
+	justify-content: center;
+}
+nav .navTitle {
+	padding: 0 20px;
 }
 header {
 	background: url("../images/header.jpg") center;
@@ -137,7 +143,7 @@ footer {
 
 
 .testForOpera {
-	background: #EE4141;
+	background: red;
 	display: flex;
 	height: 60px;
 }
