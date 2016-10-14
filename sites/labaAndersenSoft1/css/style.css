@@ -1,0 +1,177 @@
+/*
+	Author: Pavel Keyzik;
+	E-mail: pavel.keyzik@gmail.com;
+	GitHub: http:://skew4eg.github.io;
+*/
+@font-face {
+	font-family: "CarterOne";
+	src: url("../fonts/CarterOne.ttf");
+}
+@font-face {
+	font-family: "OpenSansLight";
+	src: url("../fonts/OpenSansLight.ttf");
+}
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url("../fonts/OpenSansRegular.ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+}
+.wrapper { /* ТУТ ПОСМОТРЕТЬ НА ВСЯКИЙ СЛУЧАЙ ИБО У МЕНЯ ЭКРАН МЕНЬШЕ */
+	max-width: 1366px;
+	margin: 0 auto;
+}
+.topBlock {
+	width: 100%;
+}
+nav a,
+.downloadTitle {
+	font-family: OpenSansRegular;
+}
+header .headerContent {
+	max-width: 1366px;
+	margin: 0 auto;
+}
+header .title {
+	font-family: OpenSansLight;
+}
+nav {
+	background: rgba(255, 255, 255, 0.6);
+	justify-content: space-between;
+	max-width: 1366px;
+	margin: 0 auto;
+	height: 68px;
+	display: flex;
+	/*position: absolute;*/
+	padding: 0 33px;
+}
+nav div {
+	display: flex;
+}
+nav div a:first-child {
+	margin-right: 26px; 
+}
+nav a {
+	display: flex;
+	align-items: center;
+}
+nav a.support {
+	background: #fff;
+	padding: 0 25px;
+	margin: 13px 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border: 1px solid #cdd6dc;
+	color: #5a5a5a;
+}
+nav a.changeLanguage {
+	background: #3cc0b7;
+	width: 73px;
+	justify-content: center;
+	color: #fff;
+}
+nav a.changeLanguage span {
+	margin-right: 8px;
+}
+header {
+	background: #f3f5f7 url(../images/headerBg.jpg) no-repeat;
+	background-size: cover;
+	height: 621px;
+}
+header .title {
+	font-size: 51.25pt;
+	color: #68757e;
+	padding-left: 83px;
+	/*margin-top: 153px;*/
+	padding-top: 85px;
+}
+.download {
+	width: 288px;
+	text-align: center;
+	margin-left: 160px;
+}
+.downloadTitle {
+	color: #68757e;
+	font-size: 18pt;
+}
+.downloadLinks {
+	display: flex;
+}
+.downloadLinks a {
+	width: 57px;
+	height: 57px;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-o-border-radius: 100%;
+}
+.downloadLinks a:not(:last-child) {
+	margin-right: 20px;
+}
+.downloadLinks a:nth-child(1) { background: url(../images/icons/appStore.png) no-repeat; }
+.downloadLinks a:nth-child(1):hover { background: #fcfcfc url(../images/icons/appStore.png) no-repeat 100%; }
+.downloadLinks a:nth-child(2) { background: url(../images/icons/playMarket.png) no-repeat; }
+.downloadLinks a:nth-child(2):hover { background: #fcfcfc url(../images/icons/playMarket.png) no-repeat 100%; }
+.downloadLinks a:nth-child(3) { background: url(../images/icons/winPhone.png) no-repeat; }
+.downloadLinks a:nth-child(3):hover { background: #fcfcfc url(../images/icons/winPhone.png) no-repeat 100%; }
+.downloadLinks a:nth-child(4) { background: url(../images/icons/blackberry.png) no-repeat; }
+.downloadLinks a:nth-child(4):hover { background: #fcfcfc url(../images/icons/blackberry.png) no-repeat 100%; }
+
+.wrapper .cols.col-1,
+.wrapper .cols.col-2,
+.wrapper .cols.col-3,
+.wrapper .cols.col-4,
+.wrapper .cols.col-5,
+.wrapper .cols.col-6,
+.wrapper .cols.col-7,
+.wrapper .cols.col-8,
+.wrapper .cols.col-9,
+.wrapper .cols.col-10,
+.wrapper .cols.col-11,
+.wrapper .cols.col-12 { width: 100%; }
+
+.wrapper:before,
+.wrapper:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+	content: " ";
+	display: table;
+
+	word-wrap: break-word;
+}
+
+.wrapper:after,
+.row:after,
+.clear:after {
+	clear: both;
+}
+
+@media screen and (min-width: 321px) {
+
+	.wrapper .cols.col-1 { width: 8.333333%; }
+	.wrapper .cols.col-2 { width: 16.666666%; }
+	.wrapper .cols.col-3 { width: 25%; }
+	.wrapper .cols.col-4 { width: 33.333333%; }
+	.wrapper .cols.col-5 { width: 41.666666%; }
+	.wrapper .cols.col-6 { width: 450%; }
+	.wrapper .cols.col-7 { width: 58.333333%; }
+	.wrapper .cols.col-8 { width: 66.666666%; }
+	.wrapper .cols.col-9 { width: 75%; }
+	.wrapper .cols.col-10 { width: 83.333333%; }
+	.wrapper .cols.col-11 { width: 91.666666%; }
+	.wrapper .cols.col-12 { width: 100%; }
+}
