@@ -22,19 +22,12 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-img {
-	max-width: 100%;
-	height: auto;
-}
 a {
 	text-decoration: none;
 }
-.wrapper { /* ТУТ ПОСМОТРЕТЬ НА ВСЯКИЙ СЛУЧАЙ ИБО У МЕНЯ ЭКРАН МЕНЬШЕ */
+.wrapper {
 	max-width: 1366px;
 	margin: 0 auto;
-}
-.topBlock {
-	width: 100%;
 }
 nav a,
 .downloadTitle,
@@ -136,10 +129,18 @@ ul.popUp {
 .popUp li:first-child:hover {
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-o-border-top-left-radius: 2px;
+	-o-border-top-right-radius: 2px;
 }
 .popUp li:last-child:hover {
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-o-border-bottom-left-radius: 2px;
+	-o-border-bottom-right-radius: 2px;
 }
 header {
 	background: #f3f5f7 url(../images/banner.png) no-repeat; /* НЕТУ ФОТОШОПА, ПОЭТОМУ ТАК */
@@ -152,12 +153,10 @@ header .title {
 	color: #68757e;
 	padding-left: 83px;
 	margin-top: 153px;
-	width: 700px;
+	max-width: 700px;
 	text-align: center;
-	/*padding-top: 85px;*/
 }
 .headerHandle {
-	display: inline-block;
 	position: absolute;
 	bottom: -7px;
 	right: 0;
@@ -167,7 +166,6 @@ header .title {
 	text-align: center;
 	margin-left: 160px;
 	margin-bottom: 30px;
-	display: inline-block;
 }
 .downloadTitle {
 	color: #68757e;
@@ -233,7 +231,7 @@ header .title {
 	justify-content: space-between;
 	font-size: 11pt;
 	padding: 0 33px;
-	height: 76px; /* ПРИМЕРНО */ 
+	height: 76px; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 }
 .topFooterLeft,
 .topFooterRight {
@@ -248,7 +246,7 @@ header .title {
 .topFooterLeft a:hover {
 	text-decoration: underline;
 }
-.topFooterLeft span { /* Так как-то глупо выглядит */
+.topFooterLeft span {
 	margin: 0 19px;
 }
 
@@ -271,7 +269,7 @@ header .title {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 76px; /* ПРИМЕРНО */ 
+	height: 76px; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<, */
 	color: #4b4b4b;
 	font-size: 17px;
 }
@@ -297,7 +295,6 @@ header .title {
 .clear:after {
 	content: " ";
 	display: table;
-
 	word-wrap: break-word;
 }
 
