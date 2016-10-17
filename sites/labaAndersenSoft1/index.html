@@ -13,25 +13,36 @@
 <div class="topBlock">
 	<div class="row">
 		<div class="cols col-12">
-			<nav>
-				<a href="#" class="logo">
-					<img src="images/logo.png">
-				</a>
-				<div>
-				<a href="#" class="support">Поддержка</a>
-				<a href="#" class="changeLanguage">
-					<span>RU</span>
-					<img src="images/dropButton.png">
-				</a>
-				</div>
-			</nav>
+			<div class="navBg">
+				<nav>
+					<a href="#" class="logo">
+						<img src="images/logo.png">
+					</a>
+					<div>
+					<a href="#" class="support">Поддержка</a>
+					<a href="#" class="changeLanguage" onclick="showPopUp('popUp');">
+						<span>RU</span>
+						<img src="images/dropButton.png">
+						<ul class="popUp" id="popUp">
+							<li>
+								<span>EN</span>
+							</li>
+							<li>
+								<span>RU</span>
+							</li>
+						</ul>
+					</a>
+
+					</div>
+				</nav>
+			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="cols col-12">
 			<header>
 				<div class="headerContent">
-					<div class="title">Семейный бюджет<br>это легко</div>
+					<div class="title">Семейный бюджет это легко</div>
 					<div class="download">
 						<div class="downloadTitle">Загрузить</div>
 						<div class="downloadLinks">
@@ -40,6 +51,9 @@
 							<a href="#"></a>
 							<a href="#"></a>
 						</div>
+					</div>
+					<div class="headerHandle">
+						<img src="images/hand1.png" alt="">
 					</div>
 				</div>
 			</header>
@@ -52,26 +66,74 @@
 			<section>
 				<p class="pageTitle">Быстрый контроль бюджета</p>
 				<p class="pageDescription">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм. Смысл жизни профанирует принцип восприятия, отрицая очевидное.</p>
+				<div class="phones">
+					<img src="images/iPhone1.png">
+					<img src="images/arrowRight.png">
+					<img src="images/iPhone2.png">
+					<img src="images/arrowRight.png">
+					<img src="images/iPhone3.png">
+				</div>
 			</section>
 		</div>
 	</div>
-	<div class="row">
-		<footer> <!--RENAME NAMES FOR FOOTER-->
+</div>
+<div class="row">
+	<div class="cols col-12">
+		<div class="topFooterBg">
 			<div class="topFooter">
-				<a href="#">Помощь</a> | <a href="#">Пользовательское соглашение</a>
+				<div class="topFooterLeft">
+					<a href="#">Помощь</a>
+					<span>|</span>
+					<a href="#">Пользовательское соглашение</a>
+				</div>
+				<div class="topFooterRight">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
 			</div>
-			<div class="bottomFooter">
-				&copy; 2015 Все права защищены www.hbudget.com
-			</div>
-		</footer>
+		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="cols col-12">
+		<div class="bottomFooter">
+			&copy; 2015 Все права защищены www.hbudget.com
+		</div>
+	</div>
+</div>
+</div>
+</div>
 </body>
+<script type="text/javascript">
+
+//container.has(e.target).length === 0
+
+function showPopUp(id){
+    display = document.getElementById(id).style.display;
+
+	if(display=='none'){
+		document.getElementById(id).style.display='block';
+	}
+	else{
+		document.getElementById(id).style.display='none';
+	}
+}
+</script>
+
+</script>
+
 </html>
+
 <!--
+
 	Доработать:
 	- При уменьшении экрана подгружать картинку худшего качества (picturefill)
-	- Выравнивание в верхнем меню
-	- Верхнее меню и шапке растягивание на весь экран
+	+ Выравнивание в верхнем меню
+	+ Верхнее меню и шапке растягивание на весь экран
 	- При сохранении иконок пришлось использовать PNG-24 вместо PNG-8 :( Печалька
+	- Заменить цвета и размеры в footer
+	- При клике вне PopUpMenu - закрытие PopUpMenu
+	- При клике вне кнопки выбора языка - убирать выпавдающий блок
+
 -->
