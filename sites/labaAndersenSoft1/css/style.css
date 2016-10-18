@@ -144,7 +144,7 @@ ul.popUp {
 }
 header {
 	background: #f3f5f7 url(../images/banner.png) no-repeat; /* НЕТУ ФОТОШОПА, ПОЭТОМУ ТАК */
-	background-position: top center; /* ПОМЕСТИТЬ В ОДИН background */
+	background-position: top center;
 	background-size: cover;
 	height: 621px;
 }
@@ -231,7 +231,7 @@ header .title {
 	justify-content: space-between;
 	font-size: 11pt;
 	padding: 0 33px;
-	height: 76px; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+	height: 77px;
 }
 .topFooterLeft,
 .topFooterRight {
@@ -269,7 +269,7 @@ header .title {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 76px; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<, */
+	height: 77px;
 	color: #4b4b4b;
 	font-size: 17px;
 }
