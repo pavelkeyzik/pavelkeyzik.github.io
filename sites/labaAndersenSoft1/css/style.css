@@ -204,7 +204,7 @@ header .title {
 	justify-content: center;
 	align-items: center;
 	margin: 70px 0;
-	width: 100%;
+	overflow: hidden;
 }
 .phones img {
 	margin: 0 19px;
@@ -244,10 +244,6 @@ header .title {
 	height: 46px;
 	margin-left: 10px;
 	transition: .3s;
-}
-
-.content {
-	width: 100%;
 }
 
 .topFooterRight a:nth-child(1) { background: url(../images/icons/facebook.png); }
