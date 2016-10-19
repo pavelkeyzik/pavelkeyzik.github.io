@@ -262,6 +262,13 @@ header .title {
 	font-size: 17px;
 }
 
+@media screen and (max-width: 980px) {
+	.phones img {
+		margin: 2%;
+		width: 20%;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	header .title {
 		max-width: 100%;
@@ -354,12 +361,5 @@ header .title {
 	}
 	.downloadTitle {
 		width: 100%;
-	}
-}
-
-@media screen and (max-width: 980px) {
-	.phones img {
-		margin: 2%;
-		width: 20%;
 	}
 }
