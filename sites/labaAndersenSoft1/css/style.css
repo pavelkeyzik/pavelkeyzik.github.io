@@ -245,6 +245,10 @@ header .title {
 	transition: .3s;
 }
 
+.phones {
+	width: 100%;
+}
+
 .topFooterRight a:nth-child(1) { background: url(../images/icons/facebook.png); }
 .topFooterRight a:nth-child(1):hover { background: url(../images/icons/facebook.png) 0 -46px; }
 .topFooterRight a:nth-child(2) { background: url(../images/icons/googlePlus.png); }
