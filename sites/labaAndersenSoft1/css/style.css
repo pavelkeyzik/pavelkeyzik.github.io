@@ -204,6 +204,7 @@ header .title {
 	justify-content: center;
 	align-items: center;
 	margin: 70px 0;
+	width: 100%;
 }
 .phones img {
 	margin: 0 19px;
@@ -245,7 +246,7 @@ header .title {
 	transition: .3s;
 }
 
-.phones {
+.content {
 	width: 100%;
 }
 
