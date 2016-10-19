@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Hbudget | Главная</title>
+	<title>Hbudget</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="description" content="Описание сайта Hbudget">
 	<meta name="keywords" content="Hbudget, ключевые, слова">
@@ -12,96 +12,75 @@
 </head>
 <body>
 <div class="topBlock">
-	<div class="row">
-		<div class="cols col-12">
-			<div class="navBg">
-				<nav>
-					<a href="#" class="logo">
-						<img src="images/logo.png" alt="Hbudget">
-					</a>
-					<div>
-					<a href="#" class="support">Поддержка</a>
-					<a href="#" class="changeLanguage" onclick="showPopUp('popUp');">
+	<div class="navBg">
+		<nav>
+			<a href="#" class="logo">
+				<img src="images/logo.png" alt="Hbudget">
+			</a>
+			<div>
+			<a href="#" class="support">Поддержка</a>
+			<a href="#" class="changeLanguage" onclick="showPopUp('popUp');">
+				<span>RU</span>
+				<img src="images/dropButton.png" alt="arrowDown">
+				<ul class="popUp" id="popUp">
+					<li>
+						<span>EN</span>
+					</li>
+					<li>
 						<span>RU</span>
-						<img src="images/dropButton.png" alt="arrowDown">
-						<ul class="popUp" id="popUp">
-							<li>
-								<span>EN</span>
-							</li>
-							<li>
-								<span>RU</span>
-							</li>
-						</ul>
-					</a>
-					</div>
-				</nav>
+					</li>
+				</ul>
+			</a>
+			</div>
+		</nav>
+	</div>
+	<header>
+		<div class="headerContent">
+			<div class="title">Семейный бюджет это легко</div>
+			<div class="download">
+				<div class="downloadTitle"><a href="#">Загрузить</a></div>
+				<div class="downloadLinks">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</div>
+			<div class="headerHandle">
+				<img src="images/hand.png" alt="hand">
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="cols col-12">
-			<header>
-				<div class="headerContent">
-					<div class="title">Семейный бюджет это легко</div>
-					<div class="download">
-						<div class="downloadTitle"><a href="#">Загрузить</a></div>
-						<div class="downloadLinks">
-							<a href="#"></a>
-							<a href="#"></a>
-							<a href="#"></a>
-							<a href="#"></a>
-						</div>
-					</div>
-					<div class="headerHandle">
-						<img src="images/hand.png" alt="hand">
-					</div>
-				</div>
-			</header>
-		</div>
-	</div>
+	</header>
 </div>
 <div class="wrapper">
-	<div class="row">
-		<div class="cols col-12">
-			<div class="content">
-				<p class="pageTitle">Быстрый контроль бюджета</p>
-				<p class="pageDescription">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм. Смысл жизни профанирует принцип восприятия, отрицая очевидное.</p>
-				<div class="phones">
-					<img src="images/iPhone1.png" alt="phone">
-					<img src="images/arrowRight.png" alt="arrow">
-					<img src="images/iPhone2.png" alt="phone">
-					<img src="images/arrowRight.png" alt="arrow">
-					<img src="images/iPhone3.png" alt="phone">
-				</div>
-			</div>
+	<div class="content">
+		<p class="pageTitle">Быстрый контроль бюджета</p>
+		<p class="pageDescription">Принцип восприятия непредвзято создает паллиативный интеллект, условно. Концепция ментально оспособляет закон внешнего мира. Сомнение раскладывает на элементы неоднозначный структурализм. Смысл жизни профанирует принцип восприятия, отрицая очевидное.</p>
+		<div class="phones">
+			<img src="images/iPhone1.png" alt="phone">
+			<img src="images/arrowRight.png" alt="arrow">
+			<img src="images/iPhone2.png" alt="phone">
+			<img src="images/arrowRight.png" alt="arrow">
+			<img src="images/iPhone3.png" alt="phone">
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="cols col-12">
-		<div class="topFooterBg">
-			<div class="topFooter">
-				<div class="topFooterLeft">
-					<a href="#">Помощь</a>
-					<span>|</span>
-					<a href="#">Пользовательское соглашение</a>
-				</div>
-				<div class="topFooterRight">
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
-				</div>
-			</div>
+<div class="topFooterBg">
+	<div class="topFooter">
+		<div class="topFooterLeft">
+			<a href="#">Помощь</a>
+			<span>|</span>
+			<a href="#">Пользовательское соглашение</a>
+		</div>
+		<div class="topFooterRight">
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="cols col-12">
-		<div class="bottomFooter">
-			&copy; 2015 Все права защищены www.hbudget.com
-		</div>
-	</div>
-</div>
+<div class="bottomFooter">&copy; 2015 Все права защищены www.hbudget.com</div>
+
 <script type="text/javascript">
 function showPopUp(id){
     display = document.getElementById(id).style.display;
@@ -116,10 +95,3 @@ function showPopUp(id){
 </script>
 </body>
 </html>
-
-<!--
-	Доработать:
-	- При уменьшении экрана подгружать картинку худшего качества (picturefill)
-	- При сохранении иконок пришлось использовать PNG-24 вместо PNG-8 :( Печалька
-	- При клике вне PopUpMenu - закрытие PopUpMenu
--->
