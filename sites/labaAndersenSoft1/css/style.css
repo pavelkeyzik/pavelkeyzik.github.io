@@ -316,9 +316,6 @@ header .title {
 	nav {
 		justify-content: center;
 	}
-	.phones img {
-		margin: 2%;
-	}
 } 
 
 @media screen and (max-width: 400px) {
@@ -357,5 +354,12 @@ header .title {
 	}
 	.downloadTitle {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.phones img {
+		margin: 2%;
+		width: 20%;
 	}
 }
