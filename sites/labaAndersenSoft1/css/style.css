@@ -16,6 +16,9 @@
 a {
 	text-decoration: none;
 }
+img {
+	max-width: 100%;
+}
 .wrapper {
 	max-width: 1366px;
 	margin: 0 auto;
