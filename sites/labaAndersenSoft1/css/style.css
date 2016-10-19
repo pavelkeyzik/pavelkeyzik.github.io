@@ -16,9 +16,6 @@
 a {
 	text-decoration: none;
 }
-img {
-	width: 100%;
-}
 .wrapper {
 	max-width: 1366px;
 	margin: 0 auto;
@@ -207,11 +204,9 @@ header .title {
 	justify-content: center;
 	align-items: center;
 	margin: 70px 0;
-	overflow: hidden;
 }
 .phones img {
 	margin: 0 19px;
-	height: auto;
 }
 
 .topFooterBg {
@@ -267,15 +262,64 @@ header .title {
 	font-size: 17px;
 }
 
-@media screen and (max-width: 215px) {
-	header .title,
-	.pageTitle {
-		word-break: break-all;
+@media screen and (max-width: 1200px) {
+	header .title {
+		max-width: 100%;
+		padding: 0 2%;
+		text-align: center;
 	}
-	.downloadTitle {
+	.headerHandle {
+		display: none;
+	}
+	.download {
 		width: 100%;
+		margin: 0 0 25px;
+	}
+	.downloadLinks {
+		justify-content: center;
 	}
 }
+
+@media screen and (max-width: 825px) {
+	.topFooter {
+		justify-content: center;
+	}
+	.bottomFooter {
+		text-align: center;
+	}
+	.topFooterLeft {
+		display: none;
+	}
+	.changeLanguage {
+		display: none;
+	}
+	header {
+		height: 400px;
+	}
+	header .title {
+		font-size: 48px;
+		margin-top: 140px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	header .title {
+		font-size: 48px;
+		margin-top: 90px;
+	}
+	.downloadTitle {
+		font-size: 15px;
+	}
+	.support {
+		display: none;
+	}
+	nav {
+		justify-content: center;
+	}
+	.phones img {
+		margin: 2%;
+	}
+} 
 
 @media screen and (max-width: 400px) {
 	.phones {
@@ -306,61 +350,12 @@ header .title {
 	}
 }
 
-@media screen and (max-width: 560px) {
-	header .title {
-		font-size: 48px;
-		margin-top: 90px;
+@media screen and (max-width: 215px) {
+	header .title,
+	.pageTitle {
+		word-break: break-all;
 	}
 	.downloadTitle {
-		font-size: 15px;
-	}
-	.support {
-		display: none;
-	}
-	nav {
-		justify-content: center;
-	}
-	.phones img {
-		margin: 2%;
-	}
-} 
-
-@media screen and (max-width: 825px) {
-	.topFooter {
-		justify-content: center;
-	}
-	.bottomFooter {
-		text-align: center;
-	}
-	.topFooterLeft {
-		display: none;
-	}
-	.changeLanguage {
-		display: none;
-	}
-	header {
-		height: 400px;
-	}
-	header .title {
-		font-size: 48px;
-		margin-top: 140px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	header .title {
-		max-width: 100%;
-		padding: 0 2%;
-		text-align: center;
-	}
-	.headerHandle {
-		display: none;
-	}
-	.download {
 		width: 100%;
-		margin: 0 0 25px;
-	}
-	.downloadLinks {
-		justify-content: center;
 	}
 }
