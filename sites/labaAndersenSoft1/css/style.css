@@ -208,6 +208,7 @@ header .title {
 }
 .phones img {
 	margin: 0 19px;
+	height: auto;
 }
 
 .topFooterBg {
