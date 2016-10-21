@@ -38,17 +38,33 @@ body {
 	color: #454545;
 	background: #FAFAFA;
 	display: block;
-	padding: 0 15px;
 	line-height: 45px;
-	border-left: 2px solid #FAFAFA;
 	text-decoration: none;
 }
 .content li a:hover {
-	background: #F1F1F1;
 	color: #585858;
-	padding-left: 20px;
-	border-left: 2px solid #1F99DF;
 	text-decoration: underline;
+}
+.content li a {
+	background: #F8CACA;
+	color: #815454;
+}
+.content li a.true {
+	background: #E5FCED;
+}
+.content li a span {
+	width: 45px;
+	text-align: center;
+	margin: 0;
+	display: inline-block;
+	background: #EC4242;
+	color: #802323;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.content li a span.true {
+	background: #2EEC6D;
+	color: #14933E;
 }
 .footer {
 	background: #515151;
