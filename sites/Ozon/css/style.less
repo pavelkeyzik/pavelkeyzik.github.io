@@ -1,0 +1,16 @@
+.border_radius(@radius) {
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+body {
+	background: url(../img/background.png) repeat-y, 
+                #0083c6 url(../img/backgroundLight.png) 50% 0 no-repeat;
+}
+.wrapper {
+	background: #fefefe;
+	width: 960px;
+	margin: 0 auto;
+	.border_radius(19px);
+	height: 200px;
+}
