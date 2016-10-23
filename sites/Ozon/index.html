@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	
 	<link rel="stylesheet/less" type="text/css" href="css/style.less">
+	<script src="js/less.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="online">
@@ -238,24 +239,14 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/less.js" type="text/javascript"></script>
-	<script>
-		function openBox(id)
-		{
-			display = document.getElementById(id).style.display;
-
-			if(display == 'block')
-			{
-				document.getElementById(id).style.display='none';
-			}
-			else
-			{
-				document.getElementById(id).style.display='block';
-			}
-
-		}
-	</script>
+	<script src="js/myScript.js" type="text/javascript"></script>
 </body>
 </html>
 
-<!-- СПРЯТАТЬ ШАРИКИ -->
+<!--
+	+ СПРЯТАТЬ ШАРИКИ
+	- Изменить less.js на нормальный, чтобы сайт быстрее грузился, а не как сейчас
+	- Кнопки:hover
+	- PopUp
+	- Изменить кнопочку
+-->
