@@ -6,6 +6,18 @@
 	font-family: OpenSans-Regular;
 	src: url(../fonts/OpenSans-Regular.ttf);
 }
+@font-face {
+	font-family: OpenSans-Semibold;
+	src: url(../fonts/OpenSans-Semibold.ttf);
+}
+@font-face {
+	font-family: OpenSans-ExtraBold;
+	src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+	font-family: OpenSans-Light;
+	src: url(../fonts/OpenSans-Light.ttf);
+}
 .borderRadius {
 	.bottom(@radius) {
 		border-bottom-left-radius: @radius;
@@ -31,6 +43,15 @@
 		-moz-border-radius: @radius;
 		-webkit-border-radius: @radius;
 	}
+	.left(@radius) {
+		border-top-left-radius: @radius;
+		-moz-border-top-left-radius: @radius;
+		-webkit-border-top-left-radius: @radius;	
+		border-bottom-left-radius: @radius;
+		-moz-border-bottom-left-radius: @radius;
+		-webkit-border-bottom-left-radius: @radius;
+
+	}
 }
 .gradient(@colorTop, @colorBottom)
 {
@@ -44,7 +65,7 @@
 	-moz-box-shadow: @x @y @radius @color;
 	-webkit-box-shadow: @x @y @radius @color;
 }
-.button(@width, @color) {
+.button(@width, @color, @opacity) {
 	background: radial-gradient(130% 80% at 50% 0px, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(0,0,0,0) 50%),
 	            @color linear-gradient(@color 82%, rgba(255, 255, 255, 0.2) 92%, @color 100%);
 	margin-top: 37px;
@@ -62,8 +83,8 @@
 	line-height: 20px;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.08);
 	box-shadow: inset 0px -3px 0 rgba(0,0,0,.3),
-				-10px 40px 25px -30px rgba(0, 77, 112, 0.32),
-				10px 40px 25px -30px rgba(0, 77, 112, 0.32);
+				-10px 35px 25px -25px rgba(0, 77, 112, @opacity),
+				10px 35px 25px -25px rgba(0, 77, 112, @opacity);
 }
 * {
 	margin: 0;
@@ -89,12 +110,119 @@ a:hover {
 .description,
 .gift table,
 .selectDesign,
-footer {
+footer,
+.time,
+.online {
 	font-family: OpenSans-Regular;
 }
+.hopeTitle {
+	font-family: OpenSans-Extrabold;
+}
 body {
-	background: url(../img/background.png), 
+	background: url(../img/flags.png) 50% 0 no-repeat,
+				url(../img/lenta1.png) 4% 0 no-repeat,
+				url(../img/lenta2.png) 15% 0 no-repeat,
+				url(../img/lenta3.png) 22% 0 no-repeat,
+				url(../img/lenta4.png) 80% 0 no-repeat,
+				url(../img/lenta5.png) 90% 0 no-repeat,
+				url(../img/background.png),
                 #0083c6 url(../img/backgroundLight.png) 50% 0 no-repeat;
+}
+.online {
+	display: flex;
+	background: #fff;
+	color: #008bda;
+	overflow: hidden;
+	position: fixed;
+	right: -203px;
+	top: 30%;
+	/*top: 550px;*/
+	z-index: 18;
+	transition: .2s;
+	.borderRadius > .left(70px);
+}
+.online:hover {
+	right: 0;
+}
+.online div {
+	display: flex;
+	align-items: center;
+}
+.online img {
+	margin: 7px 15px;
+}
+.online .onlineText {
+	margin-right: 43px;
+}
+.hotLine {
+	width: 980px;
+	display: flex;
+	justify-content: end;
+	margin: 0 auto;
+	color: #fff;
+	margin-top: 16px;
+}
+.hotLineRight {
+	width: 200px;
+	text-align: left;
+}
+.hotLineTop {
+	opacity: 0.8;
+	font-size: 16px;
+	font-family: OpenSans-Semibold;
+}
+.hotLineBottom {
+	font-size: 24px;
+	font-family: OpenSans-ExtraBold;
+	letter-spacing: -1px;
+}
+.happyBirthday {
+	margin: 0 auto;
+	margin-top: 150px;
+	background: #fff;
+	display: flex;
+	width: 480px;
+	color: #333;
+	.borderRadius > .all(52px);
+}
+.happyBirthday div {
+	display: flex;
+	align-items: center;
+}
+.happyBirthday .happyBirthdayImg img {
+	.borderRadius > .all(100%);
+	margin: 10px;
+}
+.happyBirthday .happyBirthdayDesc {
+	font-size: 28px;
+	font-family: OpenSans-Light;
+}
+.hope {
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 21px;
+	text-align: center;
+}
+.hopeTitle {
+	color: #ffea00;
+	font-size: 64px;
+}
+.hopeDesc {
+	color: #fff;
+	font-size: 20px;
+	font-family: OpenSans-Semibold;
+}
+.hopeDesc p {
+	margin-top: 19px;
+}
+.hope a.button {
+	.button(470px, #ff9000, 0.84);
+	margin: 27px auto 38px;
+}
+.time {
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
 }
 .content {
 	background: #fefefe;
@@ -104,7 +232,9 @@ body {
 	.borderRadius > .top(62px 180px);
 	box-shadow: 0 15px 60px rgba(0, 35, 55, 0.49);
 	position: relative;
-	margin-top: 40px;
+	margin-top: 25px;
+	z-index: 3;
+	/*margin-top: 200px;*/
 }
 .corner {
 	background: url(../img/bgFoldedsCorner.png) 0 0 no-repeat;
@@ -112,6 +242,15 @@ body {
 	top: -10px;
 	width: 960px;
 	position: absolute;
+}
+.sharik {
+	background: url(../img/sharik.png) no-repeat;
+	position: absolute;
+	z-index: -1;
+	height: 346px;
+	width: 310px;
+	right: -86px;
+	top: -142px;
 }
 .certificate {
 	position: relative;
@@ -159,6 +298,7 @@ body {
 	padding-top: 45px;
 	padding-bottom: 60px;
 	text-align: center;
+	z-index: -1;
 }
 .giftTitle {
 	color: #fff;
@@ -204,10 +344,19 @@ body {
 }
 .how {
 	position: relative;
-	z-index: 3;
+	background: #fff;
 }
 .how .wave {
 	background: url(../img/waveWhite.png) repeat-x;
+}
+.how .sharik2 {
+	background: url(../img/sharik2.png) no-repeat;
+	position: absolute;
+	z-index: -1;
+	left: -147px;
+	top: -270px;
+	width: 347px;
+	height: 324px;
 }
 .howItems {
 	margin-top: 30px;
@@ -248,24 +397,7 @@ body {
 	background: url(../img/waveOrange.png) repeat-x;
 }
 .testFree a {
-	.button(310px, #ff9000);
-/*	background: radial-gradient(130% 80% at 50% 0px, #ffba2a 0%, #ffa414 50%, #ff9000 50%),
-	            linear-gradient(#ff9000 82%, #ffa313 92%, #ff9000 100%);
-	margin-top: 37px;
-	width: 310px;
-	height: 76px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	.borderRadius > .all(38px);
-	font-size: 20px;
-	padding: 0 30px;
-	color: #fff;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.08);
-	box-shadow: inset 0px -3px 0 #b24f00,
-				-10px 40px 25px -30px rgba(0, 77, 112, 0.32),
-				10px 40px 25px -30px rgba(0, 77, 112, 0.32);*/
+	.button(310px, #ff9000, 0.32);
 }
 .leftLink {
 	display: flex;
@@ -378,7 +510,7 @@ body {
 	display: none;
 }
 .buy a {
-	.button(300px, #0080d0);
+	.button(300px, #0080d0, 0.84);
 }
 footer {
 	color: #fff;
