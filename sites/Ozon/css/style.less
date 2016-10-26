@@ -38,9 +38,6 @@
 	.all(@radius) {
 		border-radius: @radius;
 		-moz-border-radius: @radius;
-		-webkit-border-radius: @radius;	
-		border-radius: @radius;
-		-moz-border-radius: @radius;
 		-webkit-border-radius: @radius;
 	}
 	.left(@radius) {
@@ -50,7 +47,14 @@
 		border-bottom-left-radius: @radius;
 		-moz-border-bottom-left-radius: @radius;
 		-webkit-border-bottom-left-radius: @radius;
-
+	}
+	.right(@radius) {
+		border-top-right-radius: @radius;
+		-moz-border-top-right-radius: @radius;
+		-webkit-border-top-right-radius: @radius;	
+		border-bottom-right-radius: @radius;
+		-moz-border-bottom-right-radius: @radius;
+		-webkit-border-bottom-right-radius: @radius;
 	}
 }
 .gradient(@colorTop, @colorBottom)
@@ -68,7 +72,6 @@
 .button(@width, @color, @opacity) {
 	background: radial-gradient(130% 80% at 50% 0px, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(0,0,0,0) 50%),
 	            @color linear-gradient(@color 82%, rgba(255, 255, 255, 0.2) 92%, @color 100%);
-	margin-top: 37px;
 	width: @width;
 	/*height: 76px;*/
 	display: flex;
@@ -97,14 +100,17 @@ a {
 	text-decoration: none;
 	color: #008bda;
 }
-a:hover {
-	text-decoration: underline;
-}
 .certificateTitle,
 .giftTitle,
 .giftDescription,
 .selectDesign span:not(.setItem),
-.bowTitle {
+.bowTitle,
+.testOnEmailBoxTitle,
+.popHeader,
+.popContentLeft span,
+.totalPrice span,
+.tabs,
+.sectionTitle {
 	font-family: OpenSans-Bold;
 }
 .description,
@@ -112,7 +118,16 @@ a:hover {
 .selectDesign,
 footer,
 .time,
-.online {
+.online,
+.testOnEmailBoxDesc,
+.e-mail,
+.notification,
+.popContentLeft,
+.totalPrice,
+.inputStyle,
+.paymentSelect,
+.paymentDesc,
+.totalDesc {
 	font-family: OpenSans-Regular;
 }
 .hopeTitle {
@@ -137,7 +152,7 @@ body {
 	right: -203px;
 	top: 30%;
 	/*top: 550px;*/
-	z-index: 18;
+	z-index: 4;
 	transition: .2s;
 	.borderRadius > .left(70px);
 }
@@ -220,6 +235,10 @@ body {
 	margin: 27px auto 38px;
 	font-size: 28px;
 }
+.hope a.button:hover {
+	.button(470px, #ffa400, 0.84);
+	font-size: 28px;
+}
 .time {
 	text-align: center;
 	color: #fff;
@@ -275,6 +294,9 @@ body {
 	color: #1f1f1f;
 	font-size: 14px;
 	padding: 0 21px;
+}
+.description img {
+	margin-top: 10px;
 }
 .certificate .description {
 	margin-top: 55px;
@@ -387,18 +409,18 @@ body {
 	position: relative;
 	background: #fef2ce;
 	margin-top: 25px;
-
-	/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-	border-bottom-left-radius: 19px;
-	border-bottom-right-radius: 19px;
+	.borderRadius > .bottom(19px);
 	padding-bottom: 115px;
-	/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 }
 .testFree .wave {
 	background: url(../img/waveOrange.png) repeat-x;
 }
 .testFree a {
 	.button(310px, #ff9000, 0.32);
+	margin-top: 37px;
+}
+.testFree a:hover {
+	.button(310px, #ffa400, 0.32);
 }
 .leftLink {
 	display: flex;
@@ -409,9 +431,320 @@ body {
 	text-align: left;
 	margin-left: 20px;
 }
+.popHeader,
+.popHeaderRight {
+	display: flex;
+	justify-content: space-between;
+}
+.popHeader {
+	background: #ff9200;
+	/*padding: 17px 15px 15px 35px; */
+	color: #fff;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	.borderRadius > .top(9px);
+	height: 50px;
+	padding: 0 15px 0 35px;
+}
+.popHeaderRight .number {
+	margin-right: 32px;
+}
+.popCloseButton {
+	background: url(../img/closeButton.png) 100% 0 no-repeat;
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	transition: .5s;
+}
+.popCloseButton:hover {
+	transform: rotate(-180deg);
+}
+.popHeaderRight {
+	display: flex;
+	align-items: center;
+}
+.popContent {
+	display: flex;
+	align-items: stretch;
+}
+.popContentLeft {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 35px;
+	background: #fff3cf;
+	width: 183px;
+	color: #1f1f1f;
+	font-size: 14px;
+}
+.popContentLeft span,
+.totalPrice span {
+	color: #ff9200;
+	font-size: 34px;
+}
+.popContentLeft span span,
+.totalPrice span span {
+	font-size: 18px;
+}
+.totalPrice {
+	width: 200px;
+}
+.popContentLeftDesc {
+	padding-left: 40px; 
+}
+.popContentRight {
+	display: flex;
+	flex-direction: column;
+}
+.tabs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	margin-bottom: 47px;
+}
+.tabLeft {
+	background: #ff9200;
+	color: #fff;
+	box-shadow: inset 0 2px 3px rgba(0,0,0, 0.15);
+	height: 40px;
+	display: flex;
+	align-items: center;
+	padding: 0 60px 0 57px;
+	.borderRadius > .left(20px);
+}
+.tabRight {
+	background: linear-gradient(to top, rgba(0,0,0, 0.06), white);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.28);
+	color: #ff9200;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	padding: 0 52px 0 40px;
+	.borderRadius > .right(20px);
+}
+.formImg {
+	margin-top: 40px;
+}
+#formForTabRight {
+	display: none;
+}
+.sectionTitle {
+	color: #ff9200;
+	font-size: 24px;
+}
+#buyPop {
+	display: none;
+}
+.buyPopBg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.4);
+}
+.buyPop {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+.buyPopBox {
+	position: none;
+	background: #fff;
+	width: 945px;
+	margin: 200px auto 0;
+	.borderRadius > .all(9px);
+}
+/* ПОТОМ ЗАНЕСТИ ВНИЗ */
+
+#testOnEmail {
+	display: none;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+.testOnEmailBox {
+	position: relative;
+	padding: 43px 53px;
+	background: #fff;
+	z-index: 600;
+	width: 700px;
+	margin: auto;
+	.borderRadius > .all(10px);
+}
+.closeButton {
+	position: absolute;
+	background: url(../img/closeButton.png) no-repeat;
+	width: 19px;
+	height: 19px;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+	transition: .5s;
+}
+.closeButton:hover {
+	transform: rotate(-180deg);
+}
+.testOnEmailBoxTitle {
+	color: #ff9c00;
+	font-size: 32px;
+	margin-bottom: 23px;
+}
+.testOnEmailBoxDesc {
+	color: #1f1f1f;
+	font-size: 15px;
+	margin-bottom: 23px;
+}
+.popContentRight {
+	width: 100%;
+	padding: 35px 48px 0;
+}
+#formForTabLeft {
+	display: flex;
+	justify-content: space-between;
+}
+.e-mail {
+	color: #666666;
+	font-size: 14px;
+	display: block;
+	opacity: 0.8;
+}
+.inputStyle {
+	border: none;
+	background: #f4f4f4;
+	color: #949494;
+	padding: 12px;
+	width: 330px;
+	.borderRadius > .all(7px);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+	font-size: 15px;
+	margin-top: 5px;
+	height: 40px;
+}
+.inputStyle:focus {
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.55);
+	color: #333;
+}
+.notification {
+	color: #333;
+	font-size: 15px;
+	margin: 18px 0 32px;
+	display: inline-block;
+}
+input[type="checkbox"] {
+	display: none;
+}
+input[type="checkbox"] + label {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background: url(../img/checkBox.png) no-repeat;
+}
+input[type="checkbox"]:checked + label {
+	background: url(../img/checkBox.png) 100% no-repeat;
+}
+.buttonSend {
+	border: none;
+	.button(296px, #f99000, 0);
+	cursor: pointer;
+}
+.buttonSend:hover {
+	.button(296px, #ffa400, 0);
+}
+.formText {
+	display: flex;
+	justify-content: space-between;
+}
+.formTextLeft input {
+	margin-bottom: 18px;
+}
+.formTextRight textarea {
+	resize: none;
+	height: 205px;
+}
+#paymentSelectBox {
+	display: none;
+}
+.payment {
+	display: flex;
+}
+.paymentSelect {
+	width: 320px;
+	position: relative;
+}
+.paymentSelect span {
+	line-height: 39px;
+	font-size: 15px;
+	padding: 0 16px;
+	display: block;
+	.borderRadius > .all(6px);
+	cursor: pointer;
+	background: url(../img/arrowDown.png) 295px 50% no-repeat, linear-gradient(to top, #d5d5d5, #f8f8f8);
+}
+.paymentSelect ul {
+	position: absolute;
+	top: 39px;
+	left: 5px;
+	z-index: 6;
+	background: #f7f7f7;
+	font-size: 14px;
+	width: 310px;
+	margin: 0 auto;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+	.borderRadius > .bottom(12px)
+}
+.paymentSelect li {
+	cursor: pointer;
+	list-style: none;
+	padding: 0 18px;
+	color: #555;
+	line-height: 35px;
+}
+.paymentSelect li:hover {
+	color: #7d7d7d;
+}
+.paymentDesc {
+	color: #1f1f1f;
+	opacity: 0.65;
+	font-size: 13px;
+}
+hr {
+	background: #ffc20e;
+	box-shadow: none;
+	border: none;
+	height: 1px;
+	margin-top: 45px;
+}
+.total {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 0 50px;
+}
+.totalBuy {
+	.button(215px, #ff9c00, 0);
+}
+.totalBuy:hover {
+	.button(215px, #ffa400, 0);
+}
+.totalDesc {
+	padding-right: 25px;
+	color: #1f1f1f;
+	font-size: 12px;
+	opacity: 0.65;
+}
 .bow {
 	position: relative;
-	background: #ff9c00;
+	background: #ff9000;
 	.borderRadius > .bottom(19px);
 	padding-top: 80px;
 }
@@ -511,7 +844,11 @@ body {
 	display: none;
 }
 .buy a {
+	margin-top: 32px;
 	.button(300px, #0080d0, 0.84);
+}
+.buy a:hover {
+	.button(300px, #0092e9, 0.84);
 }
 footer {
 	color: #fff;

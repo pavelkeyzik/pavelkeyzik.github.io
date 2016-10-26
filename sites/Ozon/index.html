@@ -1,9 +1,16 @@
+
+<!--
+	+ СПРЯТАТЬ ШАРИКИ
+	- Изменить less.js на нормальный, чтобы сайт быстрее грузился, а не как сейчас
+	- Кнопки:hover
+	+ PopUp
+	- Изменить кнопочку
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Дари подарки | DariPodarki.Ru</title>
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<meta name="description" content="Дари Подарки - интернет-магазин подарочных сертификатов, карт в Москве и Cанкт-Петербурге.">
 	<meta name="keywords" content="Магазин, подарки">
@@ -19,6 +26,108 @@
 			<img src="img/online.png" alt="HeadPhones">
 		</div>
 		<div class="onlineText">On-line консультант</div>
+	</div>
+	<div id="buyPop">
+		<div class="buyPopBg"></div>
+		<div class="buyPop">
+			<div class="buyPopBox">
+				<div class="popHeader">
+					<div class="title">Подарить в электронном виде</div>
+					<div class="popHeaderRight">
+						<div class="number">+7 (495) 221 10 77</div>
+						<div class="popCloseButton" onclick="openAndCloseBox('buyPop');"></div>
+					</div>
+				</div>
+				<div class="popContent">
+					<div class="popContentLeft">
+						<div class="popContentLeftImg">
+							<img src="img/ozon1.png" alt="Ozon">
+						</div>
+						<div class="popContentLeftDesc">Подарочный сертификат Ozon<br><span>500 <span>руб.</span></span></div>
+					</div>
+					<div class="popContentRight">
+						<div class="tabs">
+							<div class="tabLeft">Доставка на E-mail</div>
+							<div class="tabRight">Доставка по ссылке</div>
+						</div>
+						<form id="formForTabLeft">
+							<div>
+								<label for="E-mail" class="e-mail">E-mail получателя:</label><br>
+								<input type="text" name="e-mail" class="inputStyle" id="E-mail">
+							</div>
+							<div>
+								<label for="E-mail" class="e-mail">Ваш E-mail:</label><br>
+								<input type="text" class="inputStyle" name="e-mail" id="E-mail">
+							</div>
+						</form>
+						<!-- <form id="formForTabRight">
+							<label for="E-mail">Ваш E-mail:</label>
+							<input type="text" name="e-mail" id="E-mail">
+						</form> -->
+						<div class="formImg">
+							<img src="img/certificate1.png" alt="Картинка">
+						</div>
+						<div class="sectionTitle">Напишите текст поздравления</div>
+						<form class="formText">
+							<div class="formTextLeft">
+								<label for="user" class="e-mail">Кому:</label>
+								<input type="text" id="user" class="inputStyle" placeholder="Ивану Иванову">
+								<label for="title" class="e-mail">Заголовок поздравления:</label>
+								<input type="text" id="title" class="inputStyle" placeholder="Заголовок поздравления">
+								<label for="from" class="e-mail">От кого:</label>
+								<input type="text" id="from" class="inputStyle" placeholder="От меня">
+							</div>
+							<div class="formTextRight">				
+								<label for="message" class="e-mail">Текст поздравления:</label>
+								<textarea name="message" id="message" class="inputStyle" placeholder="Ваш текст поздравления"></textarea>
+							</div>
+						</form>
+						<div class="sectionTitle">Выберите способ оплаты</div>
+						<div class="payment">
+							<div class="paymentImage">
+								<img src="img/card.jpg" alt="Payment Card">
+							</div>
+							<div class="paymentSelect">
+								<span onclick="openAndCloseSelect('paymentSelectBox');">Картой <strong>VISA</strong> или <strong>MasterCard</strong></span>
+								<ul id="paymentSelectBox">
+									<li>Картой VISA или MasterCard</li>
+									<li>Бла-бла-бла</li>
+									<li>В шаблоне нет пунктов</li>
+								</ul>
+							</div>
+						</div>
+						<div class="paymentDesc">К оплате принимаются карточки РФ и стран СНГ. Максимальная сумма, которую можно оплатить карточкой за один раз - 35000 руб.</div>
+						<hr>
+						<div class="total">
+							<div class="totalPrice">
+								<span>500 <span>руб.</span></span>
+							</div>
+							<div class="totalDesc">
+								Для оплаты заказа вы будете перенаправлены на сайт платежной системы <u>PayOnline System</u>
+							</div>
+							<div class="totalButton">
+								<a href="#" class="totalBuy">Купить</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="testOnEmail">
+		<div class="testOnEmailBox">
+			<div class="closeButton" onclick="openAndCloseBox('testOnEmail');"></div>
+			<div class="testOnEmailBoxTitle">Тестовый сертификат</div>
+			<div class="testOnEmailBoxDesc">Хочу получить тестовый сертификат с поздравительной открыткой на свой e-mail и посмотреть, как это работает.</div>
+			<form>
+				<label for="e-mail" class="e-mail">Ваш E-mail:</label><br>
+				<input type="text" name="e-mail" class="inputStyle" id="e-mail" placeholder="Введите ваш E-Mail"><br>
+				<input type="checkbox" id="checkNotification">
+				<label for="checkNotification" class="checkBox"></label>
+				<label for="checkNotification" class="notification">Получать новости и спецпредложения от магазина DariPodarki.ru</label><br>
+				<input type="button" value="Отправить" class="buttonSend">
+			</form>
+		</div>
 	</div>
 	<div class="wrapper">
 		<div class="row">
@@ -53,7 +162,7 @@
 						<p>Ваш друг в Вконтакте поклонник Ozon.</p>
 						<p>Электронный подарочный сертификат Ozon станет неожиданным, ярким и желанным подарком на День Рождения!</p>
 					</div>
-					<a href="#" class="button">Купить сертификат сейчас</a>
+					<a href="#" class="button" onclick="openAndCloseBox('buyPop');">Купить сертификат сейчас</a>
 				</div>
 				<div class="time">
 					Это займёт всего 2 минуты!
@@ -173,6 +282,7 @@
 						<div class="description">
 							<strong>Шаг 3</strong><br>
 							Оплатите заказ удобным способом.
+							<img src="img/cards.jpg" alt="cards">
 						</div>
 					</div>
 				</div>
@@ -185,12 +295,12 @@
 				<div class="row">
 					<div class="cols col-6">
 						<div class="leftLink">
-							<a href="#">Тестовый сертификат по e-mail</a>
+							<a href="#" onclick="openAndCloseBox('testOnEmail');">Тестовый сертификат по e-mail</a>
 						</div>
 					</div>
 					<div class="cols col-6">
 						<div class="rightLink">
-							<a href="#">Тестовый сертификат по ссылке</a>
+							<a href="#" onclick="openAndCloseBox('testOnEmail');">Тестовый сертификат по ссылке</a>
 						</div>
 					</div>
 				</div>
@@ -212,7 +322,7 @@
 								<div class="bowContentRight">
 									<div class="selectDesign">
 										<span class="setItem">
-										<div onclick="openBox('selectBox');"><img src="img/arrowDown.png"><span>3000</span> рублей</div>
+										<div onclick="openAndCloseSelect('selectBox');"><img src="img/arrowDown.png"><span>3000</span> рублей</div>
 										<ul id="selectBox">
 											<li><span>500</span> рублей</li>
 											<li><span>1000</span> рублей</li>
@@ -222,7 +332,7 @@
 										</span>
 									</div>
 									<div class="buy">
-										<a href="#">Купить</a>
+										<a href="#" onclick="openAndCloseBox('buyPop');">Купить</a>
 									</div>
 								</div>
 							</div>
@@ -242,11 +352,3 @@
 	<script src="js/myScript.js" type="text/javascript"></script>
 </body>
 </html>
-
-<!--
-	+ СПРЯТАТЬ ШАРИКИ
-	- Изменить less.js на нормальный, чтобы сайт быстрее грузился, а не как сейчас
-	- Кнопки:hover
-	- PopUp
-	- Изменить кнопочку
--->
