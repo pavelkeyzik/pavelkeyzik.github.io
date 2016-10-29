@@ -1,10 +1,10 @@
-
 <!--
 	+ СПРЯТАТЬ ШАРИКИ
-	- Изменить less.js на нормальный, чтобы сайт быстрее грузился, а не как сейчас
-	- Кнопки:hover
+	+ Кнопки:hover
 	+ PopUp
-	- Изменить кнопочку
+	+ Изменить кнопочку
+	- Select с возможностью выбора, а не просто выпадающий список
+	- Изменить less.js на нормальный, чтобы сайт быстрее грузился, а не как сейчас
 -->
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
 		<div class="onlineText">On-line консультант</div>
 	</div>
 	<div id="buyPop">
-		<div class="buyPopBg"></div>
+		<div class="PopBg" onclick="openAndCloseBox('buyPop');"></div>
 		<div class="buyPop">
 			<div class="buyPopBox">
 				<div class="popHeader">
@@ -47,10 +47,10 @@
 					</div>
 					<div class="popContentRight">
 						<div class="tabs">
-							<div class="tabLeft">Доставка на E-mail</div>
-							<div class="tabRight">Доставка по ссылке</div>
+							<div id="tabLeft" class="tabActive" onclick="clickOnTab('formForTabLeft');">Доставка на E-mail</div>
+							<div id="tabRight" class="tabNotActive" onclick="clickOnTab('formForTabRight');">Доставка по ссылке</div>
 						</div>
-						<form id="formForTabLeft">
+						<form id="formForTabLeft" class="display">
 							<div>
 								<label for="E-mail" class="e-mail">E-mail получателя:</label><br>
 								<input type="text" name="e-mail" class="inputStyle" id="E-mail">
@@ -60,10 +60,12 @@
 								<input type="text" class="inputStyle" name="e-mail" id="E-mail">
 							</div>
 						</form>
-						<!-- <form id="formForTabRight">
-							<label for="E-mail">Ваш E-mail:</label>
-							<input type="text" name="e-mail" id="E-mail">
-						</form> -->
+						<form id="formForTabRight" class="none">
+							<div>
+								<label for="E-mail" class="e-mail">Ваш E-mail:</label><br>
+								<input type="text" class="inputStyle" name="e-mail" id="E-mail">
+							</div>
+						</form>
 						<div class="formImg">
 							<img src="img/certificate1.png" alt="Картинка">
 						</div>
@@ -115,6 +117,7 @@
 		</div>
 	</div>
 	<div id="testOnEmail">
+		<div class="PopBg" onclick="openAndCloseBox('testOnEmail');"></div>
 		<div class="testOnEmailBox">
 			<div class="closeButton" onclick="openAndCloseBox('testOnEmail');"></div>
 			<div class="testOnEmailBoxTitle">Тестовый сертификат</div>
@@ -170,7 +173,9 @@
 			</div>
 		</div>
 		<div class="content">
-			<div class="corner"></div>
+			<div class="corner">
+				<img src="img/bgFoldedsCorner.png" alt="corner">
+			</div>
 			<div class="sharik"></div>
 			<div class="certificate">
 				<div class="row">
