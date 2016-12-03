@@ -1,0 +1,24 @@
+<div>
+  <span>{{ ((request.page - 1) * request.num_res) + 1 + " - " +request.page * request.num_res }}</span><b> {{ " / " + pageInfo.total_results }}</b>
+</div>
+
+<h2>Appartaments List</h2>
+<span ng-if="items.length == 0">I didn't find data. Sorry!</span>
+<div ng-if="items.length > 0">
+  <div class="itemBlock" ng-repeat="item in items">
+    <div class="prevImg">
+      <img src="{{ item.img_url }}">
+    </div>
+    <div class="content">
+      <div>
+        <a href="blog/{{ item.id }}" class="title">{{ item.title }}</a>
+        <div class="description">{{ item.summary }}</div>
+      </div>
+      <div class="info">
+        <div class="left">{{ item.property_type }}</div>
+        <div class="price">MORE</div>
+        <!-- {{ item.price_formatted }} -->
+      </div>
+    </div>
+  </div>
+</div>
