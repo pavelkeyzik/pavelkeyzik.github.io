@@ -1,3 +1,7 @@
 'use strict';
 
-angular.module('try', ['appartamentsList']);
+angular.module('try', [
+	'appartamentsList',
+	'appartamentInfo'
+]);
+	// 'appartamentInfo'

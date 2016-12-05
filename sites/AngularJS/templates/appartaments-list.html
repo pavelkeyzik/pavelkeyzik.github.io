@@ -1,5 +1,8 @@
-<div>
-  <span>{{ ((request.page - 1) * request.num_res) + 1 + " - " +request.page * request.num_res }}</span><b> {{ " / " + pageInfo.total_results }}</b>
+<div class="pageInfo">
+  <div>Sorting by Date</div>
+  <div>
+    <span>Items from {{ ((request.page - 1) * request.num_res) + 1 + " to " +request.page * request.num_res }}</span><b> {{ " / " + pageInfo.total_results }}</b>
+  </div>
 </div>
 
 <h2>Appartaments List</h2>
@@ -16,7 +19,7 @@
       </div>
       <div class="info">
         <div class="left">{{ item.property_type }}</div>
-        <div class="price">MORE</div>
+        <div class="price"><a href="article.html">MORE</a></div>
         <!-- {{ item.price_formatted }} -->
       </div>
     </div>
