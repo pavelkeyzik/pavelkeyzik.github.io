@@ -5,8 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- TODO: Add icon-->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/menu.css">
     <title>WebDesigners.bel</title>
 </head>
 <body>
@@ -93,9 +93,9 @@
                 <li>Брест</li>
                 <li>Гродно</li>
                 <li>Могилёв</li>
-                <li class="opened">
+                <li class="closed">
                     Борисов
-                    <span>Студия-интерьера "Флис"<br>ул. Наваторов 7<br>+375 29 7896756<br><a href="http://filis.by">www.filis.by</a></span>
+                    <div class="description">Студия-интерьера "Флис"<br>ул. Наваторов 7<br>+375 29 7896756<br><a href="http://filis.by">www.filis.by</a></div>
                 </li>
                 <li>Витебск</li>
                 <li>Солигорск</li>
@@ -112,12 +112,18 @@
                     </form>
                 </div>
                 <div class="social">
-                    <a href="#">ВКонтакте</a>
-                    <a href="#">FaceBook</a>
+                    <a href="#">
+                        <img src="img/icons/vk.png" alt="Вконтакте">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/facebook.png" alt="FaceBook">
+                    </a>
                 </div>
                 <div class="copyright">Copyright &copy; 2017 EHAV</div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
