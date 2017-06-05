@@ -1,0 +1,291 @@
+@grey: #bbb;
+@dark-grey: #222;
+
+.button(@text-color, @bg-color) {
+  color: @text-color;
+  background: @bg-color;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 55px;
+  text-transform: uppercase;
+  // TODO: Remove 'transition' or replace
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  &:hover {
+    background: @text-color;
+    color: @bg-color;
+  }
+}
+.line(@color) {
+  background: @color;
+  display: flex;
+  height: 3px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+  }
+  .button-white {
+    .button(#000, #fff);
+  }
+  .title {
+    text-transform: uppercase;
+    font-size: 24pt;
+  }
+  .wrap {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  header {
+    // FIXME: Change background
+    background: @grey url("../img/header-bg.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav-wrap {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      nav {
+        width: 1140px;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.7);
+        a {
+          color: #fff;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          height: 45px;
+          padding: 0 10px;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid red;
+      color: #fff;
+      .logo {
+        font-size: 48pt;
+      }
+    }
+  }
+  .free-consultation {
+    background: @dark-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    .title {
+      color: #fff;
+    }
+    .line {
+      .line(@grey);
+    }
+    .button-white {
+      margin-top: 40px;
+    }
+  }
+  .styles {
+    display: flex;
+    justify-content: space-between;
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
+      .left-side {
+        .description {
+          font-size: 10pt;
+        }
+        .line {
+          .line(@dark-grey);
+        }
+        menu {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          ul {
+            padding: 0;
+            margin: 20px 0 0;
+            li {
+              list-style: none;
+              &.current {
+                list-style: disc;
+                margin-left: 15px;
+              }
+              a {
+                color: @dark-grey;
+                text-transform: uppercase;
+                transition: .2s;
+                &:hover {
+                  opacity: 0.8;
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-side {
+        .images {
+          display: flex;
+          a {
+            width: 235px;
+            height: 530px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+            &:after {
+              position: absolute;
+              display: flex;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              content: url("../img/icons/loupe.png");
+              transition: .2s;
+              transform: scale(0);
+            }
+            &:hover {
+              img {
+                filter: brightness(1);
+                transform: scale(1.1);
+              }
+              &:after{
+                opacity:1;
+                transform: scale(1);
+              }
+            }
+            img {
+              background: @grey;
+              height: 100%;
+              //  ---------------------------------------------------------
+              // FIXME: I wanna be cover image, but I don't working in Firefox :(
+              //  ---------------------------------------------------------
+              object-fit: cover;
+              -o-object-fit: cover;
+              //  ---------------------------------------------------------
+              filter: brightness(0.7);
+              transition: .2s;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background: @dark-grey;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .map {
+      background: @grey;
+      width: 100%;
+    }
+    .right-side {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px 0 30px;
+      menu {
+        li {
+          list-style: none;
+          text-transform: uppercase;
+          color: #fff;
+          cursor: pointer;
+          transition: .2s;
+          &:hover {
+            color: @grey;
+          }
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+          &.opened {
+            span {
+              display: flex;
+              flex-direction: column;
+              padding-left: 20px;
+              font-size: 9pt;
+              margin: 10px 0;
+              color: @grey;
+              a {
+                color: @grey;
+                text-decoration: underline;
+              }
+            }
+          }
+          &.opened:before {
+            content: '▼';
+          }
+        }
+      }
+      .bottom {
+        margin-left: 40px;
+        .search {
+          form {
+            display: flex;
+            align-items: center;
+          }
+          @input-height:35px;
+          input {
+            background: #333;
+            border: none;
+            position: relative;
+            height: @input-height;
+            width: 150px;
+            color: #fff;
+            padding: 0 40px 0 10px;
+          }
+          button {
+            margin-left: -40px;
+            z-index: 1;
+            color: #fff;
+            font-size: 16pt;
+            img {
+              height: calc(@input-height - 18px);
+            }
+          }
+        }
+        .social {
+          a {
+            color: #fff;
+          }
+        }
+        .copyright {
+          color: #fff;
+          font-size: 10pt;
+        }
+      }
+    }
+  }
+}
