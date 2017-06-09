@@ -437,6 +437,12 @@ body footer {
 body footer .map {
   background: #7a7a7a;
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body footer .map iframe {
+  display: flex;
+  height: 100%;
 }
 body footer .right-side {
   width: 30%;
