@@ -21,6 +21,9 @@
 * {
   box-sizing: border-box;
 }
+img {
+  vertical-align: middle;
+}
 body {
   margin: 0;
   padding: 0;
@@ -179,7 +182,7 @@ body .projects .info .description {
 body .projects .info .line {
   background: #4d4d49;
   display: flex;
-  height: 3px;
+  height: 5px;
   width: 45px;
   margin-top: 16px;
 }
@@ -191,6 +194,76 @@ body .projects .info .arrows img {
 }
 body .projects .info .arrows img:first-child {
   margin-right: 16px;
+}
+body .best-works {
+  background: #212121;
+  display: flex;
+  flex-direction: column;
+  padding: 83px 0 0;
+  color: #fff;
+  position: relative;
+}
+body .best-works .top {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+body .best-works .top .description {
+  font-family: Roboto-Medium;
+  font-size: 11px;
+}
+body .best-works .top .line {
+  background: #7a7a7a;
+  display: flex;
+  height: 5px;
+  width: 45px;
+  margin-top: 16px;
+}
+body .best-works .info {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 47px;
+}
+body .best-works .info .info-title {
+  text-transform: uppercase;
+  font-family: Aria-Bold;
+  font-size: 25px;
+}
+body .best-works .info .info-params {
+  color: #9d9c9c;
+  font-family: Roboto-Medium;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 13px;
+}
+body .best-works .info .info-params b {
+  font-size: 16px;
+}
+body .best-works .info .info-description {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12px;
+  font-family: Roboto-Medium;
+  margin: 24px 0px 0 0;
+}
+body .best-works .info .button-white {
+  margin-top: 27px;
+}
+body .best-works .info .arrows {
+  margin: 42px 0 62px;
+  cursor: pointer;
+}
+body .best-works .info .arrows img:first-child {
+  margin-right: 9px;
+}
+body .best-works .image {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  bottom: 0;
 }
 body .free-consultation {
   background: #212121;
@@ -206,7 +279,7 @@ body .free-consultation .title {
 body .free-consultation .line {
   background: #7a7a7a;
   display: flex;
-  height: 3px;
+  height: 5px;
   width: 45px;
   margin-top: 16px;
 }
@@ -235,7 +308,7 @@ body .styles .wrap .left-side .description {
 body .styles .wrap .left-side .line {
   background: #4d4d49;
   display: flex;
-  height: 3px;
+  height: 5px;
   width: 45px;
   margin-top: 16px;
 }
