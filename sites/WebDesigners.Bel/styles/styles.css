@@ -265,6 +265,64 @@ body .best-works .image {
   right: 0;
   bottom: 0;
 }
+body .advantages .wrap {
+  display: flex;
+  flex-direction: column;
+}
+body .advantages .wrap .title {
+  margin-top: 80px;
+}
+body .advantages .wrap .description {
+  font-size: 11px;
+  font-family: Roboto-Medium;
+  color: #4d4d49;
+}
+body .advantages .wrap .line {
+  background: #4d4d49;
+  display: flex;
+  height: 5px;
+  width: 45px;
+  margin-top: 16px;
+}
+body .advantages .wrap .grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+body .advantages .wrap .grid .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+body .advantages .wrap .grid .item,
+body .advantages .wrap .grid .arrows {
+  display: flex;
+  flex-basis: 25%;
+}
+body .advantages .wrap .grid .arrows {
+  justify-content: center;
+  align-items: center;
+}
+body .advantages .wrap .grid .arrows img {
+  cursor: pointer;
+}
+body .advantages .wrap .grid .arrows img:first-child {
+  margin-right: 30px;
+}
+body .advantages .wrap .grid .item {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Roboto-Medium;
+  font-size: 13px;
+}
+body .advantages .wrap .grid .item .img {
+  height: 70px;
+}
+body .advantages .wrap .grid .item .desc {
+  padding: 20px 30px 0;
+  text-align: center;
+}
 body .free-consultation {
   background: #212121;
   display: flex;
