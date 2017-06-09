@@ -3,8 +3,20 @@
   src: url("../fonts/Aria-Bold.ttf");
 }
 @font-face {
-  font-family: Helvetica-Roman;
-  src: url("../fonts/HelveticaNeueCyr-Roman.otf");
+  font-family: Roboto-Light;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: Roboto-LightItalic;
+  src: url("../fonts/Roboto-LightItalic.ttf");
+}
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 * {
   box-sizing: border-box;
@@ -76,15 +88,109 @@ body header .info {
   color: #fff;
 }
 body header .info .logo-description {
+  font-family: Roboto-Regular;
   font-size: 10px;
   width: 110px;
 }
 body header .info .title {
+  font-family: Roboto-Medium;
   font-size: 34px;
   margin-top: 42px;
 }
 body header .info .button-white {
   margin-top: 21px;
+}
+body .projects {
+  padding: 74px 0 63px;
+}
+body .projects .grid {
+  display: flex;
+  flex-direction: column;
+}
+body .projects .grid .grid-row {
+  display: flex;
+  justify-content: space-between;
+}
+body .projects .grid .grid-row:not(:last-child) {
+  margin-bottom: 4px;
+}
+body .projects .grid .grid-row .col-1 {
+  display: flex;
+  width: 182px;
+  height: 182px;
+}
+body .projects .grid .grid-row .col-1 a {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+body .projects .grid .grid-row .col-1 a .image {
+  position: absolute;
+  filter: brightness(0.4);
+  top: 0;
+  left: 0;
+  transition: .2s;
+}
+body .projects .grid .grid-row .col-1 a .info {
+  z-index: 1;
+  color: #fff;
+  margin: 0 0 12px 13px;
+}
+body .projects .grid .grid-row .col-1 a .info .project-title {
+  color: #fff;
+  font-family: Roboto-Medium;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+body .projects .grid .grid-row .col-1 a .info .project-description {
+  font-family: Roboto-Regular;
+  font-size: 13px;
+}
+body .projects .grid .grid-row .col-1 a:hover .image {
+  filter: brightness(1);
+  transform: scale(1.1);
+}
+body .projects .grid .grid-row .col-2 {
+  display: flex;
+  width: 370px;
+  height: 182px;
+}
+body .projects .grid .grid-row .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 182px;
+  height: 182px;
+}
+body .projects .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .projects .info .title {
+  color: #4d4d49;
+}
+body .projects .info .description {
+  color: #4d4d49;
+  font-size: 11px;
+}
+body .projects .info .line {
+  background: #4d4d49;
+  display: flex;
+  height: 3px;
+  width: 45px;
+  margin-top: 16px;
+}
+body .projects .info .arrows {
+  margin-bottom: 28px;
+}
+body .projects .info .arrows img {
+  cursor: pointer;
+}
+body .projects .info .arrows img:first-child {
+  margin-right: 16px;
 }
 body .free-consultation {
   background: #212121;
@@ -101,7 +207,7 @@ body .free-consultation .line {
   background: #7a7a7a;
   display: flex;
   height: 3px;
-  width: 50px;
+  width: 45px;
   margin-top: 16px;
 }
 body .free-consultation .button-white {
@@ -130,7 +236,7 @@ body .styles .wrap .left-side .line {
   background: #4d4d49;
   display: flex;
   height: 3px;
-  width: 50px;
+  width: 45px;
   margin-top: 16px;
 }
 body .styles .wrap .left-side menu {
@@ -144,6 +250,7 @@ body .styles .wrap .left-side menu ul {
 }
 body .styles .wrap .left-side menu ul li {
   list-style: none;
+  font-family: Roboto-Medium;
   font-size: 11px;
 }
 body .styles .wrap .left-side menu ul li:not(:last-child) {
@@ -212,7 +319,7 @@ body footer .right-side menu {
   padding: 0;
 }
 body footer .right-side menu li {
-  font-family: Helvetica-Roman;
+  font-family: Roboto-Medium;
   font-size: 11px;
   list-style: none;
   text-transform: uppercase;
@@ -232,7 +339,7 @@ body footer .right-side menu li .description {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-  font-size: 9pt;
+  font-size: 9px;
   margin: 10px 0;
   color: #7a7a7a;
 }
@@ -257,6 +364,7 @@ body footer .right-side .bottom .search form {
   align-items: center;
 }
 body footer .right-side .bottom .search input {
+  font-family: Roboto-Regular;
   background: #333;
   border: none;
   position: relative;

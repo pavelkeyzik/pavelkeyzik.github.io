@@ -8,8 +8,23 @@
 }
 
 @font-face {
-  font-family: Helvetica-Roman;
-  src: url("../fonts/HelveticaNeueCyr-Roman.otf");
+  font-family: Roboto-Light;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto-LightItalic;
+  src: url("../fonts/Roboto-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 
 .button(@text-color, @bg-color) {
@@ -28,7 +43,7 @@
   background: @color;
   display: flex;
   height: 3px;
-  width: 50px;
+  width: 45px;
   margin-top: 16px;
 }
 
@@ -52,7 +67,6 @@ body {
     font-family: Aria-Bold;
   }
   .wrap {
-    // FIXME: width
     width: 932px;
     margin: 0 auto;
   }
@@ -94,17 +108,105 @@ body {
       align-items: center;
       color: #fff;
       .logo-description {
-        // FIXME: Add Font Family 'Helvetica Neue Cyr Roman'
+        font-family: Roboto-Regular;
         font-size: 10px;
         width: 110px;
       }
       .title {
-        // FIXME: Add Font Family 'Helvetica Neue Cyr Medium'
+        font-family: Roboto-Medium;
         font-size: 34px;
         margin-top: 42px;
       }
       .button-white {
         margin-top: 21px;
+      }
+    }
+  }
+  .projects {
+    padding: 74px 0 63px;
+    .grid {
+      display: flex;
+      flex-direction: column;
+      .grid-row {
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+        .col-1 {
+          display: flex;
+          width: 182px;
+          height: 182px;
+          a {
+            display: flex;
+            width: 100%;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            .image {
+              position: absolute;
+              filter: brightness(0.4);
+              top: 0;
+              left: 0;
+              transition: .2s;
+            }
+            .info {
+              z-index: 1;
+              color: #fff;
+              margin: 0 0 12px 13px;
+              .project-title {
+                color: #fff;
+                font-family: Roboto-Medium;
+                text-transform: uppercase;
+                font-size: 14px;
+              }
+              .project-description {
+                font-family: Roboto-Regular;
+                font-size: 13px;
+              }
+            }
+            &:hover .image {
+              filter: brightness(1);
+              transform: scale(1.1);
+            }
+          }
+        }
+        .col-2 {
+          display: flex;
+          width: 370px;
+          height: 182px;
+        }
+        .add {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 182px;
+          height: 182px;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        color: @grey;
+      }
+      .description {
+        color: @grey;
+        font-size: 11px;
+      }
+      .line {
+        .line(@grey);
+      }
+      .arrows {
+        margin-bottom: 28px;
+        img {
+          cursor: pointer;
+          &:first-child {
+            margin-right: 16px;
+          }
+        }
       }
     }
   }
@@ -153,7 +255,7 @@ body {
             margin: 63px 0 0;
             li {
               list-style: none;
-              // FIXME: Add Font Family 'Helvetica Neue Cyr Medium'
+              font-family: Roboto-Medium;
               font-size: 11px;
               &:not(:last-child) {
                 margin-bottom: 16px;
@@ -251,8 +353,7 @@ body {
         margin: 0 0 0 40px;
         padding: 0;
         li {
-          // FIXME: Add Font Family 'Helvetica Neue Cyr Medium'
-          font-family: Helvetica-Roman;
+          font-family: Roboto-Medium;
           font-size: 11px;
           list-style: none;
           text-transform: uppercase;
@@ -271,7 +372,7 @@ body {
             display: flex;
             flex-direction: column;
             padding-left: 20px;
-            font-size: 9pt;
+            font-size: 9px;
             margin: 10px 0;
             color: @light-grey;
             a {
@@ -299,7 +400,7 @@ body {
           }
           @input-height: 25px;
           input {
-            // FIXME: Add Font Family 'Helvetica Neue Cyr Roman'
+            font-family: Roboto-Regular;
             background: #333;
             border: none;
             position: relative;
