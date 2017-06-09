@@ -7,6 +7,7 @@ $(document).ready(function () {
                 element.attr({"class" : "closed"});
             }
             else {
+                element.siblings("[class]").attr( { "class": "closed" }).children(".description").hide("fast");
                 element.attr({"class" : "opened"});
             }
         });
