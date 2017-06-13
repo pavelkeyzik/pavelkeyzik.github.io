@@ -49,6 +49,9 @@ function loadData(category) {
                         url: 'js/api/' + category + '.json',
                         dataType: 'json',
                         timeout: 10000,
+                        beforeSend: function () {
+                            content.empty().append("ЗАГРУЗКА....");
+                        },
                         success: function (data) {
                             var tmpl = _.template(html_file);
                             content.empty().append( tmpl(data) ).slideDown(200);
@@ -62,4 +65,27 @@ function loadData(category) {
             });
         });
     }
+}
+
+function viewArticle(articleId) {
+    // FIXME Change OldCategory
+    var content = $(".advantages .wrap .content");
+
+    content.slideUp(200, function () {
+        $.ajax({
+            type: 'GET',
+            url: 'js/api/articles.json',
+            success: function (data) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'js/templates/article.html',
+                    success: function (html_file) {
+                        // alert(JSON.stringify(data[articleId].title));
+                        var tmpl = _.template(html_file);
+                        content.empty().append(tmpl(data[articleId])).slideDown(200);
+                    }
+                });
+            }
+        });
+    });
 }

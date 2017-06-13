@@ -401,6 +401,16 @@ body {
       }
       .content {
         display: none;
+        position: relative;
+        border: 1px solid red;
+        &:after {
+          position: absolute;
+          right: 0;
+          top: 0;
+          content: 'X';
+          border: 1px solid red;
+          background: red;
+        }
         .news {
           display: flex;
           align-items: center;
