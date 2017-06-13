@@ -1,0 +1,26 @@
+{
+  "articles" :
+  [
+    {
+      "title": "Лофт 'по-украински'",
+      "description": "Описание статьи",
+      "category": "Интерьеры",
+      "date": "30 июня 2016, 12:02",
+      "image_link": "../img/news/9320225.jpg"
+    },
+    {
+      "title" : "Дизайн интерьера деревянного дома Energy-Systems",
+      "description": "Описание статьи 2",
+      "category": "Пресс-релизы",
+      "date": "60 июня 2017, 25:62",
+      "image_link": "../img/news/dub_10.jpg"
+    },
+    {
+      "title" : "Design. Living Tendency 2016: Фотоотчёт от FID",
+      "description": "Описание статьи 3",
+      "category": "Интерьеры 3",
+      "date": "11 июля 3017, 15:62",
+      "image_link": "../img/news/51251.jpg"
+    }
+  ]
+}

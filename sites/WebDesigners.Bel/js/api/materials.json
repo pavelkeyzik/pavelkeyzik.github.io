@@ -1,0 +1,14 @@
+{
+  "materials":
+  [
+    {
+      "icon_link" : "../img/icons/materials/"
+    },
+    {
+      "icon_link" : "../img/icons/materials/"
+    },
+    {
+      "icon_link" : "../img/icons/materials/"
+    }
+  ]
+}

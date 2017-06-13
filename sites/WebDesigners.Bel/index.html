@@ -11,6 +11,50 @@
     <!-- TODO: Check all alt="" in HTML -->
 </head>
 <body>
+    <div class="pop-up-bg">
+        <div class="pop-up-form">
+            <div class="close">
+                <!-- FIXME: Change icon-->
+                X
+            </div>
+            <div class="title">Внесите свои данные</div>
+            <form>
+                <div class="row">
+                    <label for="country">Страна</label>
+                    <select name="country" id="country">
+                        <option value="1">Беларусь</option>
+                        <option value="2">Россия</option>
+                        <option value="3">Украина</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="city">Город</label>
+                    <select name="city" id="city">
+                        <option value="1">Минск</option>
+                        <option value="2">Борисов</option>
+                        <option value="3">Солигорск</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="title">Название</label>
+                    <input type="text" id="title">
+                </div>
+                <div class="row">
+                    <label for="site">Сайт</label>
+                    <input type="text" id="site">
+                </div>
+                <div class="row">
+                    <label for="mobile">Телефон</label>
+                    <input type="text" id="mobile">
+                </div>
+                <div class="row">
+                    <label for="photos">Фотографии</label>
+                    <input type="text" id="photos">
+                </div>
+                <button class="button-dark">Добавить</button>
+            </form>
+        </div>
+    </div>
     <header>
         <nav-wrap>
             <nav>
@@ -154,7 +198,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="add">
+                    <div class="add" onclick="togglePopUp('.pop-up-form')">
                         <img src="img/icons/add.png" alt="Добавить">
                     </div>
                 </div>
@@ -202,7 +246,7 @@
                         </div>
                         <div class="desc">Готовые проекты более 1000</div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="loadData('consultation')">
                         <div class="img">
                             <img src="img/icons/phone.png" alt="Телефонные звони">
                         </div>
@@ -226,20 +270,21 @@
                         </div>
                         <div class="desc">Дизайн, который экономит время, создаёт комфорт и образ жизни</div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="loadData('materials')">
                         <div class="img">
                             <img src="img/icons/small-diamond.png" alt="Лучший материал">
                         </div>
                         <div class="desc">Мы рекомендуем только самые лучшие материалы в мире</div>
                     </div>
-                    <div class="item">
+                    <div class="item" onclick="loadData('news')">
                         <div class="img">
-                            <img src="img/icons/files.png" alt="Уникальное ТЗ">
+                            <img src="img/icons/files.png" alt="Новости">
                         </div>
-                        <div class="desc">Уникальная система Технического задания на основе UX проектирования</div>
+                        <div class="desc">Следим за новостями всего мира</div>
                     </div>
                 </div>
             </div>
+            <div class="content"></div>
         </div>
     </div>
     <div class="free-consultation">
@@ -344,6 +389,7 @@
         </div>
     </footer>
     <script src="js/jquery.min.js"></script>
+    <script src="js/lodash.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
