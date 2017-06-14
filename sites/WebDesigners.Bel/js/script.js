@@ -1,6 +1,10 @@
 var oldCategory;
+var images = [];
+var currentImage = 0;
 
 $(document).ready(function () {
+    loadProjects();
+
     $("footer menu li").click(function () {
         var element = $(this);
         $(this).children(".description").toggle("fast", function () {
@@ -22,10 +26,7 @@ $(document).ready(function () {
             });
         })
     });
-    $(".projects .add").click(function () {
-        $()
-    });
-})
+});
 
 function togglePopUp(windowName) {
     $(windowName).parent().css({"display" : "flex"});
@@ -34,6 +35,7 @@ function togglePopUp(windowName) {
     });
 }
 
+// FIXME: RemoveMe and change all popUp windows to AJAX requests
 function loadData(category) {
     if(oldCategory != category) {
         oldCategory = category;
@@ -88,4 +90,56 @@ function viewArticle(articleId) {
             }
         });
     });
+}
+
+function loadProjects(page) {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/projects.html',
+        success: function(html_file) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/api/projects.json',
+                success: function (data) {
+                    $(".projects .col-1").fadeOut("slow", function () {
+                      $(this).remove();
+                    });
+                    var tmpl = _.template(html_file);
+                    $(".projects .col-2").after(tmpl(data));
+                    $(".projects .col-1").hide().fadeIn(700);
+                }
+            });
+        }
+    });
+}
+
+function viewImages(array) {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/view-images-window.html',
+        success: function (html_file) {
+            var tmpl = _.template(html_file);
+            images = JSON.parse(array);
+            $("body").append(tmpl(JSON.parse(array)));
+            currentImage = 0;
+        }
+    });
+}
+
+function nextImage() {
+    if(currentImage < images.images.length - 1) currentImage++;
+    else currentImage = 0;
+
+    $(".view-images-window .img").empty().append("<img src=" + images.images[currentImage] + ">");
+}
+
+function prevImage() {
+    if(currentImage > 0) currentImage--;
+    else currentImage = images.images.length - 1;
+
+    $(".view-images-window .img").empty().append("<img src=" + images.images[currentImage] + ">");
+}
+
+function closeWindow(window) {
+    $(window).fadeOut(100);
 }

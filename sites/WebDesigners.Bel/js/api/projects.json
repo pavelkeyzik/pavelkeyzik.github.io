@@ -1,0 +1,185 @@
+{
+  "projects" :
+  [
+    {
+      "title": "Борисовский проектик",
+      "country": "Борисов",
+      "pre_img": "img/projects/project-1.jpg",
+      "images": [
+        "img/projects/project-1.jpg",
+        "img/projects/project-2.jpg",
+        "img/projects/project-3.jpg"
+      ]
+    },
+    {
+      "title": "Проект 2",
+      "country": "Могилев",
+      "pre_img": "img/projects/project-2.jpg",
+      "images": [
+        "img/projects/project-4.jpg",
+        "img/projects/project-5.jpg",
+        "img/projects/project-6.jpg"
+      ]
+    },
+    {
+        "title": "Проект 3",
+        "country": "Полоцк",
+        "pre_img": "img/projects/project-3.jpg",
+        "images": [
+          "img/projects/project-7.jpg",
+          "img/projects/project-8.jpg",
+          "img/projects/project-9.jpg"
+        ]
+      },
+    {
+      "title": "Проект 4",
+      "country": "Гродно",
+      "pre_img": "img/projects/project-4.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 5",
+      "country": "Солигорск",
+      "pre_img": "img/projects/project-5.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 6",
+      "country": "Гомель",
+      "pre_img": "img/projects/project-6.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 7",
+      "country": "Витебск",
+      "pre_img": "img/projects/project-7.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 8",
+      "country": "Борисов",
+      "pre_img": "img/projects/project-8.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 9",
+      "country": "Борисов",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 10",
+      "country": "Борисов",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 11",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 12",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 13",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 14",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 15",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 16",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 17",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    },
+    {
+      "title": "Проект 18",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
+    }
+  ]
+}
