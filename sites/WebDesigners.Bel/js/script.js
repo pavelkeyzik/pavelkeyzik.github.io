@@ -1,6 +1,8 @@
 var oldCategory;
 var images = [];
 var currentImage = 0;
+var currentPageOfProjects = 0;
+var countPagesOfProjects = 0;
 
 $(document).ready(function () {
     loadProjects();
@@ -101,12 +103,14 @@ function loadProjects(page) {
                 type: 'GET',
                 url: 'js/api/projects.json',
                 success: function (data) {
-                    $(".projects .col-1").fadeOut("slow", function () {
+                    var newData = data.projects.slice(currentPageOfProjects*9, currentPageOfProjects*9+9);
+                    countPagesOfProjects = Math.ceil(data.projects.length / 9);
+                    $(".projects .col-1").hide(function () {
                       $(this).remove();
                     });
                     var tmpl = _.template(html_file);
-                    $(".projects .col-2").after(tmpl(data));
-                    $(".projects .col-1").hide().fadeIn(700);
+                    $(".projects .col-2").after(tmpl({"data" : newData}));
+                    $(".projects .col-1").hide().fadeIn(500);
                 }
             });
         }
@@ -142,4 +146,18 @@ function prevImage() {
 
 function closeWindow(window) {
     $(window).fadeOut(100);
+}
+
+function nextProjectPage() {
+    if(currentPageOfProjects == countPagesOfProjects - 1 ) currentPageOfProjects = 0;
+    else currentPageOfProjects++;
+
+    loadProjects(currentPageOfProjects);
+}
+
+function prevProjectPage() {
+    if(currentPageOfProjects == 0 ) currentPageOfProjects = countPagesOfProjects - 1;
+    else currentPageOfProjects--;
+
+    loadProjects(currentPageOfProjects);
 }

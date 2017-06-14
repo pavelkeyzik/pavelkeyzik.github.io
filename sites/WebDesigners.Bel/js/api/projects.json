@@ -180,6 +180,16 @@
         "img/projects/project-8.jpg",
         "img/projects/project-9.jpg"
       ]
+    },
+    {
+      "title": "Проект 19",
+      "country": "Нарочь",
+      "pre_img": "img/projects/project-9.jpg",
+      "images": [
+        "img/projects/project-7.jpg",
+        "img/projects/project-8.jpg",
+        "img/projects/project-9.jpg"
+      ]
     }
   ]
 }

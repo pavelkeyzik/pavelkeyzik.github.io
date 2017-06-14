@@ -1,6 +1,6 @@
 <% var currentPage = 1; %>
         <%
-        _.forIn(projects.splice(currentPage - 1, currentPage + 8), function(item, key) {
+        _.forIn(data, function(item, key) {
                 if(key == 2 || key == 5 || key == 7) { %>
                     <div class="col-1"></div>
                 <% } %>
