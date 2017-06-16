@@ -1,0 +1,132 @@
+{
+  "avangard" : {
+    "title" : "Авангард",
+    "pre_images" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "ampir" : {
+    "title" : "Ампир",
+    "pre_images" : [
+      "img/styles-2.jpg",
+      "img/styles-3.jpg",
+      "img/styles-1.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "art-deko" : {
+    "title" : "Арт-деко",
+    "pre_images" : [
+      "img/styles-3.jpg",
+      "img/styles-1.jpg",
+      "img/styles-2.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "barokko" : {
+    "title" : "Барокко",
+    "pre_images" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "konstruktivism" : {
+    "title" : "Конструктивизм",
+    "pre_images" : [
+      "img/styles-2.jpg",
+      "img/styles-3.jpg",
+      "img/styles-1.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "skandinavkiy" : {
+    "title" : "Скандинавский",
+    "pre_images" : [
+      "img/styles-2.jpg",
+      "img/styles-3.jpg",
+      "img/styles-1.jpg"
+    ],
+    "full_img" : [
+      "img/styles-3.jpg",
+      "img/styles-1.jpg",
+      "img/styles-2.jpg"
+    ]
+  },
+  "grange" : {
+    "title" : "Гранж",
+    "pre_images" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ],
+    "full_img" : [
+      "img/styles-2.jpg",
+      "img/styles-3.jpg",
+      "img/styles-1.jpg"
+    ]
+  },
+  "postmodernizm" : {
+    "title" : "Постмодернизм",
+    "pre_images" : [
+      "img/styles-3.jpg",
+      "img/styles-2.jpg",
+      "img/styles-1.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  },
+  "hi-tech" : {
+    "title" : "Хай-тек",
+    "pre_images" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ],
+    "full_img" : [
+      "img/styles-2.jpg",
+      "img/styles-3.jpg",
+      "img/styles-1.jpg"
+    ]
+  },
+  "shale" : {
+    "title" : "Шале",
+    "pre_images" : [
+      "img/styles-3.jpg",
+      "img/styles-1.jpg",
+      "img/styles-2.jpg"
+    ],
+    "full_img" : [
+      "img/styles-1.jpg",
+      "img/styles-2.jpg",
+      "img/styles-3.jpg"
+    ]
+  }
+}

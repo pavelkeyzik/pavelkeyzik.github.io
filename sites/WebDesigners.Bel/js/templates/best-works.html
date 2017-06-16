@@ -1,0 +1,13 @@
+<div class="info">
+    <div class="info-title"><%- data.title %></div>
+    <div class="info-params"><%- data.params %></div>
+    <div class="info-description"><%- data.description%></div>
+    <a class="button-white" onclick="viewImages('<%- JSON.stringify(data) %>')">Выбрать</a>
+    <div class="arrows">
+        <img src="img/icons/arrow-left-white.png" alt="<" onclick="prevWorkPage()">
+        <img src="img/icons/arrow-right-white.png" alt=">" onclick="nextWorkPage()">
+    </div>
+</div>
+<div class="image">
+    <img src="<%- data.pre_img %>" alt="Первая лучшая работа">
+</div>

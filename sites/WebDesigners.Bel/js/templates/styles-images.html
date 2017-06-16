@@ -1,0 +1,7 @@
+<div class="images">
+    <% _.forIn(images.pre_images, function(value, key) { %>
+    <a onclick="">
+        <img src="<%- value %>" alt="Image description" onclick="viewImages('<%- JSON.stringify([images.full_img[key]]) %>')">
+    </a>
+    <% }); %>
+</div>

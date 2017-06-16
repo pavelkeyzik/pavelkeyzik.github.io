@@ -3,9 +3,14 @@ var images = [];
 var currentImage = 0;
 var currentPageOfProjects = 0;
 var countPagesOfProjects = 0;
+var currentPageOfWorks = 0;
+var countPagesOfWorks = 0;
 
 $(document).ready(function () {
     loadProjects();
+    loadBestWorks();
+    loadStylesMenu();
+    loadStylesImages();
 
     $("footer menu li").click(function () {
         var element = $(this);
@@ -94,7 +99,7 @@ function viewArticle(articleId) {
     });
 }
 
-function loadProjects(page) {
+function loadProjects() {
     $.ajax({
         type: 'GET',
         url: 'js/templates/projects.html',
@@ -160,4 +165,85 @@ function prevProjectPage() {
     else currentPageOfProjects--;
 
     loadProjects(currentPageOfProjects);
+}
+
+// FIXME: Refactor code with repeated functions
+function loadBestWorks() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/best-works.html',
+        success: function(html_file) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/api/best-works.json',
+                success: function (data) {
+                    var newData = data.bestWorks.slice(currentPageOfWorks, currentPageOfWorks + 1);
+                    countPagesOfWorks = data.bestWorks.length;
+                    var tmpl = _.template(html_file);
+                    $(".best-works .wrap").empty().append(tmpl({"data" : newData[0] })).hide().fadeIn();
+                }
+            });
+        }
+    });
+}
+
+function nextWorkPage() {
+    if(currentPageOfWorks == countPagesOfWorks - 1 ) currentPageOfWorks = 0;
+    else currentPageOfWorks++;
+
+    loadBestWorks();
+}
+
+function prevWorkPage() {
+    if(currentPageOfWorks == 0 ) currentPageOfWorks = countPagesOfWorks - 1;
+    else currentPageOfWorks--;
+
+    loadBestWorks(currentPageOfWorks);
+}
+
+function freeConsult() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/free-consultation.html',
+        success: function (data) {
+            $("body").append(data);
+        }
+    });
+}
+
+function loadStylesMenu() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/styles-menu.html',
+        success: function (html_file) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/api/styles.json',
+                success: function (data) {
+                    var tmpl = _.template(html_file);
+                    $(".styles .left-side menu").empty().append(tmpl({"stylesItems" : data })).hide().fadeIn();
+                }
+            });
+        }
+    });
+}
+
+function loadStylesImages(section) {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/styles-images.html',
+        success: function (html_file) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/api/styles.json',
+                success: function (data) {
+                    var tmpl = _.template(html_file);
+                    // console.log(data[section]);
+                    if(!section) section = Object.keys(data)[0];
+
+                    $(".styles .right-side").empty().append(tmpl({"images" : data[section] })).hide().fadeIn();
+                }
+            });
+        }
+    })
 }

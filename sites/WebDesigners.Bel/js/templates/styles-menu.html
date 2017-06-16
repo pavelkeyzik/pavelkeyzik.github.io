@@ -1,0 +1,7 @@
+<ul>
+    <% _.forIn(stylesItems, function(value, key) { %>
+    <li>
+        <a onclick="loadStylesImages('<%- key %>')"><%- value.title %></a>
+    </li>
+    <% }); %>
+</ul>

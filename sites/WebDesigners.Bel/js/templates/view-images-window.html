@@ -1,8 +1,10 @@
 <div class="view-images-window-bg">
     <div class="view-images-window">
         <div class="close" onclick="closeWindow('.view-images-window-bg')">x</div>
+        <% if (images.length > 1) { %>
         <div class="arrow left" onclick="prevImage()"><</div>
         <div class="arrow right" onclick="nextImage()">></div>
+        <% } %>
         <div class="img">
             <img src="<%- images[0] %>">
         </div>
