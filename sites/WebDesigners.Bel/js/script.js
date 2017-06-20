@@ -1,35 +1,32 @@
 var oldCategory;
 var images = [];
 var currentImage = 0;
+
 var currentPageOfProjects = 0;
 var countPagesOfProjects = 0;
+
 var currentPageOfWorks = 0;
 var countPagesOfWorks = 0;
+
+var currentPageOfAdvantages = 0;
+var countPagesOfAdvantages = 0;
 
 $(document).ready(function () {
     loadProjects();
     loadBestWorks();
+    loadAdvantages();
     loadStylesMenu();
     loadStylesImages();
+    loadCities();
 
-    $("footer menu li").click(function () {
-        var element = $(this);
-        $(this).children(".description").toggle("fast", function () {
-            // TODO: Add rotate arrow
-            if(element.attr("class") == "opened") {
-                element.attr({"class" : "closed"});
-            }
-            else {
-                element.siblings("[class]").attr( { "class": "closed" }).children(".description").hide("fast");
-                element.attr({"class" : "opened"});
-            }
-        });
-    });
+    $(".spinner").hide();
+    $("app").fadeIn(200);
+
     $(".pop-up-form .close, .pop-up-bg").click(function () {
-        $(".pop-up-form").animate({"top": "-100vh"}, 300, function() { // .pop-up-form
-            $(".pop-up-bg").animate({"opacity" : 0}, 100, function() { // .pop-up-bg
-                $(".pop-up-bg").css({"display" : "none"}); // .pop-up-bg
-                $(".pop-up-form").css({"top" : "100vh"}); // .pop-up-form
+        $(".pop-up-form").animate({"top": "-100vh"}, 300, function() {
+            $(".pop-up-bg").animate({"opacity" : 0}, 100, function() {
+                $(".pop-up-bg").css({"display" : "none"});
+                $(".pop-up-form").css({"top" : "100vh"});
             });
         })
     });
@@ -222,6 +219,11 @@ function loadStylesMenu() {
                 success: function (data) {
                     var tmpl = _.template(html_file);
                     $(".styles .left-side menu").empty().append(tmpl({"stylesItems" : data })).hide().fadeIn();
+                    $(".styles .left-side menu li:first-child").addClass("current");
+                    $(".styles .left-side menu li").click(function () {
+                        $(this).siblings("[class]").removeClass("current");
+                        $(this).addClass("current");
+                    });
                 }
             });
         }
@@ -238,7 +240,6 @@ function loadStylesImages(section) {
                 url: 'js/api/styles.json',
                 success: function (data) {
                     var tmpl = _.template(html_file);
-                    // console.log(data[section]);
                     if(!section) section = Object.keys(data)[0];
 
                     $(".styles .right-side").empty().append(tmpl({"images" : data[section] })).hide().fadeIn();
@@ -246,4 +247,70 @@ function loadStylesImages(section) {
             });
         }
     })
+}
+
+function loadAdvantages() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/api/advantages.json',
+        success: function (data) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/templates/advantages.html',
+                success: function (html_file) {
+                    var tmpl = _.template(html_file);
+                    var newData = data.advantages.slice(currentPageOfAdvantages * 7, currentPageOfAdvantages * 7 + 7);
+                    countPagesOfAdvantages = Math.ceil(data.advantages.length / 7);
+                    $(".advantages .grid").remove();
+                    $(".advantages .line").after(tmpl({ "advantages" : newData}));
+                }
+            });
+        }
+    });
+}
+
+function nextAdvantagePage() {
+    if(currentPageOfAdvantages == countPagesOfAdvantages - 1 ) currentPageOfAdvantages = 0;
+    else currentPageOfAdvantages++;
+
+    loadAdvantages();
+}
+
+function prevAdvantagePage() {
+    if(currentPageOfAdvantages == 0 ) currentPageOfAdvantages = countPagesOfAdvantages - 1;
+    else currentPageOfAdvantages--;
+
+    loadAdvantages();
+}
+
+function loadCities() {
+    console.log("KO1");
+    $.ajax({
+        type: 'GET',
+        url: 'js/api/cities.json',
+        success: function (data) {
+            $.ajax({
+                type: 'GET',
+                url: 'js/templates/cities.html',
+                success: function (html_file) {
+                    var tmpl = _.template(html_file);
+                    $("footer .right-side").prepend(tmpl(data));
+
+                    $("footer menu li").click(function () {
+                        var element = $(this);
+                        $(this).children(".description").toggle("fast", function () {
+                            // TODO: Add rotate arrow
+                            if(element.attr("class") == "opened") {
+                                element.attr({"class" : "closed"});
+                            }
+                            else {
+                                element.siblings("[class]").attr( { "class": "closed" }).children(".description").hide("fast");
+                                element.attr({"class" : "opened"});
+                            }
+                        });
+                    });
+                }
+            })
+        }
+    });
 }

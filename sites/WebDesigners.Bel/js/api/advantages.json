@@ -1,0 +1,75 @@
+{
+  "advantages" :
+  [
+    {
+      "title" : "Самые быстрые и качественные проекты",
+      "icon": "img/icons/speed.png",
+      "category" : "speed"
+    },
+    {
+      "title" : "Готовые проекты более 1000",
+      "icon" : "img/icons/city.png",
+      "category" : "projects"
+    },
+    {
+      "title" : "Консультация  обслуживание 24 часа в сутки",
+      "icon" : "img/icons/phone.png",
+      "category" : "consultation"
+    },
+    {
+      "title" : "Узкая специализация дизайнеров - каждый работает в своём стиле",
+      "icon" : "img/icons/lamp.png",
+      "category" : "spetialization"
+    },
+    {
+      "title" : "Дизайн, который экономит время, создаёт комфорт и образ жизни",
+      "icon" : "img/icons/clock.png",
+      "category" : "design"
+    },
+    {
+      "title" : "Мы рекомендуем только самые лучшие материалы в мире",
+      "icon" : "img/icons/small-diamond.png",
+      "category" : "materials"
+    },
+    {
+      "title" : "Следим за новостями всего мира",
+      "icon" : "img/icons/files.png",
+      "category" : "news"
+    },
+    {
+      "title" : "Следим за новостями всего мира",
+      "icon" : "img/icons/files.png",
+      "category" : "news"
+    },
+    {
+      "title" : "Мы рекомендуем только самые лучшие материалы в мире",
+      "icon" : "img/icons/small-diamond.png",
+      "category" : "materials"
+    },
+    {
+      "title" : "Дизайн, который экономит время, создаёт комфорт и образ жизни",
+      "icon" : "img/icons/clock.png",
+      "category" : "design"
+    },
+    {
+      "title" : "Узкая специализация дизайнеров - каждый работает в своём стиле",
+      "icon" : "img/icons/lamp.png",
+      "category" : "spetialization"
+    },
+    {
+      "title" : "Консультация  обслуживание 24 часа в сутки",
+      "icon" : "img/icons/phone.png",
+      "category" : "consultation"
+    },
+    {
+      "title" : "Готовые проекты более 1000",
+      "icon" : "img/icons/city.png",
+      "category" : "projects"
+    },
+    {
+      "title" : "Самые быстрые и качественные проекты",
+      "icon": "img/icons/speed.png",
+      "category" : "speed"
+    }
+  ]
+}

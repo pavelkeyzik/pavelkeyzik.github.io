@@ -1,0 +1,26 @@
+<div class="grid">
+    <div class="row">
+        <%
+        _.forIn(advantages, function(value, key) {
+            if(key == 4 && advantages.length == 7) {
+        %>
+        <div class="arrows">
+            <img src="img/icons/arrow-left-dark.png" alt="<" onclick="prevAdvantagePage()">
+            <img src="img/icons/arrow-right-dark.png" alt=">" onclick="nextAdvantagePage()">
+        </div>
+        <% } %>
+        <div class="item" onclick="loadData('<%- value.category %>')">
+            <div class="img">
+                <img src="<%- value.icon %>" alt="Скорость">
+            </div>
+            <div class="desc"><%- value.title %></div>
+        </div>
+        <% if((key == advantages.length - 1) && (advantages.length < 7)) { %>
+        <div class="arrows">
+            <img src="img/icons/arrow-left-dark.png" alt="<" onclick="prevAdvantagePage()">
+            <img src="img/icons/arrow-right-dark.png" alt=">" onclick="nextAdvantagePage()">
+        </div>
+        <% } %>
+        <% }); %>
+    </div>
+</div>

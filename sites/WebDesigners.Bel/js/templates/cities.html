@@ -1,0 +1,12 @@
+<menu>
+    <% _.forIn(cities, function(value, key) {
+        if(value.description) {
+    %>
+        <li class="closed">
+            <%- value.name %>
+            <div class="description"><%= value.description %></div>
+        </li>
+    <% } else { %>
+        <li><%- value.name %></li>
+    <% } }); %>
+</menu>

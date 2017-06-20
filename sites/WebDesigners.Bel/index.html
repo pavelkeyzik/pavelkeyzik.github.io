@@ -10,348 +10,288 @@
     <!-- TODO: Check all alt="" in HTML -->
 </head>
 <body>
-    <div class="pop-up-bg">
-        <div class="pop-up-form">
-            <div class="close">
-                <!-- FIXME: Change icon-->
-                X
-            </div>
-            <div class="title">Внесите свои данные</div>
-            <form>
-                <div class="row">
-                    <label for="country">Страна</label>
-                    <select name="country" id="country">
-                        <option value="1">Беларусь</option>
-                        <option value="2">Россия</option>
-                        <option value="3">Украина</option>
-                    </select>
-                </div>
-                <div class="row">
-                    <label for="city">Город</label>
-                    <select name="city" id="city">
-                        <option value="1">Минск</option>
-                        <option value="2">Борисов</option>
-                        <option value="3">Солигорск</option>
-                    </select>
-                </div>
-                <div class="row">
-                    <label for="title">Название</label>
-                    <input type="text" id="title">
-                </div>
-                <div class="row">
-                    <label for="site">Сайт</label>
-                    <input type="text" id="site">
-                </div>
-                <div class="row">
-                    <label for="mobile">Телефон</label>
-                    <input type="text" id="mobile">
-                </div>
-                <div class="row">
-                    <label for="photos">Фотографии</label>
-                    <input type="text" id="photos">
-                </div>
-                <button class="button-dark">Добавить</button>
-            </form>
-        </div>
+    <div class="spinner">
+        <img src="img/icons/spinner.gif" alt="Loading...">
     </div>
-    <header>
-        <div class="square square-1"></div>
-        <div class="square square-2"></div>
-        <div class="square square-3"></div>
-        <nav-wrap>
-            <nav>
-                <a href="#">Главная</a>
-                <a href="#">Графический дизайн</a>
-                <a href="#">Веб-дизайн</a>
-                <a href="#">Ландшафтный дизайн</a>
-                <a href="#">Дизайн интерьера</a>
-            </nav>
-        </nav-wrap>
-        <div class="info">
-            <!-- TODO: Animation squares... -->
-            <div class="logo">
-                <img src="img/icons/logo.png" alt="D">
-                <div class="logo-description">Студии дизайна Республики Беларусь</div>
+    <app>
+        <div class="pop-up-bg">
+            <div class="pop-up-form">
+                <div class="close">
+                    <!-- FIXME: Change icon-->
+                    X
+                </div>
+                <div class="title">Внесите свои данные</div>
+                <form>
+                    <div class="row">
+                        <label for="country">Страна</label>
+                        <select name="country" id="country">
+                            <option value="1">Беларусь</option>
+                            <option value="2">Россия</option>
+                            <option value="3">Украина</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="1">Минск</option>
+                            <option value="2">Борисов</option>
+                            <option value="3">Солигорск</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="title">Название</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="row">
+                        <label for="site">Сайт</label>
+                        <input type="text" id="site">
+                    </div>
+                    <div class="row">
+                        <label for="mobile">Телефон</label>
+                        <input type="text" id="mobile">
+                    </div>
+                    <div class="row">
+                        <label for="photos">Фотографии</label>
+                        <input type="text" id="photos">
+                    </div>
+                    <button class="button-dark">Добавить</button>
+                </form>
             </div>
-            <div class="title">Дизайн интерьера</div>
-            <a href="#" class="button-white">Выбрать</a>
         </div>
-    </header>
-    <div class="projects">
-        <div class="wrap">
-            <div class="grid">
-                <div class="grid-row">
-                    <div class="col-2">
-                        <div class="info">
-                            <div>
-                                <div class="title">Проекты</div>
-                                <div class="description">Наши дизайнеры профессионалы своего дела</div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="arrows">
-                                <img src="img/icons/arrow-left.png" alt="<" onclick="prevProjectPage()">
-                                <img src="img/icons/arrow-right.png" alt=">" onclick="nextProjectPage()">
+        <header>
+            <div class="square square-1"></div>
+            <div class="square square-2"></div>
+            <div class="square square-3"></div>
+            <nav-wrap>
+                <nav>
+                    <a href="#">Главная</a>
+                    <a href="#">Графический дизайн</a>
+                    <a href="#">Веб-дизайн</a>
+                    <a href="#">Ландшафтный дизайн</a>
+                    <a href="#">Дизайн интерьера</a>
+                </nav>
+            </nav-wrap>
+            <div class="info">
+                <!-- TODO: Animation squares... -->
+                <div class="logo">
+                    <img src="img/icons/logo.png" alt="D">
+                    <div class="logo-description">Студии дизайна Республики Беларусь</div>
+                </div>
+                <div class="title">Дизайн интерьера</div>
+                <a href="#" class="button-white">Выбрать</a>
+            </div>
+        </header>
+        <div class="projects">
+            <div class="wrap">
+                <div class="grid">
+                    <div class="grid-row">
+                        <div class="col-2">
+                            <div class="info">
+                                <div>
+                                    <div class="title">Проекты</div>
+                                    <div class="description">Наши дизайнеры профессионалы своего дела</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="arrows">
+                                    <img src="img/icons/arrow-left.png" alt="<" onclick="prevProjectPage()">
+                                    <img src="img/icons/arrow-right.png" alt=">" onclick="nextProjectPage()">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="add" onclick="togglePopUp('.pop-up-form')">
-                        <img src="img/icons/add.png" alt="Добавить">
+                        <div class="add" onclick="togglePopUp('.pop-up-form')">
+                            <img src="img/icons/add.png" alt="Добавить">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--<div class="grid">-->
-                <!--<div class="grid-row">-->
-                    <!--<div class="col-2">-->
-                        <!--<div class="info">-->
-                            <!--<div>-->
-                                <!--<div class="title">Проекты</div>-->
-                                <!--<div class="description">Наши дизайнеры профессионалы своего дела</div>-->
-                                <!--<div class="line"></div>-->
-                            <!--</div>-->
-                            <!--<div class="arrows">-->
-                                <!--<img src="img/icons/arrow-left.png" alt="<">-->
-                                <!--<img src="img/icons/arrow-right.png" alt=">">-->
+                <!--<div class="grid">-->
+                    <!--<div class="grid-row">-->
+                        <!--<div class="col-2">-->
+                            <!--<div class="info">-->
+                                <!--<div>-->
+                                    <!--<div class="title">Проекты</div>-->
+                                    <!--<div class="description">Наши дизайнеры профессионалы своего дела</div>-->
+                                    <!--<div class="line"></div>-->
+                                <!--</div>-->
+                                <!--<div class="arrows">-->
+                                    <!--<img src="img/icons/arrow-left.png" alt="<">-->
+                                    <!--<img src="img/icons/arrow-right.png" alt=">">-->
+                                <!--</div>-->
                             <!--</div>-->
                         <!--</div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-1.jpg" alt="Первый проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 1</div>-->
+                                    <!--<div class="project-description">Борисов</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-2.jpg" alt="Второй проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 2</div>-->
+                                    <!--<div class="project-description">Могилев</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1"></div>-->
                     <!--</div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-1.jpg" alt="Первый проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 1</div>-->
-                                <!--<div class="project-description">Борисов</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
+                    <!--<div class="grid-row">-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-3.jpg" alt="Третий проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 3</div>-->
+                                    <!--<div class="project-description">Полоцк</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-4.jpg" alt="Четвертый проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 4</div>-->
+                                    <!--<div class="project-description">Гродно</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-5.jpg" alt="Пятый проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 5</div>-->
+                                    <!--<div class="project-description">Солигорск</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1"></div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-6.jpg" alt="Шестой проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 6</div>-->
+                                    <!--<div class="project-description">Гомель</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
                     <!--</div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-2.jpg" alt="Второй проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 2</div>-->
-                                <!--<div class="project-description">Могилев</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
+                    <!--<div class="grid-row">-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-7.jpg" alt="Седьмой проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 7</div>-->
+                                    <!--<div class="project-description">Витебск</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1"></div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-8.jpg" alt="Восьмой проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 8</div>-->
+                                    <!--<div class="project-description">Борисов</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="col-1">-->
+                            <!--<a href="#">-->
+                                <!--<div class="image">-->
+                                    <!--<img src="img/projects/project-9.jpg" alt="Девятый проект">-->
+                                <!--</div>-->
+                                <!--<div class="info">-->
+                                    <!--<div class="project-title">Проект 9</div>-->
+                                    <!--<div class="project-description">Борисов</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="add" onclick="togglePopUp('.pop-up-form')">-->
+                            <!--<img src="img/icons/add.png" alt="Добавить">-->
+                        <!--</div>-->
                     <!--</div>-->
-                    <!--<div class="col-1"></div>-->
                 <!--</div>-->
-                <!--<div class="grid-row">-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-3.jpg" alt="Третий проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 3</div>-->
-                                <!--<div class="project-description">Полоцк</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-4.jpg" alt="Четвертый проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 4</div>-->
-                                <!--<div class="project-description">Гродно</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-5.jpg" alt="Пятый проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 5</div>-->
-                                <!--<div class="project-description">Солигорск</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="col-1"></div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-6.jpg" alt="Шестой проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 6</div>-->
-                                <!--<div class="project-description">Гомель</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="grid-row">-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-7.jpg" alt="Седьмой проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 7</div>-->
-                                <!--<div class="project-description">Витебск</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="col-1"></div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-8.jpg" alt="Восьмой проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 8</div>-->
-                                <!--<div class="project-description">Борисов</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="col-1">-->
-                        <!--<a href="#">-->
-                            <!--<div class="image">-->
-                                <!--<img src="img/projects/project-9.jpg" alt="Девятый проект">-->
-                            <!--</div>-->
-                            <!--<div class="info">-->
-                                <!--<div class="project-title">Проект 9</div>-->
-                                <!--<div class="project-description">Борисов</div>-->
-                            <!--</div>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="add" onclick="togglePopUp('.pop-up-form')">-->
-                        <!--<img src="img/icons/add.png" alt="Добавить">-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-    </div>
-    <div class="best-works">
-        <div class="top">
-            <div class="title">Лучшие работы</div>
-            <div class="description">Наши дизайнеры профессионалы своего дела</div>
-            <div class="line"></div>
-        </div>
-        <div class="wrap"></div>
-    </div>
-    <div class="advantages">
-        <div class="wrap">
-            <div class="title">Преимущества</div>
-            <div class="description">Наши дизайнеры профессионалы своего дела</div>
-            <div class="line"></div>
-            <div class="grid">
-                <div class="row">
-                    <div class="item">
-                        <div class="img">
-                            <img src="img/icons/speed.png" alt="Скорость">
-                        </div>
-                        <div class="desc">Самые быстрые и качественные проекты</div>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="img/icons/city.png" alt="Готовые проекты">
-                        </div>
-                        <div class="desc">Готовые проекты более 1000</div>
-                    </div>
-                    <div class="item" onclick="loadData('consultation')">
-                        <div class="img">
-                            <img src="img/icons/phone.png" alt="Телефонные звони">
-                        </div>
-                        <div class="desc">Консультация и обслуживание 24 часа в сутки</div>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="img/icons/lamp.png" alt="Идеи">
-                        </div>
-                        <div class="desc">Узкая специализация дизайнеров - каждый работает в своём стиле</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="arrows">
-                        <img src="img/icons/arrow-left-dark.png" alt="<">
-                        <img src="img/icons/arrow-right-dark.png" alt=">">
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="img/icons/clock.png" alt="Экономия">
-                        </div>
-                        <div class="desc">Дизайн, который экономит время, создаёт комфорт и образ жизни</div>
-                    </div>
-                    <div class="item" onclick="loadData('materials')">
-                        <div class="img">
-                            <img src="img/icons/small-diamond.png" alt="Лучший материал">
-                        </div>
-                        <div class="desc">Мы рекомендуем только самые лучшие материалы в мире</div>
-                    </div>
-                    <div class="item" onclick="loadData('news')">
-                        <div class="img">
-                            <img src="img/icons/files.png" alt="Новости">
-                        </div>
-                        <div class="desc">Следим за новостями всего мира</div>
-                    </div>
-                </div>
             </div>
-            <div class="content"></div>
         </div>
-    </div>
-    <div class="free-consultation">
-        <div class="title">Бесплатная консультация</div>
-        <div class="line"></div>
-        <a class="button-white" onclick="freeConsult()">Получить</a>
-    </div>
-    <div class="styles">
-        <div class="wrap">
-            <div class="left-side">
-                <div class="title">Стили</div>
+        <div class="best-works">
+            <div class="top">
+                <div class="title">Лучшие работы</div>
                 <div class="description">Наши дизайнеры профессионалы своего дела</div>
                 <div class="line"></div>
-                <menu></menu>
             </div>
-            <div class="right-side"></div>
+            <div class="wrap"></div>
         </div>
-    </div>
-    <footer>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150222.09383780422!2d27.661514719726558!3d53.96335703934027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1497045554003" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-        <div class="right-side">
-            <menu>
-                <li>Брест</li>
-                <li>Гродно</li>
-                <li>Могилёв </li>
-                <li class="closed">
-                    Борисов
-                    <div class="description">Студия-интерьера "Флис"<br>ул. Наваторов 7<br>+375 29 7896756<br><a href="http://filis.by">www.filis.by</a></div>
-                </li>
-                <li>Витебск</li>
-                <li>Солигорск</li>
-                <li>Гомель</li>
-                <li>Пинск</li>
-            </menu>
-            <div class="bottom">
-                <div class="search">
-                    <form autocomplete="off">
-                        <input type="text" placeholder="Найти">
-                        <button>
-                            <img src="img/icons/loupe.png" alt="⌕">
-                        </button>
-                    </form>
-                </div>
-                <div class="social">
-                    <a href="#">
-                        <img src="img/icons/vk.png" alt="Вконтакте">
-                    </a>
-                    <a href="#">
-                        <img src="img/icons/facebook.png" alt="FaceBook">
-                    </a>
-                </div>
-                <div class="copyright">Copyright &copy; 2016 EHRN</div>
+        <div class="advantages">
+            <div class="wrap">
+                <div class="title">Преимущества</div>
+                <div class="description">Наши дизайнеры профессионалы своего дела</div>
+                <div class="line"></div>
+                <div class="content"></div>
             </div>
         </div>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/lodash.min.js"></script>
-    <script src="js/script.js"></script>
+        <div class="free-consultation">
+            <div class="title">Бесплатная консультация</div>
+            <div class="line"></div>
+            <a class="button-white" onclick="freeConsult()">Получить</a>
+        </div>
+        <div class="styles">
+            <div class="wrap">
+                <div class="left-side">
+                    <div class="title">Стили</div>
+                    <div class="description">Наши дизайнеры профессионалы своего дела</div>
+                    <div class="line"></div>
+                    <menu></menu>
+                </div>
+                <div class="right-side"></div>
+            </div>
+        </div>
+        <footer>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150222.09383780422!2d27.661514719726558!3d53.96335703934027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1497045554003" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="right-side">
+                <div class="bottom">
+                    <div class="search">
+                        <form autocomplete="off">
+                            <input type="text" placeholder="Найти">
+                            <button>
+                                <img src="img/icons/loupe.png" alt="⌕">
+                            </button>
+                        </form>
+                    </div>
+                    <div class="social">
+                        <a href="#">
+                            <img src="img/icons/vk.png" alt="Вконтакте">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/facebook.png" alt="FaceBook">
+                        </a>
+                    </div>
+                    <div class="copyright">Copyright &copy; 2016 EHRN</div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/lodash.min.js"></script>
+        <script src="js/script.js"></script>
+    </app>
 </body>
 </html>
