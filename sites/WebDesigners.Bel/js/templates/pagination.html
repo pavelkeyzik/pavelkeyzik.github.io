@@ -1,0 +1,13 @@
+<% if(data.currentPage > 0) { %>
+<a class="arrow-left" onclick="loadData('news', '<%= Number(data.currentPage)-1 %>')"><</a>
+<span>...</span>
+<% } else { %>
+<span class="arrow-left"><</span>
+<% } %>
+<a class="current-page"><%- data.currentPage + 1 %></a>
+<% if(data.currentPage < data.countOfPages - 1) { %>
+<span>...</span>
+<a class="arrow-right" onclick="loadData('news', '<%= Number(data.currentPage)+1 %>')">></a>
+<% } else { %>
+<span class="arrow-right">></span>
+<% } %>

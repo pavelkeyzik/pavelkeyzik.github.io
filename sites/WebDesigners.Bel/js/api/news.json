@@ -1,6 +1,38 @@
 {
-  "articles" :
+  "news" :
   [
+    {
+      "id" : 7,
+      "title": "Новая статья",
+      "description": "Описание новой статьи",
+      "category": "Прочее",
+      "date": "22 июня 2017, 14:39",
+      "image_link": "img/news/dub_10.jpg"
+    },
+    {
+      "id" : 6,
+      "title": "Лофт 'по-украински'",
+      "description": "Описание статьи",
+      "category": "Интерьеры",
+      "date": "30 июня 2016, 12:02",
+      "image_link": "img/news/9320225.jpg"
+    },
+    {
+      "id" : 5,
+      "title" : "Дизайн интерьера деревянного дома Energy-Systems",
+      "description": "Описание статьи 2",
+      "category": "Пресс-релизы",
+      "date": "60 июня 2017, 25:62",
+      "image_link": "img/news/dub_10.jpg"
+    },
+    {
+      "id" : 4,
+      "title": "Новая статья",
+      "description": "Описание новой статьи",
+      "category": "Прочее",
+      "date": "22 июня 2017, 14:39",
+      "image_link": "img/news/dub_10.jpg"
+    },
     {
       "id" : 3,
       "title": "Лофт 'по-украински'",

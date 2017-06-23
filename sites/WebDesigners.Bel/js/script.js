@@ -11,6 +11,10 @@ var countPagesOfWorks = 0;
 var currentPageOfAdvantages = 0;
 var countPagesOfAdvantages = 0;
 
+var currentPageOfNews = 0;
+var countPagesOfNews = 0;
+var maxCountOfNewsOnPage = 2;
+
 $(document).ready(function () {
     loadProjects();
     loadBestWorks();
@@ -40,7 +44,7 @@ function togglePopUp(windowName) {
 }
 
 // FIXME: RemoveMe and change all popUp windows to AJAX requests
-function loadData(category) {
+function loadData(category, page) {
     if(oldCategory != category) {
         oldCategory = category;
         var content = $(".advantages .wrap .content");
@@ -53,18 +57,29 @@ function loadData(category) {
                     $.ajax({
                         type: 'GET',
                         url: 'js/api/' + category + '.json',
-                        dataType: 'json',
-                        timeout: 10000,
-                        beforeSend: function () {
-                            content.empty().append("ЗАГРУЗКА....");
-                        },
                         success: function (data) {
+
+                            var newData, paginationShow;
+
+                            if(category == 'news') {
+                                if(page == undefined) currentPageOfNews = 0;
+                                else {
+                                    currentPageOfNews = Number(page);
+                                }
+                                oldCategory = '';
+
+                                if(data.news.length > maxCountOfNewsOnPage) paginationShow = true;
+                                countPagesOfNews = Math.ceil(data.news.length / maxCountOfNewsOnPage);
+                                newData = { "articles" : data.news.splice(currentPageOfNews * maxCountOfNewsOnPage, maxCountOfNewsOnPage)};
+                            }
+                            else
+                                newData = data;
+
                             var tmpl = _.template(html_file);
-                            content.empty().append( tmpl(data) ).slideDown(200);
-                        },
-                        error: function () {
-                            var tmpl = _.template(html_file);
-                            content.empty().append( tmpl ).slideDown(200);
+                            content.empty().append("<div class='close' onclick='closeContent()'>CLOSE</div>").append( tmpl(newData) ).slideDown(200);
+
+                            if(paginationShow)
+                                showPagination(currentPageOfNews);
                         }
                     });
                 }
@@ -75,6 +90,7 @@ function loadData(category) {
 
 function viewArticle(articleId) {
     // FIXME Change OldCategory
+    oldCategory = '';
     var content = $(".advantages .wrap .content");
 
     content.slideUp(200, function () {
@@ -86,13 +102,33 @@ function viewArticle(articleId) {
                     type: 'GET',
                     url: 'js/templates/article.html',
                     success: function (html_file) {
-                        // alert(JSON.stringify(data[articleId].title));
                         var tmpl = _.template(html_file);
-                        content.empty().append(tmpl(data[articleId])).slideDown(200);
+                        var newObject = data[articleId];
+
+                        newObject['currentPageOfNews'] = currentPageOfNews;
+
+                        content.empty().append(tmpl(newObject)).slideDown(200);
                     }
                 });
             }
         });
+    });
+}
+
+function showPagination(page) {
+    $.ajax({
+        url: 'js/templates/pagination.html',
+        type: 'GET',
+        success: function (html_file) {
+            if(!page) currentPageOfNews = 0;
+                else currentPageOfNews = page;
+            var tmpl = _.template(html_file);
+            var data = {
+                "currentPage" : currentPageOfNews,
+                "countOfPages" : countPagesOfNews
+            };
+            $(".news .pagination").empty().append(tmpl({"data" : data }));
+        }
     });
 }
 
@@ -148,6 +184,12 @@ function prevImage() {
 
 function closeWindow(window) {
     $(window).fadeOut(100);
+}
+
+function closeContent() {
+    $(".advantages .content").slideUp(function () {
+      $(this).empty();
+    });
 }
 
 function nextProjectPage() {
@@ -284,7 +326,6 @@ function prevAdvantagePage() {
 }
 
 function loadCities() {
-    console.log("KO1");
     $.ajax({
         type: 'GET',
         url: 'js/api/cities.json',
