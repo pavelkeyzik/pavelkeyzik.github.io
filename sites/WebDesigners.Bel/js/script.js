@@ -355,3 +355,16 @@ function loadCities() {
         }
     });
 }
+
+function toggleMenu() {
+    var state = $(".mobile ul").css("display");
+    if($(".mobile ul").css("display") == "none") {
+        $(".mobile ul").css({"display" : "flex"});
+        $(".mobile ul").animate({"right" : "0"}, 200);
+    }
+    else {
+        $(".mobile ul").animate({"right" : "-100%"}, 200, function() {
+            $(".mobile ul").css({"display" : "none"});
+        });
+    }
+}

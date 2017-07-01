@@ -87,6 +87,8 @@ body {
     font-family: Aria-Bold;
   }
   .wrap {
+    display: flex;
+    flex-display: column;
     width: 932px;
     margin: 0 auto;
   }
@@ -280,8 +282,12 @@ body {
       justify-content: center;
       position: absolute;
       top: 20px;
+      left: 0;
       width: 100%;
-      nav {
+      nav.mobile {
+        display: none;
+      }
+      nav.desktop {
         width: 932px;
         background: rgba(0, 0, 0, 0.7);
         display: flex;
@@ -478,6 +484,10 @@ body {
       padding: 0;
       right: 0;
       bottom: 0;
+      width: 60%;
+      img {
+        max-width: 100%;
+      }
     }
   }
   .advantages {
@@ -498,11 +508,13 @@ body {
       }
       .grid {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         margin-top: 60px;
+        width: 100%;
         .row {
           display: flex;
-          //justify-content: space-between;
+          width: 100%;
           flex-wrap: wrap;
         }
         .item, .arrows {
@@ -543,9 +555,9 @@ body {
         }
       }
       .content {
+        flex-wrap: wrap;
         display: none;
         position: relative;
-        border: 1px solid red;
         &:after {
           position: absolute;
           right: 0;
@@ -692,8 +704,9 @@ body {
                 margin-bottom: 16px;
               }
               &.current {
-                list-style: disc;
-                margin-left: 15px;
+                //list-style: disc;
+                //padding-left: 15px;
+                font-weight: bold;
               }
               a {
                 color: @grey;
@@ -868,6 +881,130 @@ body {
         .copyright {
           color: #fff;
           font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    .wrap {
+      width: 100%;
+    }
+    header {
+      nav-wrap {
+        display: flex;
+        justify-content: flex-end;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0;
+        nav.mobile {
+          display: flex;
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 25px;
+            height: 45px;
+            color: #fff;
+            cursor: pointer;
+          }
+          ul {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            padding: 0;
+            right: -100%;
+            z-index: 9;
+            top: -16px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            height: 100%;
+            span {
+              display: flex;
+              justify-content: flex-end;
+              color: #333;
+            }
+            a {
+              padding: 10px 25px;
+              color: #333;
+              &:hover {
+                background: #f2f2f2;
+              }
+            }
+          }
+        }
+        nav.desktop {
+          display: none;
+        }
+      }
+    }
+    .advantages {
+    }
+    .best-works {
+    }
+    .styles {
+      .wrap {
+        flex-direction: column;
+        align-items: center;
+        .left-side,
+        .right-side {
+          width: 90%;
+          margin: 0;
+        }
+        .right-side .images {
+            justify-content: center;
+        }
+        .title,
+        .description,
+        .line {
+          align-items: flex-start;
+        }
+        menu {
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              flex-basis: 25%;
+              height: 45px;
+              display: flex;
+              //border: 1px solid green;
+              a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                &:hover {
+                  margin-right: 5px;
+                }
+              }
+              &.current {
+                background: #f2f2f2;
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 20px;
+      .right-side {
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        menu {
+          margin: 20px 0;
+        }
+        .bottom {
+          margin: 0;
+          text-align: center;
+          .search input {
+            width: 100%;
+          }
         }
       }
     }

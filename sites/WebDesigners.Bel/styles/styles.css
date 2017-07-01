@@ -73,6 +73,8 @@ body .title {
   font-family: Aria-Bold;
 }
 body .wrap {
+  display: flex;
+  flex-display: column;
   width: 932px;
   margin: 0 auto;
 }
@@ -283,9 +285,13 @@ body header nav-wrap {
   justify-content: center;
   position: absolute;
   top: 20px;
+  left: 0;
   width: 100%;
 }
-body header nav-wrap nav {
+body header nav-wrap nav.mobile {
+  display: none;
+}
+body header nav-wrap nav.desktop {
   width: 932px;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -293,7 +299,7 @@ body header nav-wrap nav {
   text-transform: uppercase;
   margin: 0 auto;
 }
-body header nav-wrap nav a {
+body header nav-wrap nav.desktop a {
   color: #fff;
   text-decoration: none;
   display: flex;
@@ -487,6 +493,10 @@ body .best-works .image {
   padding: 0;
   right: 0;
   bottom: 0;
+  width: 60%;
+}
+body .best-works .image img {
+  max-width: 100%;
 }
 body .advantages .wrap {
   display: flex;
@@ -510,11 +520,14 @@ body .advantages .wrap .line {
 }
 body .advantages .wrap .grid {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-top: 60px;
+  width: 100%;
 }
 body .advantages .wrap .grid .row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
 }
 body .advantages .wrap .grid .item,
@@ -555,9 +568,9 @@ body .advantages .wrap .grid .item .desc {
   text-align: center;
 }
 body .advantages .wrap .content {
+  flex-wrap: wrap;
   display: none;
   position: relative;
-  border: 1px solid red;
 }
 body .advantages .wrap .content:after {
   position: absolute;
@@ -717,8 +730,7 @@ body .styles .wrap .left-side menu ul li:not(:last-child) {
   margin-bottom: 16px;
 }
 body .styles .wrap .left-side menu ul li.current {
-  list-style: disc;
-  margin-left: 15px;
+  font-weight: bold;
 }
 body .styles .wrap .left-side menu ul li a {
   color: #4d4d49;
@@ -878,4 +890,114 @@ body footer .right-side .bottom .social a {
 body footer .right-side .bottom .copyright {
   color: #fff;
   font-size: 11px;
+}
+@media screen and (max-width: 980px) {
+  body .wrap {
+    width: 100%;
+  }
+  body header nav-wrap {
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+  }
+  body header nav-wrap nav.mobile {
+    display: flex;
+  }
+  body header nav-wrap nav.mobile span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    height: 45px;
+    color: #fff;
+    cursor: pointer;
+  }
+  body header nav-wrap nav.mobile ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    padding: 0;
+    right: -100%;
+    z-index: 9;
+    top: -16px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+  }
+  body header nav-wrap nav.mobile ul span {
+    display: flex;
+    justify-content: flex-end;
+    color: #333;
+  }
+  body header nav-wrap nav.mobile ul a {
+    padding: 10px 25px;
+    color: #333;
+  }
+  body header nav-wrap nav.mobile ul a:hover {
+    background: #f2f2f2;
+  }
+  body header nav-wrap nav.desktop {
+    display: none;
+  }
+  body .styles .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .styles .wrap .left-side,
+  body .styles .wrap .right-side {
+    width: 90%;
+    margin: 0;
+  }
+  body .styles .wrap .right-side .images {
+    justify-content: center;
+  }
+  body .styles .wrap .title,
+  body .styles .wrap .description,
+  body .styles .wrap .line {
+    align-items: flex-start;
+  }
+  body .styles .wrap menu ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .styles .wrap menu ul li {
+    flex-basis: 25%;
+    height: 45px;
+    display: flex;
+  }
+  body .styles .wrap menu ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  body .styles .wrap menu ul li a:hover {
+    margin-right: 5px;
+  }
+  body .styles .wrap menu ul li.current {
+    background: #f2f2f2;
+  }
+  body footer {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  body footer .right-side {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+  }
+  body footer .right-side menu {
+    margin: 20px 0;
+  }
+  body footer .right-side .bottom {
+    margin: 0;
+    text-align: center;
+  }
+  body footer .right-side .bottom .search input {
+    width: 100%;
+  }
 }
