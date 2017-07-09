@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(".spinner").hide();
     $("app").fadeIn(200);
 
-    $(".pop-up-form .close, .pop-up-bg").click(function () {
+    $(".pop-up-form .close").click(function () {
         $(".pop-up-form").animate({"top": "-100vh"}, 300, function() {
             $(".pop-up-bg").animate({"opacity" : 0}, 100, function() {
                 $(".pop-up-bg").css({"display" : "none"});
@@ -343,10 +343,13 @@ function loadCities() {
                             // TODO: Add rotate arrow
                             if(element.attr("class") == "opened") {
                                 element.attr({"class" : "closed"});
+                                element.children("img").replaceWith("<img src='img/icons/sub-closed.png' alt='▶'>");
                             }
                             else {
                                 element.siblings("[class]").attr( { "class": "closed" }).children(".description").hide("fast");
+                                element.siblings("[class]").attr( { "class": "closed" }).children("img").replaceWith("<img src='img/icons/sub-closed.png' alt='▶'>")
                                 element.attr({"class" : "opened"});
+                                element.children("img").replaceWith("<img src='img/icons/sub-opened.png' alt='▼'>");
                             }
                         });
                     });

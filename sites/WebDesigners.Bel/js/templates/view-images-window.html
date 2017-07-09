@@ -1,9 +1,14 @@
 <div class="view-images-window-bg">
     <div class="view-images-window">
-        <div class="close" onclick="closeWindow('.view-images-window-bg')">x</div>
+        <div class="close" onclick="closeWindow('.view-images-window-bg')">
+            <img src="img/icons/close.png" alt="X">
+        </div>
         <% if (images.length > 1) { %>
-        <div class="arrow left" onclick="prevImage()"><</div>
-        <div class="arrow right" onclick="nextImage()">></div>
+        <div class="arrow left" onclick="prevImage()">
+            <img src="img/icons/arrow-left-slider.png" alt="<">
+        </div>
+        <div class="arrow right" onclick="nextImage()">
+            <img src="img/icons/arrow-right-slider.png" alt="<"></div>
         <% } %>
         <div class="img">
             <img src="<%- images[0] %>">

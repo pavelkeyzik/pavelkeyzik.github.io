@@ -51,7 +51,7 @@
 * {
   box-sizing: border-box;
   outline: none;
-  //border: 1px solid red;
+  // border: 1px solid red;
 }
 
 img {
@@ -77,9 +77,11 @@ body {
   }
   .button-white {
     .button(@grey, #fff);
+    cursor: pointer;
   }
   .button-dark {
     .button(#fff, @dark-grey);
+    cursor: pointer;    
   }
   .title {
     text-transform: uppercase;
@@ -97,7 +99,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 90;
     width: 100%;
     height: 100vh;
@@ -115,12 +117,14 @@ body {
       top: 100vh;
       .close {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: -23px;
+        top: -23px;
         cursor: pointer;
       }
       .title {
-        margin-bottom: 20px;
+        font-size: 24px;
+        color: #4d4d49;
+        margin: 0 auto 30px;
       }
       form {
         .row {
@@ -129,17 +133,24 @@ body {
           justify-content: flex-end;
           align-items: center;
           margin-bottom: 20px;
+          label {
+            font-family: Roboto-Regular;
+            font-size: 16px;
+          }
           select, input {
-            width: 70%;
+            width: 300px;
             margin-left: 20px;
             height: 35px;
             // FIXME COLOR
-            border: 2px solid @light-grey;
+            border: none;
+            background: #f1f1f1;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.16);
+            padding: 0 10px;
           }
         }
       }
       .button-dark {
-        margin: auto;
+        margin: 30px auto 0;
       }
     }
   }
@@ -149,23 +160,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
     .view-images-window {
       background: #fff;
-      padding: 10px;
+      padding: 20px;
       position: relative;
       .close {
-        background: rgba(255, 255, 255, 0.3);
         color: #fff;
         cursor: pointer;
-        right: -45px;
-        top: 0;
-        width: 45px;
-        height: 45px;
+        right: -23px;
+        top: -23px;
+        // width: 45px;
+        // height: 45px;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -181,7 +191,7 @@ body {
       }
       .left {
         justify-content: flex-start;
-        padding-left: 10px;
+        padding-left: 40px;
         left: 0;
         width: 20%;
       }
@@ -189,7 +199,7 @@ body {
         justify-content: flex-end;
         width: 80%;
         right: 0;
-        padding-right: 10px;
+        padding-right: 40px;
       }
     }
   }
@@ -209,27 +219,61 @@ body {
       align-items: center;
       flex-direction: column;
       background: #fff;
-      max-width: 450px;
-      padding: 20px;
+      padding: 40px;
       position: relative;
       .close {
-        width: 30px;
-        height: 30px;
         position: absolute;
-        right: -30px;
-        top: -30px;
-        background: red;
+        right: -23px;
+        top: -23px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: #fff;
+        cursor: pointer;
       }
       .title {
         text-align: center;
+        color: #4d4d49;
+        margin-bottom: 30px;
       }
       form {
-        display: flex;
-        flex-direction: column;
+        .row {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-bottom: 20px;
+          label {
+            font-family: Roboto-Regular;
+            font-size: 16px;
+          }
+          input {
+            width: 300px;
+          }
+          select, input:not([type="file"]), textarea {
+            width: 300px;
+            margin-left: 20px;
+            // FIXME COLOR
+            border: none;
+            background: #f1f1f1;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.16);
+          }
+          label, input:not([type="file"]) {
+            height: 35px;
+            display: flex;
+            align-items: center;
+            font-family: Roboto-Regular;
+            padding: 0 10px;  
+          }
+          textarea {
+            font-family: Roboto-Regular;
+            padding: 10px;
+            resize: none;
+          }
+        }
+      }
+      .button-dark {
+        margin: 30px auto 0;
       }
     }
   }
@@ -736,30 +780,25 @@ body {
             &:not(:last-child) {
               margin-right: 7px;
             }
-            &:after {
-              position: absolute;
-              display: flex;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              opacity: 0;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              content: url("../img/icons/loupe-1.svg");
-              transition: .2s;
-              transform: scale(0);
-            }
             &:hover {
               img {
                 filter: brightness(1);
                 transform: scale(1.1);
               }
               &:after{
-                opacity:1;
-                transform: scale(0.4);
+                opacity: 0;
               }
+            }
+            &:after {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: '';
+              width: 100%;
+              height: 100%;
+              opacity: .3;
+              transition: .2s;
+              background: #212121;
             }
             img {
               background: @light-grey;
@@ -834,11 +873,8 @@ body {
           &.closed .description {
             display: none;
           }
-          &.opened:before {
-            content: '▼';
-          }
-          &.closed:before {
-            content: '▶';
+          img {
+            margin-right: 5px;
           }
         }
       }

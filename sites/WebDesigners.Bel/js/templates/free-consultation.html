@@ -1,19 +1,31 @@
 <div class="free-consultation-window-bg">
     <div class="free-consultation-window">
-        <div class="close" onclick="closeWindow('.free-consultation-window-bg')">x</div>
-        <div class="title">Напишите нам и мы вам перезвоним</div>
+        <div class="close" onclick="closeWindow('.free-consultation-window-bg')">
+            <img src="img/icons/close.png" alt="X">
+        </div>
+        <div class="title">Напишите нам и мы<br>вам перезвоним</div>
         <form>
-            <label for="cMobilePhone">Телефон</label>
-            <input type="text" id="cMobilePhone">
-            <label for="cEmail">Mail</label>
-            <input type="text" id="cEmail">
-            <label for="cTopic">Mail</label>
-            <input type="text" id="cTopic">
-            <label for="cMessage">Сообщение</label>
-            <textarea name="message" id="cMessage" cols="30" rows="10"></textarea>
-            <label for="cFile">Прикрепить</label>
-            <input type="text" id="cFile">
-            <button>Отправить</button>
+            <div class="row">
+                <label for="cMobilePhone">Телефон</label>
+                <input type="text" id="cMobilePhone">
+            </div>
+            <div class="row">
+                <label for="cEmail">Mail</label>
+                <input type="text" id="cEmail">
+            </div>
+            <div class="row">
+                <label for="cTopic">Mail</label>
+                <input type="text" id="cTopic">
+            </div>
+            <div class="row">
+                <label for="cMessage">Сообщение</label>
+                <textarea name="message" id="cMessage" cols="30" rows="4"></textarea>
+            </div>
+            <div class="row">
+                <label for="cFile">Прикрепить</label>
+                <input type="file" id="cFile" accept="image/*">
+            </div>
+            <button class="button-dark">Отправить</button>
         </form>
     </div>
 </div>
