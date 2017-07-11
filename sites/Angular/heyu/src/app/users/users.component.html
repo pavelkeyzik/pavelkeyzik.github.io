@@ -1,0 +1,32 @@
+<div class="top">
+    <div class="edit">Edit</div>
+    <div class="title">{{ sectionTitle }}</div>
+    <div class="add">+</div>
+</div>
+<form id="filter">
+    <input type="text" placeholder="Search Friends" [(ngModel)]="searchTerm" name="search">
+</form>
+<!--<button (click)="loadListOfUsers()">Refresh Data</button>-->
+<div class="section">Online: (<span>{{ checkOnline(users) }}</span>)</div>
+<ul>
+    <li *ngFor="let user of users | filter:searchTerm | orderBy:true">
+        <div class="left">
+            <div class="avatar">
+                <img src="{{ user.avatar }}">
+                <span class="online" *ngIf="user.online"></span>
+            </div>
+            <div class="name">
+                {{ user.name }}
+            </div>
+        </div>
+        <div class="right">
+            <span>
+                <img src="assets/icons/information.png" alt="Info">
+            </span>
+            <span>
+                <img src="assets/icons/message-text.png" alt="Message Text">
+            </span>
+        </div>
+    </li>
+    <div class="section">Other</div> <!-- TODO: Вставить это между онлайн и не онлайн пользователями -->
+</ul>
