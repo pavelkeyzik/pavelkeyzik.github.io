@@ -2,9 +2,9 @@
   "avangard" : {
     "title" : "Авангард",
     "pre_images" : [
-      "img/styles-1.jpg",
-      "img/styles-2.jpg",
-      "img/styles-3.jpg"
+      "img/style-test.jpg",
+      "img/style-test-1.jpg",
+      "img/style-test-2.jpg"
     ],
     "full_img" : [
       "img/styles-1.jpg",

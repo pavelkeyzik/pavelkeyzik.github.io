@@ -1,6 +1,6 @@
 <div class="images">
     <% _.forIn(images.pre_images, function(value, key) { %>
-    <a onclick="viewImages('<%- JSON.stringify([images.full_img[key]]) %>')">
+    <a onclick="viewStyle('<%- JSON.stringify([images.full_img[key]]) %>')">
         <img src="<%- value %>" alt="Image description">
     </a>
     <% }); %>

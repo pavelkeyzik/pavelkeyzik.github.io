@@ -15,6 +15,8 @@ var currentPageOfNews = 0;
 var countPagesOfNews = 0;
 var maxCountOfNewsOnPage = 2;
 
+var viewStyleImageOpened = false;
+
 $(document).ready(function () {
     loadProjects();
     loadBestWorks();
@@ -168,6 +170,25 @@ function viewImages(array) {
     });
 }
 
+function viewStyle(array) {
+    if(viewStyleImageOpened) {
+        $(".styles .images a").animate({"width": "230px", "opacity" : "1", "display" : "flex"}, 300, function() {
+                $(".styles .images a img").css({"filter" : "brightness(0.7)"});
+        });
+        viewStyleImageOpened = false;
+    }
+    else {
+        var element = $(event.currentTarget);  
+        $(".styles .images a").animate({"margin" : "0px"}, 100, function() {
+            $(this).not(element).animate({"width": "0", "opacity" : "0"}, 300, function() {
+                $(".styles .images a img").css({"filter" : "brightness(1)"});
+            });
+        });
+        element.animate({"width" : "100%"}, 500);
+        viewStyleImageOpened = true;
+    }
+}
+
 function nextImage() {
     if(currentImage < images.images.length - 1) currentImage++;
     else currentImage = 0;
@@ -273,6 +294,7 @@ function loadStylesMenu() {
 }
 
 function loadStylesImages(section) {
+    viewStyleImageOpened = false;
     $.ajax({
         type: 'GET',
         url: 'js/templates/styles-images.html',

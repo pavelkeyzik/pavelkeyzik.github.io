@@ -51,7 +51,6 @@
 * {
   box-sizing: border-box;
   outline: none;
-  // border: 1px solid red;
 }
 
 img {
@@ -90,7 +89,6 @@ body {
   }
   .wrap {
     display: flex;
-    flex-display: column;
     width: 932px;
     margin: 0 auto;
   }
@@ -721,7 +719,8 @@ body {
       justify-content: space-between;
       padding: 85px 0;
       .left-side {
-        margin-right: 20px;
+        width: 20%;
+        // margin-right: 20px;
         .title {
           color: @grey;
         }
@@ -766,8 +765,12 @@ body {
         }
       }
       .right-side {
+        display: flex;
+        width: 80%;
         .images {
           display: flex;
+          justify-content: space-between;
+          width: 100%;
           a {
             width: 230px;
             height: 514px;
@@ -783,26 +786,13 @@ body {
             &:hover {
               img {
                 filter: brightness(1);
-                transform: scale(1.1);
+                // transform: scale(1.1);
               }
-              &:after{
-                opacity: 0;
-              }
-            }
-            &:after {
-              position: absolute;
-              top: 0;
-              left: 0;
-              content: '';
-              width: 100%;
-              height: 100%;
-              opacity: .3;
-              transition: .2s;
-              background: #212121;
             }
             img {
               background: @light-grey;
-              height: 100%;
+              // width: 100%;
+              // height: 100%;
               //  ---------------------------------------------------------
               // FIXME: I wanna be cover image, but I don't working in Firefox :(
               //  ---------------------------------------------------------
