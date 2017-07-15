@@ -173,7 +173,7 @@ function viewImages(array) {
 function viewStyle(array) {
     if(viewStyleImageOpened) {
         $(".styles .images a").animate({"width": "230px", "opacity" : "1", "display" : "flex"}, 300, function() {
-                $(".styles .images a img").css({"filter" : "brightness(0.7)"});
+            $(".styles .images a img").css({"filter" : "brightness(0.7)"});
         });
         viewStyleImageOpened = false;
     }
@@ -392,4 +392,14 @@ function toggleMenu() {
             $(".mobile ul").css({"display" : "none"});
         });
     }
+}
+
+function toOrder() {
+    $.ajax({
+        type: 'GET',
+        url: 'js/templates/order-window.html',
+        success: function (data) {
+            $("body").append(data);
+        }
+    });
 }

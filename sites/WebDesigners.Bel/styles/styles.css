@@ -143,7 +143,7 @@ body .view-images-window-bg {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -185,7 +185,7 @@ body .view-images-window-bg .view-images-window .right {
   padding-right: 40px;
 }
 body .free-consultation-window-bg {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -257,6 +257,22 @@ body .free-consultation-window-bg .free-consultation-window form .row textarea {
 }
 body .free-consultation-window-bg .free-consultation-window .button-dark {
   margin: 30px auto 0;
+}
+body .pop-up-order-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+body .pop-up-order-bg .pop-up-order form {
+  display: flex;
+  flex-direction: column;
 }
 body header {
   background: #7a7a7a url("../img/header-bg.jpg");
