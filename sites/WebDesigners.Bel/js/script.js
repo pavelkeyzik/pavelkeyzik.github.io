@@ -13,7 +13,11 @@ var countPagesOfAdvantages = 0;
 
 var currentPageOfNews = 0;
 var countPagesOfNews = 0;
-var maxCountOfNewsOnPage = 2;
+var maxCountOfNewsOnPage = 3;
+
+var currentPageOfMaterials = 0;
+var countPagesOfMaterials = 0;
+var maxCountOfMaterialsOnPage = 15;
 
 var viewStyleImageOpened = false;
 
@@ -74,6 +78,16 @@ function loadData(category, page) {
                                 countPagesOfNews = Math.ceil(data.news.length / maxCountOfNewsOnPage);
                                 newData = { "articles" : data.news.splice(currentPageOfNews * maxCountOfNewsOnPage, maxCountOfNewsOnPage)};
                             }
+                            else if(category == 'materials') {
+                                if(page == undefined) currentPageOfMaterials = 0;
+                                else {
+                                    currentPageOfMaterials = Number(page);
+                                }
+                                oldCategory = '';
+                                if(data.materials.length > maxCountOfMaterialsOnPage) paginationShow = true;
+                                countPagesOfMaterials = Math.ceil(data.materials.length / maxCountOfMaterialsOnPage);
+                                newData = { "materials" : data.materials.splice(currentPageOfMaterials * maxCountOfMaterialsOnPage, maxCountOfMaterialsOnPage)};
+                            }
                             else
                                 newData = data;
 
@@ -81,7 +95,7 @@ function loadData(category, page) {
                             content.empty().append("<div class='close' onclick='closeContent()'>CLOSE</div>").append( tmpl(newData) ).slideDown(200);
 
                             if(paginationShow)
-                                showPagination(currentPageOfNews);
+                                showPagination(category, currentPageOfNews);
                         }
                     });
                 }
@@ -117,7 +131,12 @@ function viewArticle(articleId) {
     });
 }
 
-function showPagination(page) {
+function toExpand() {
+    $(".full-article").animate({ height: "100%" }, 200);
+    $(".full-article .buttons").css({ background: "none"});
+}
+
+function showPagination(category, page) {
     $.ajax({
         url: 'js/templates/pagination.html',
         type: 'GET',
@@ -125,11 +144,25 @@ function showPagination(page) {
             if(!page) currentPageOfNews = 0;
                 else currentPageOfNews = page;
             var tmpl = _.template(html_file);
-            var data = {
-                "currentPage" : currentPageOfNews,
-                "countOfPages" : countPagesOfNews
-            };
-            $(".news .pagination").empty().append(tmpl({"data" : data }));
+            if(category == 'news')
+            {
+                var data = {
+                    "currentPage" : currentPageOfNews,
+                    "countOfPages" : countPagesOfNews,
+                    "category": category
+                };
+            }
+            else if(category == 'materials')
+            {
+                var data = {
+                    "currentPage" : currentPageOfMaterials,
+                    "countOfPages" : countPagesOfMaterials,
+                    "category": category
+                };
+            }
+            var element = "." + category + " .pagination";
+            console.log(category);
+            $(element).empty().append(tmpl({"data" : data }));
         }
     });
 }

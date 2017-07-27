@@ -1,8 +1,10 @@
 <div class="materials">
-    kokokok
-    <ul>
-        <% materials.forEach(function(material) { %>
-            <li><%- material.icon_link %></li>
-        <% }); %>
-    </ul>
+    <div class="box">
+    <% materials.forEach(function(material) { %>
+        <a href="<%- material.link %>" target="_blank">
+            <img src="<%- material.icon_link %>" alt="<%- material.title %>">
+        </a>
+    <% }); %>
+    </div>
+    <div class="pagination"></div>
 </div>

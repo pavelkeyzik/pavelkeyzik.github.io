@@ -1,5 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { UsersService } from './users.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsersService } from '../shared/services/users.service';
+import { CreateUserComponent } from '../create-user/create-user.component';
 import { User } from './user';
 
 import { FilterPipe } from '../filter.pipe';
@@ -9,7 +11,7 @@ import { OrderByPipe } from '../order-by.pipe';
     selector: 'users',
     templateUrl: 'users.component.html',
     styleUrls: [
-        'users.component.css'
+        'users.component.less'
     ],
     providers: [UsersService]
 })
@@ -18,7 +20,7 @@ export class UsersComponent implements OnInit {
     private searchTerm: string;
     private sectionTitle:string = 'Contacts';
 
-    constructor(private usersService: UsersService) {}
+    constructor(private usersService: UsersService, private router: Router) {}
 
     ngOnInit(){
         this.loadListOfUsers();
@@ -26,6 +28,11 @@ export class UsersComponent implements OnInit {
 
     private loadListOfUsers() {
         this.usersService.getData().subscribe(data => this.users = data);
+    }
+
+    private deleteUser(id) {
+        this.usersService.delete(id);
+        this.router.navigate(['/messages']);
     }
 
     private checkOnline(values) {

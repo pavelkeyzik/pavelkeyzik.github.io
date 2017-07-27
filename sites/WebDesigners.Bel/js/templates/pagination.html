@@ -1,13 +1,18 @@
-<% if(data.currentPage > 0) { %>
-<a class="arrow-left" onclick="loadData('news', '<%= Number(data.currentPage)-1 %>')"><</a>
-<span>...</span>
-<% } else { %>
-<span class="arrow-left"><</span>
-<% } %>
-<a class="current-page"><%- data.currentPage + 1 %></a>
+<div class="section">
+    <% if(data.category == 'news') { %>
+        Новости
+    <% } else if(data.category == 'materials') { %>
+        Материалы
+    <% } %>    
+</div>
+<% _.forEach(_.range(data.countOfPages), function(value) { 
+    if(value == data.currentPage) { %>
+        <a class="current-page"><%- value + 1 %></a>
+    <% } else { %>
+        <a onclick="loadData('<%- data.category %>', '<%= value %>')"><%- value + 1 %></a>
+<% }} ); %>
 <% if(data.currentPage < data.countOfPages - 1) { %>
-<span>...</span>
-<a class="arrow-right" onclick="loadData('news', '<%= Number(data.currentPage)+1 %>')">></a>
+<a class="next" onclick="loadData('<%- data.category %>', '<%= Number(data.currentPage)+1 %>')">Следующая</a>
 <% } else { %>
-<span class="arrow-right">></span>
+<a class="next">Следующая</a>
 <% } %>

@@ -2,13 +2,109 @@
   "materials":
   [
     {
-      "icon_link" : "../img/icons/materials/"
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
     },
     {
-      "icon_link" : "../img/icons/materials/"
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
     },
     {
-      "icon_link" : "../img/icons/materials/"
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
+    },
+    {
+      "title": "Smart House",
+      "link": "http://smarthouse.by/",
+      "icon_link" : "img/materials/logo.jpg"
     }
   ]
 }

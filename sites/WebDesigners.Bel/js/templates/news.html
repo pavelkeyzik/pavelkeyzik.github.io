@@ -2,7 +2,7 @@
     <% articles.forEach(function(item) { %>
     <div class="article">
         <div class="img">
-            <img src="<%- item.image_link %>" width="150" height="100">
+            <img src="<%- item.image_link %>">
         </div>
         <div class="text">
             <div class="top">
@@ -10,10 +10,10 @@
                 <div class="desc"><%- item.description %></div>
             </div>
             <div class="info">
-                <span class="category"><%- item.category %></span>
-                <span class="circle"></span>
-                <span><%- item.date %></span>
-                <button onclick="viewArticle('<%- item.id %>')">View Article</button>
+                <!-- <span class="category"><%- item.category %></span> -->
+                <!-- <span class="circle"></span> -->
+                <!-- <span><%- item.date %></span> -->
+                <a onclick="viewArticle('<%- item.id %>')" class="more">Подробнее</a>
             </div>
         </div>
     </div>

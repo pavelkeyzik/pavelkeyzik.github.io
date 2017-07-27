@@ -1,0 +1,38 @@
+<div class="top" *ngIf="user">
+  <div class="go-back" (click)="goBack()">Go Back</div>
+  <div class="img">
+    <img src="{{ user.avatar }}" alt="">
+  </div>
+   <div class="name">{{ user.name }}</div> 
+</div>
+<ul *ngIf="user">
+  <li *ngIf="user.email">
+    <div class="left">Email adress</div>
+    <div class="right">
+      {{ user.email }}
+      <img src="assets/icons/arrow-right.png" alt="">
+    </div>
+  </li>
+  <li *ngIf="user.phone">
+    <div class="left">Phone</div>
+    <div class="right">
+      {{ user.phone }}
+      <img src="assets/icons/arrow-right.png" alt="">
+    </div>
+  </li>
+  <li *ngIf="user.notifications === true; else notificationsFalse">
+    <div class="left">Notifications</div>
+    <div class="right">
+      TRUE
+    </div>
+  </li>
+  <ng-template #notificationsFalse>
+    <li>
+      <div class="left">Notifications</div>
+      <div class="right">
+        FALSE
+      </div>
+    </li>
+  </ng-template>
+  <li class="remove">Delete account</li>
+</ul>

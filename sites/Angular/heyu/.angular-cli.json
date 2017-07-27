@@ -14,7 +14,7 @@
       "index": "index.html",
       "main": "main.ts",
       "styles": [
-        "styles/main.css"
+        "styles/main.less"
       ],
       "polyfills": "polyfills.ts",
       "test": "test.ts",

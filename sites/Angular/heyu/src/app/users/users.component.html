@@ -1,8 +1,10 @@
+<!-- [НАЧАЛО] Вынести в другой компонент. Тут только sectionTitle меняется  -->
 <div class="top">
     <div class="edit">Edit</div>
     <div class="title">{{ sectionTitle }}</div>
-    <div class="add">+</div>
+    <div class="add" routerLink="/create-user">+</div>
 </div>
+<!-- [КОНЕЦ]  -->
 <form id="filter">
     <input type="text" placeholder="Search Friends" [(ngModel)]="searchTerm" name="search">
 </form>
@@ -20,13 +22,14 @@
             </div>
         </div>
         <div class="right">
-            <span>
+            <span routerLink="/profile/{{ user._id }}">
                 <img src="assets/icons/information.png" alt="Info">
             </span>
             <span>
                 <img src="assets/icons/message-text.png" alt="Message Text">
             </span>
+            <button (click)="deleteUser(user._id)">REMOVE</button>
         </div>
     </li>
-    <div class="section">Other</div> <!-- TODO: Вставить это между онлайн и не онлайн пользователями -->
 </ul>
+<div class="section">Other</div> <!-- TODO: Вставить это между онлайн и не онлайн пользователями -->

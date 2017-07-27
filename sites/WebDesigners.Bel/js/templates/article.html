@@ -1,5 +1,15 @@
-<div class="article">
+<div class="full-article">
+    <div class="img">
+        <img src="<%- img %>" alt="Image">
+    </div>
     <div class="article-title">Заголовок: <%- title %></div>
     <div class="text"><%= text %></div>
-    <button onclick="loadData('news', '<%- Number(currentPageOfNews) %>')"><b>COME BACK</b></button>
+    <div class="buttons">
+        <a onclick="loadData('news', '<%- Number(currentPageOfNews) %>')">
+            <img src="img/icons/arrow-left-circle.png" alt="Come back">
+        </a>
+        <a onclick="toExpand()">
+            <img src="img/icons/arrow-down-circle.png" alt="View full article">
+        </a>
+    </div>
 </div>

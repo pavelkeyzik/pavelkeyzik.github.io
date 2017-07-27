@@ -629,13 +629,37 @@ body .advantages .wrap .content {
   display: none;
   position: relative;
 }
-body .advantages .wrap .content:after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: 'X';
-  border: 1px solid red;
-  background: red;
+body .advantages .wrap .content .pagination {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: 60px 0;
+}
+body .advantages .wrap .content .pagination .section {
+  font-family: Aria-Bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  margin-right: 60px;
+}
+body .advantages .wrap .content .pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: Aria-Bold;
+  color: #3d3d3d;
+  border-bottom: 2px solid #fff;
+}
+body .advantages .wrap .content .pagination a.current-page {
+  color: #a1a1a1;
+  border-bottom: 2px solid #a1a1a1;
+}
+body .advantages .wrap .content .pagination a.next {
+  font-size: 15px;
+  color: #a4a4a4;
 }
 body .advantages .wrap .content .news {
   display: flex;
@@ -643,83 +667,89 @@ body .advantages .wrap .content .news {
   flex-direction: column;
 }
 body .advantages .wrap .content .news .article {
-  border-bottom: 1px solid #7a7a7a;
   padding: 20px 0;
   display: flex;
   width: 80%;
 }
 body .advantages .wrap .content .news .article .img {
-  padding-right: 20px;
+  margin-right: 20px;
+  width: 156px;
+  height: 156px;
 }
 body .advantages .wrap .content .news .article .text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 body .advantages .wrap .content .news .article .text .article-title {
   font-family: Aria-Bold;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 body .advantages .wrap .content .news .article .text .desc {
   font-family: Roboto-Regular;
+  margin-top: 20px;
+  font-size: 12px;
 }
 body .advantages .wrap .content .news .article .text .info {
   display: flex;
   align-items: center;
   font-family: Roboto-Regular;
+}
+body .advantages .wrap .content .news .article .text .info a.more {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #747474;
+  margin-top: 20px;
+}
+body .advantages .wrap .content .full-article {
+  overflow: hidden;
+  height: 680px;
+  position: relative;
+  padding-bottom: 100px;
+}
+body .advantages .wrap .content .full-article .article-title {
+  font-family: Aria-Bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 40px 0 25px;
+  color: #3f3f3f;
+}
+body .advantages .wrap .content .full-article .text {
+  color: #434343;
+  font-family: Roboto-Regular;
   font-size: 12px;
 }
-body .advantages .wrap .content .news .article .text .info .category {
-  color: #ff0000;
-}
-body .advantages .wrap .content .news .article .text .info .circle {
-  width: 6px;
-  height: 6px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: #7a7a7a;
-  margin: 0 5px;
-}
-body .advantages .wrap .content .news .pagination {
+body .advantages .wrap .content .full-article .buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border: 1px solid #7a7a7a;
-  margin: 20px 0;
-  border-radius: 45px;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), #ffffff 20%);
 }
-body .advantages .wrap .content .news .pagination a,
-body .advantages .wrap .content .news .pagination span {
+body .advantages .wrap .content .full-article .buttons a {
+  cursor: pointer;
+  margin: 40px 0 50px;
+}
+body .advantages .wrap .content .full-article .buttons a:first-child {
+  margin-right: 15px;
+}
+body .advantages .wrap .content .materials .box {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+}
+body .advantages .wrap .content .materials .box a {
+  display: flex;
   justify-content: center;
-  height: 45px;
-  width: 45px;
-  font-family: Roboto-Regular;
-}
-body .advantages .wrap .content .news .pagination a {
-  color: #212121;
-  transition: .2s;
-}
-body .advantages .wrap .content .news .pagination a:hover {
-  background: #f8f8f8;
-  color: #666;
-}
-body .advantages .wrap .content .news .pagination a.current-page {
-  background: #eee;
-  color: #000;
-  font-family: Aria-Bold;
-}
-body .advantages .wrap .content .news .pagination span {
-  color: #999;
-}
-body .advantages .wrap .content .news .pagination .arrow-left {
-  border-top-left-radius: 45px;
-  border-bottom-left-radius: 45px;
-}
-body .advantages .wrap .content .news .pagination .arrow-right {
-  border-top-right-radius: 45px;
-  border-bottom-right-radius: 45px;
+  align-items: center;
+  overflow: hidden;
+  margin-left: -1px;
+  margin-top: -1px;
+  border: 1px solid #ddd;
+  width: 186px;
+  height: 186px;
 }
 body .free-consultation {
   background: #212121;
