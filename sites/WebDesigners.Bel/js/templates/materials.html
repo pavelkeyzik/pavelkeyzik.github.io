@@ -2,7 +2,9 @@
     <div class="box">
     <% materials.forEach(function(material) { %>
         <a href="<%- material.link %>" target="_blank">
-            <img src="<%- material.icon_link %>" alt="<%- material.title %>">
+            <span>
+                <img src="<%- material.icon_link %>" alt="<%- material.title %>">
+            </span>
         </a>
     <% }); %>
     </div>

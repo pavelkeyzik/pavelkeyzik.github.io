@@ -165,15 +165,16 @@ body {
     align-items: center;
     .view-images-window {
       background: #fff;
-      padding: 20px;
+      padding: 30px;
       position: relative;
       .close {
         color: #fff;
         cursor: pointer;
-        right: -23px;
-        top: -23px;
-        // width: 45px;
-        // height: 45px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        z-index: 2;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -189,7 +190,7 @@ body {
       }
       .left {
         justify-content: flex-start;
-        padding-left: 40px;
+        padding-left: 9px;
         left: 0;
         width: 20%;
       }
@@ -197,7 +198,28 @@ body {
         justify-content: flex-end;
         width: 80%;
         right: 0;
-        padding-right: 40px;
+        padding-right: 9px;
+      }
+      .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+          background: #000;
+          width: 10px;
+          height: 10px;
+          &.current {
+            opacity: 0.5;
+          }
+          &:not(:last-child) {
+            margin-right: 4px;
+          }
+        }
       }
     }
   }
@@ -618,14 +640,6 @@ body {
         flex-wrap: wrap;
         display: none;
         position: relative;
-        // &:after {
-        //   position: absolute;
-        //   right: 0;
-        //   top: 0;
-        //   content: 'X';
-        //   border: 1px solid red;
-        //   background: red;
-        // }
         .pagination {
           display: flex;
           width: 80%;
@@ -787,7 +801,7 @@ body {
               margin-top: -1px;  // А ФИЧА
               border: 1px solid #ddd;
               width: 186px;
-              height: 186px;
+              // height: 186px;
             }
           }
         }
@@ -1066,6 +1080,26 @@ body {
       }
     }
     .advantages {
+      .content {
+        .materials {
+          .box a {
+            flex-basis: 20%;
+            span {
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+              padding-bottom: 100%;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
     }
     .best-works {
     }

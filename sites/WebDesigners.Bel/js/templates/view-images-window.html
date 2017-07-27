@@ -1,17 +1,28 @@
 <div class="view-images-window-bg">
     <div class="view-images-window">
         <div class="close" onclick="closeWindow('.view-images-window-bg')">
-            <img src="img/icons/close.png" alt="X">
+            <img src="img/icons/close-dark.png" alt="X">
         </div>
         <% if (images.length > 1) { %>
         <div class="arrow left" onclick="prevImage()">
-            <img src="img/icons/arrow-left-slider.png" alt="<">
+            <img src="img/icons/arrow-left-slider-dark.png" alt="<">
         </div>
         <div class="arrow right" onclick="nextImage()">
-            <img src="img/icons/arrow-right-slider.png" alt="<"></div>
+            <img src="img/icons/arrow-right-slider-dark.png" alt="<"></div>
         <% } %>
         <div class="img">
             <img src="<%- images[0] %>">
         </div>
+        <% if (images.length > 1) { %>
+        <div class="pagination">
+            <% _.forEach(images, function(value, key) { %>
+                <% if(key == 0) { %>
+                <div onclick="viewImage('<%- key %>')" class="current"></div>
+                <% } else {%>
+                <div onclick="viewImage('<%- key %>')"></div>
+                <% } %>
+            <% }); %>
+        </div>
+        <% } %>        
     </div>
 </div>

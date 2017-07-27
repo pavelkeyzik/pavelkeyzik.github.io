@@ -5,14 +5,14 @@ _.forIn(data, function(item, key) {
             <div class="col-1"></div>
         <% } %>
     <div class="col-1" onclick="viewImages('<%- JSON.stringify(item) %>')">
-    <div class="block">
-        <div class="image">
-            <img src="<%- item.pre_img %>" alt="">
-        </div>
-        <div class="info">
-            <div class="project-title"><%- item.title %></div>
-            <div class="project-description"><%- item.country %></div>
+        <div class="block">
+            <div class="image">
+                <img src="<%- item.pre_img %>" alt="">
+            </div>
+            <div class="info">
+                <div class="project-title"><%- item.title %></div>
+                <div class="project-description"><%- item.country %></div>
+            </div>
         </div>
     </div>
-</div>
 <% }); %>

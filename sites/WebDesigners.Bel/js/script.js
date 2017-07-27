@@ -18,6 +18,7 @@ var maxCountOfNewsOnPage = 3;
 var currentPageOfMaterials = 0;
 var countPagesOfMaterials = 0;
 var maxCountOfMaterialsOnPage = 15;
+// TODO: If count of pages in pagination too more then I will have horizontal scrollbar
 
 var viewStyleImageOpened = false;
 
@@ -199,6 +200,13 @@ function viewImages(array) {
             images = JSON.parse(array);
             $("body").append(tmpl(JSON.parse(array)));
             currentImage = 0;
+            $(".view-images-window .pagination div").click(function() {
+                var element = $(this);
+                if(element.attr("class") == undefined || element.attr("class") == "") {
+                    element.attr({"class" : "current"});
+                    element.siblings("[class]").attr( { "class": "" });
+                }
+            });
         }
     });
 }
@@ -227,6 +235,9 @@ function nextImage() {
     else currentImage = 0;
 
     $(".view-images-window .img").empty().append("<img src=" + images.images[currentImage] + ">");
+    $(".view-images-window .pagination div").siblings("[class]").attr( { "class": "" });
+    var el = ".view-images-window .pagination div:eq(" + currentImage + ")";
+    $(el).attr({"class": "current"});
 }
 
 function prevImage() {
@@ -234,6 +245,13 @@ function prevImage() {
     else currentImage = images.images.length - 1;
 
     $(".view-images-window .img").empty().append("<img src=" + images.images[currentImage] + ">");
+    $(".view-images-window .pagination div").siblings("[class]").attr( { "class": "" });
+    var el = ".view-images-window .pagination div:eq(" + currentImage + ")";
+    $(el).attr({"class": "current"});
+}
+
+function viewImage(page) {
+    $(".view-images-window .img").empty().append("<img src=" + images.images[page] + ">");
 }
 
 function closeWindow(window) {
