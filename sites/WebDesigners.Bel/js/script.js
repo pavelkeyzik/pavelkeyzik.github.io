@@ -252,10 +252,13 @@ function prevImage() {
 
 function viewImage(page) {
     $(".view-images-window .img").empty().append("<img src=" + images.images[page] + ">");
+    currentImage = page;
 }
 
 function closeWindow(window) {
     $(window).fadeOut(100);
+    $(window).empty();
+    currentImage = 0;
 }
 
 function closeContent() {
