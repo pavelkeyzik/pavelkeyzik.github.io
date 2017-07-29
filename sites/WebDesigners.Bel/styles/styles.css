@@ -20,7 +20,6 @@
 }
 * {
   box-sizing: border-box;
-  outline: none;
 }
 img {
   vertical-align: middle;
@@ -199,14 +198,14 @@ body .view-images-window-bg .view-images-window .pagination {
 }
 body .view-images-window-bg .view-images-window .pagination div {
   background: #000;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
 }
 body .view-images-window-bg .view-images-window .pagination div.current {
-  opacity: 0.5;
+  background: #b2b2b2;
 }
 body .view-images-window-bg .view-images-window .pagination div:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 17px;
 }
 body .free-consultation-window-bg {
   background: rgba(0, 0, 0, 0.3);
@@ -294,9 +293,133 @@ body .pop-up-order-bg {
   background: rgba(0, 0, 0, 0.3);
   z-index: 9;
 }
+body .pop-up-order-bg .pop-up-order {
+  position: relative;
+  background: rgba(0, 0, 0, 0.43);
+  padding: 15px;
+}
+body .pop-up-order-bg .pop-up-order .close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+}
 body .pop-up-order-bg .pop-up-order form {
   display: flex;
   flex-direction: column;
+  max-width: 575px;
+}
+body .pop-up-order-bg .pop-up-order form .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  padding: 15px 50px 0 10px;
+}
+body .pop-up-order-bg .pop-up-order form .top textarea {
+  resize: none;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #cececd;
+  font-size: 12pt;
+  width: 100%;
+  height: 50px;
+  font-family: Roboto-Medium;
+}
+body .pop-up-order-bg .pop-up-order form .top textarea:focus {
+  color: #777;
+  background: #fafafa;
+}
+body .pop-up-order-bg .pop-up-order form .top label {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  height: 32px;
+  color: #cececd;
+  font-size: 11pt;
+  font-family: Roboto-Medium;
+  cursor: pointer;
+  transition: .2s;
+  padding: 0 10px;
+}
+body .pop-up-order-bg .pop-up-order form .top label:hover {
+  color: #aaa;
+}
+body .pop-up-order-bg .pop-up-order form .top label img {
+  margin-right: 7px;
+}
+body .pop-up-order-bg .pop-up-order form .info {
+  display: flex;
+  background: #fff;
+  padding: 0 1px;
+}
+body .pop-up-order-bg .pop-up-order form .info .section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid #919191;
+  position: relative;
+  flex: 1 1 auto;
+}
+body .pop-up-order-bg .pop-up-order form .info .section:not(:last-child) {
+  border-right: 1px solid #919191;
+}
+body .pop-up-order-bg .pop-up-order form .info .section label {
+  position: absolute;
+  left: 18px;
+}
+body .pop-up-order-bg .pop-up-order form .info .section input {
+  display: flex;
+  border: none;
+  align-items: center;
+  height: 32px;
+  padding-left: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 10pt;
+  font-family: Roboto-Medium;
+  opacity: 1;
+}
+body .pop-up-order-bg .pop-up-order form .info .section input::-webkit-input-placeholder {
+  color: #303030;
+}
+body .pop-up-order-bg .pop-up-order form .info .section input:focus {
+  background: #fafafa;
+}
+body .pop-up-order-bg .pop-up-order form .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .pop-up-order-bg .pop-up-order form .bottom ul {
+  background: #303030;
+  padding: 20px;
+  margin: 20px 0 0 0;
+  flex: 1;
+}
+body .pop-up-order-bg .pop-up-order form .bottom ul li {
+  list-style: none;
+  font-family: Roboto-Medium;
+  font-size: 12pt;
+  color: #848484;
+}
+body .pop-up-order-bg .pop-up-order form .bottom ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+body .pop-up-order-bg .pop-up-order form .bottom button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 174px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  font-family: Aria-Bold;
+  font-size: 12pt;
+  color: #5c5c5c;
+  margin: 20px 0 0 20px;
+  cursor: pointer;
 }
 body header {
   background: #7a7a7a url("../img/header-bg.jpg");
@@ -694,6 +817,7 @@ body .advantages .wrap .content .news .article {
   padding: 20px 0;
   display: flex;
   width: 80%;
+  cursor: pointer;
 }
 body .advantages .wrap .content .news .article .img {
   margin-right: 20px;
@@ -1033,6 +1157,46 @@ body footer .right-side .bottom .copyright {
   body header nav-wrap nav.desktop {
     display: none;
   }
+  body .advantages .arrows img {
+    margin: 0;
+    width: 30px;
+  }
+  body .advantages .arrows img:first-child {
+    margin-right: 10px !important;
+  }
+  body .advantages .item .desc {
+    display: none;
+  }
+  body .advantages .content .article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .advantages .content .article .img {
+    width: 100%;
+    margin: 0;
+  }
+  body .advantages .content .article .text {
+    width: 100%;
+    text-align: center;
+  }
+  body .advantages .content .article .text .top {
+    padding: 0 20px;
+    width: 100%;
+  }
+  body .advantages .content .article .text .top .article-title {
+    font-size: 14px !important;
+    margin-top: 20px;
+  }
+  body .advantages .content .article .text .info {
+    justify-content: center;
+  }
+  body .advantages .content .full-article {
+    padding: 0 10px;
+  }
+  body .advantages .content .full-article img {
+    max-width: 100%;
+  }
   body .advantages .content .materials .box a {
     flex-basis: 20%;
   }
@@ -1048,6 +1212,9 @@ body footer .right-side .bottom .copyright {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  body .advantages .content .pagination .section {
+    display: none;
   }
   body .styles .wrap {
     flex-direction: column;
@@ -1107,6 +1274,27 @@ body footer .right-side .bottom .copyright {
     text-align: center;
   }
   body footer .right-side .bottom .search input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pop-up-order {
+    background: #fff !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+  }
+  .pop-up-order .info {
+    flex-direction: column;
+  }
+  .pop-up-order .info .section {
+    border: 1px solid #919191;
+  }
+  .pop-up-order .bottom {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .pop-up-order .bottom ul {
     width: 100%;
   }
 }

@@ -1,16 +1,51 @@
 <div class="pop-up-order-bg">
     <div class="pop-up-order">
         <div class="close" onclick="closeWindow('.pop-up-order-bg')">
-            <img src="img/icons/close.png" alt="X">
+            <img src="img/icons/close-dark.png" alt="X">
         </div>
         <form>
-            <textarea name="" id="" cols="30" rows="10">Опишите вашу задачу</textarea>
-            <input type="file">
-            <input type="text" placeholder="Ваше имя">
-            <input type="text" placeholder="Ваш телефон">
-            <input type="text" placeholder="Электронная почта">
-            <input type="text" placeholder="Ваш город">
-            <button>Отправить заявку</button>
+            <div class="top">
+                <textarea name="" id="" cols="30" rows="10">Опишите вашу задачу</textarea>
+                <label for="file-input">
+                    <img src="img/icons/attachment.png">
+                    Прикрепить файл
+                </label>
+                <input type="file" id="file-input" hidden>
+            </div>
+            <div class="info">
+                <div class="section">
+                    <label for="order-name">
+                        <img src="img/icons/man.png" alt="">
+                    </label>
+                    <input type="text" placeholder="Ваше имя" id="order-name" sizes="6">
+                </div>
+                <div class="section">
+                    <label for="order-name">
+                        <img src="img/icons/phone-1.png" alt="">
+                    </label>
+                    <input type="text" placeholder="Ваш телефон" sizes="12">
+                </div>
+                <div class="section">
+                    <label for="order-name">
+                        <img src="img/icons/mail.png" alt="">
+                    </label>
+                    <input type="text" placeholder="Эл. почта">
+                </div>
+                <div class="section">
+                    <label for="order-name">
+                        <img src="img/icons/place.png" alt="">
+                    </label>
+                    <input type="text" placeholder="Ваш город">
+                </div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>Заполните поле телефон</li>
+                    <li>Поле электронная почта не заполнено</li>
+                    <li>Поле ваш город не заполнено</li>
+                </ul>
+                <button>Отправить заявку</button>
+            </div>
         </form>
     </div>
 </div>

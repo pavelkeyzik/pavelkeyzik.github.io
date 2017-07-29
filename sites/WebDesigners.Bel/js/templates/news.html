@@ -1,6 +1,6 @@
 <div class="news">
     <% articles.forEach(function(item) { %>
-    <div class="article">
+    <div class="article" onclick="viewArticle('<%- item.id %>')">
         <div class="img">
             <img src="<%- item.image_link %>">
         </div>
@@ -13,7 +13,7 @@
                 <!-- <span class="category"><%- item.category %></span> -->
                 <!-- <span class="circle"></span> -->
                 <!-- <span><%- item.date %></span> -->
-                <a onclick="viewArticle('<%- item.id %>')" class="more">Подробнее</a>
+                <a class="more">Подробнее</a>
             </div>
         </div>
     </div>
