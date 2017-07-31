@@ -1030,8 +1030,6 @@ body .styles .wrap .right-side .images a:hover img {
 }
 body .styles .wrap .right-side .images a img {
   background: #7a7a7a;
-  object-fit: cover;
-  -o-object-fit: cover;
   filter: brightness(0.7);
   transition: .2s;
   position: relative;
