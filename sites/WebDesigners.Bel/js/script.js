@@ -454,6 +454,69 @@ function toOrder() {
         url: 'js/templates/order-window.html',
         success: function (data) {
             $("body").append(data);
+            $("#file-input").on('change', function() {
+                var label = $("#file-input-label span");
+                var countOfFiles = $(this).prop('files').length;
+                label.empty();
+                label.append('Кол-во: ' + countOfFiles);
+            });
+            $("#submitOrder").on('click', function() {
+                validateForm();
+            });
         }
     });
+}
+
+function validateForm() {
+    var numberReg =  /^[0-9]+$/;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+    var email = $("#order-mail");
+    var phone = $("#order-phone");
+    var city = $("#order-city");
+    var name = $("#order-name");
+    var task = $("#order-task");
+
+    var error = false;
+
+    $("#errors").empty();
+
+    if(task.val().length === 0) {
+        $("#errors").append("<li>Поле с задачей не заполнено</li>");
+        error = true;
+    }
+
+    if(name.val().length === 0) {
+        $("#errors").append("<li>Поле ваше Имя не заполнено</li>");
+        error = true;
+    }
+
+    if(phone.val().length === 0) {
+        $("#errors").append("<li>Заполните поле телефон</li>");
+        error = true;
+    }
+    else if(!numberReg.test( phone.val() ) )
+    {
+        $("#errors").append("<li>Поле телефон заполнено неверно</li>");
+        error = true;
+    }
+
+    if(email.val().length === 0) {
+        $("#errors").append("<li>Поле электронная почта не заполнено</li>");
+        error = true;
+    }
+    else if(!emailReg.test( email.val() ) )
+    {
+        $("#errors").append("<li>Поле электронная почта заполнено неверно</li>");
+        error = true;
+    }
+
+    if(city.val().length === 0) {
+        $("#errors").append("<li>Поле ваш город не заполнено</li>");
+        error = true;
+    }
+
+    if(error) {
+        $("#errors").animate({opacity: 1});
+    }
 }

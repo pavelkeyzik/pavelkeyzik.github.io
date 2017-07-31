@@ -5,12 +5,12 @@
         </div>
         <form>
             <div class="top">
-                <textarea name="" id="" cols="30" rows="10">Опишите вашу задачу</textarea>
-                <label for="file-input">
+                <textarea name="order-task" id="order-task" cols="30" rows="10" placeholder="Опишите вашу задачу"></textarea>
+                <label for="file-input" id="file-input-label">
                     <img src="img/icons/attachment.png">
-                    Прикрепить файл
+                    <span>Прикрепить файл</span>
                 </label>
-                <input type="file" id="file-input" hidden>
+                <input type="file" id="file-input" multiple hidden>
             </div>
             <div class="info">
                 <div class="section">
@@ -20,31 +20,28 @@
                     <input type="text" placeholder="Ваше имя" id="order-name" sizes="6">
                 </div>
                 <div class="section">
-                    <label for="order-name">
-                        <img src="img/icons/phone-1.png" alt="">
+                    <label for="order-phone">
+                        <img src="img/icons/phone-1.png">
                     </label>
-                    <input type="text" placeholder="Ваш телефон" sizes="12">
+                    <input type="text" name="usrtel" placeholder="Ваш телефон" sizes="12" id="order-phone">
                 </div>
                 <div class="section">
-                    <label for="order-name">
-                        <img src="img/icons/mail.png" alt="">
+                    <label for="order-mail">
+                        <img src="img/icons/mail.png">
                     </label>
-                    <input type="text" placeholder="Эл. почта">
+                    <input type="email" placeholder="Эл. почта" id="order-mail">
                 </div>
                 <div class="section">
-                    <label for="order-name">
-                        <img src="img/icons/place.png" alt="">
+                    <label for="order-city">
+                        <img src="img/icons/place.png">
                     </label>
-                    <input type="text" placeholder="Ваш город">
+                    <input type="text" placeholder="Ваш город" id="order-city">
                 </div>
             </div>
             <div class="bottom">
-                <ul>
-                    <li>Заполните поле телефон</li>
-                    <li>Поле электронная почта не заполнено</li>
-                    <li>Поле ваш город не заполнено</li>
+                <ul id="errors">
                 </ul>
-                <button>Отправить заявку</button>
+                <input type="button" id="submitOrder" value="Отправить заявку"></input>
             </div>
         </form>
     </div>

@@ -165,6 +165,7 @@ body .view-images-window-bg .view-images-window .close {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.4;
 }
 body .view-images-window-bg .view-images-window .arrow {
   position: absolute;
@@ -173,6 +174,7 @@ body .view-images-window-bg .view-images-window .arrow {
   height: 100%;
   top: 0;
   cursor: pointer;
+  opacity: 0.4;
 }
 body .view-images-window-bg .view-images-window .left {
   justify-content: flex-start;
@@ -258,7 +260,8 @@ body .free-consultation-window-bg .free-consultation-window form .row input {
 }
 body .free-consultation-window-bg .free-consultation-window form .row select,
 body .free-consultation-window-bg .free-consultation-window form .row input:not([type="file"]),
-body .free-consultation-window-bg .free-consultation-window form .row textarea {
+body .free-consultation-window-bg .free-consultation-window form .row textarea,
+body .free-consultation-window-bg .free-consultation-window form .row .file {
   width: 300px;
   margin-left: 20px;
   border: none;
@@ -277,6 +280,26 @@ body .free-consultation-window-bg .free-consultation-window form .row textarea {
   font-family: Roboto-Regular;
   padding: 10px;
   resize: none;
+}
+body .free-consultation-window-bg .free-consultation-window form .row .file {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+body .free-consultation-window-bg .free-consultation-window form .row .file span {
+  background: #1b1b1b;
+  color: #5e5e5e;
+  font-size: 20pt;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  transition: .2s;
+}
+body .free-consultation-window-bg .free-consultation-window form .row .file span:hover {
+  color: #aaa;
 }
 body .free-consultation-window-bg .free-consultation-window .button-dark {
   margin: 30px auto 0;
@@ -332,7 +355,7 @@ body .pop-up-order-bg .pop-up-order form .top textarea:focus {
   background: #fafafa;
 }
 body .pop-up-order-bg .pop-up-order form .top label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   margin-top: 10px;
   height: 32px;
@@ -369,6 +392,10 @@ body .pop-up-order-bg .pop-up-order form .info .section label {
   position: absolute;
   left: 18px;
 }
+body .pop-up-order-bg .pop-up-order form .info .section.input-error {
+  color: #CF161D;
+  background: red;
+}
 body .pop-up-order-bg .pop-up-order form .info .section input {
   display: flex;
   border: none;
@@ -397,6 +424,7 @@ body .pop-up-order-bg .pop-up-order form .bottom ul {
   padding: 20px;
   margin: 20px 0 0 0;
   flex: 1;
+  opacity: 0;
 }
 body .pop-up-order-bg .pop-up-order form .bottom ul li {
   list-style: none;
@@ -407,7 +435,7 @@ body .pop-up-order-bg .pop-up-order form .bottom ul li {
 body .pop-up-order-bg .pop-up-order form .bottom ul li:not(:last-child) {
   margin-bottom: 10px;
 }
-body .pop-up-order-bg .pop-up-order form .bottom button {
+body .pop-up-order-bg .pop-up-order form .bottom #submitOrder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -836,7 +864,7 @@ body .advantages .wrap .content .news .article .text .article-title {
 body .advantages .wrap .content .news .article .text .desc {
   font-family: Roboto-Regular;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 12pt;
 }
 body .advantages .wrap .content .news .article .text .info {
   display: flex;
@@ -844,7 +872,7 @@ body .advantages .wrap .content .news .article .text .info {
   font-family: Roboto-Regular;
 }
 body .advantages .wrap .content .news .article .text .info a.more {
-  font-size: 12px;
+  font-size: 12pt;
   text-transform: uppercase;
   text-decoration: underline;
   cursor: pointer;
@@ -1296,5 +1324,33 @@ body footer .right-side .bottom .copyright {
   }
   .pop-up-order .bottom ul {
     width: 100%;
+  }
+  .free-consultation {
+    text-align: center;
+  }
+  .free-consultation-window-bg {
+    overflow: hidden;
+  }
+  .free-consultation-window-bg .free-consultation-window {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+  .free-consultation-window-bg .free-consultation-window input,
+  .free-consultation-window-bg .free-consultation-window textarea,
+  .free-consultation-window-bg .free-consultation-window label {
+    margin: 0 !important;
+  }
+  .free-consultation-window-bg .free-consultation-window .close {
+    right: 10px !important;
+    top: 10px !important;
+  }
+  .free-consultation-window-bg .free-consultation-window .close img {
+    mix-blend-mode: difference;
+  }
+  .free-consultation-window-bg .free-consultation-window .row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    margin: 0 !important;
   }
 }

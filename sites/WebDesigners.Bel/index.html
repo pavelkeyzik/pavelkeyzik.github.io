@@ -56,17 +56,17 @@
                     <button class="button-dark">Добавить</button>
                 </form>
             </div>
-        </div>
+        </div> 
+        <!-- ОКОШКА ДЛЯ ПЛЮСИКА. УБРАТЬ В AJAX -->
         <header>
-            <div class="square square-1"></div>
+            <!-- <div class="square square-1"></div>
             <div class="square square-2"></div>
-            <div class="square square-3"></div>
+            <div class="square square-3"></div> -->
             <nav-wrap>
                 <nav class="mobile">
                     <span onclick="toggleMenu()">=</span>
                     <ul>
                         <span onclick="toggleMenu()">x</span>
-                        <a href="#">Главная</a>
                         <a href="#">Графический дизайн</a>
                         <a href="#">Веб-дизайн</a>
                         <a href="#">Ландшафтный дизайн</a>
@@ -74,7 +74,6 @@
                     </ul>
                 </nav>
                 <nav class="desktop">
-                    <a href="#">Главная</a>
                     <a href="#">Графический дизайн</a>
                     <a href="#">Веб-дизайн</a>
                     <a href="#">Ландшафтный дизайн</a>
@@ -88,7 +87,7 @@
                     <div class="logo-description">Студии дизайна Республики Беларусь</div>
                 </div>
                 <div class="title">Дизайн интерьера</div>
-                <a href="#" class="button-white">Выбрать</a>
+                <a class="button-white" onclick="toOrder()">Выбрать</a>
             </div>
         </header>
         <div class="projects">
@@ -134,7 +133,8 @@
         <div class="free-consultation">
             <div class="title">Бесплатная консультация</div>
             <div class="line"></div>
-            <a class="button-white" onclick="freeConsult()">Получить</a>
+            <!--  onclick="freeConsult()" -->
+            <a class="button-white" onclick="toOrder()">Получить</a>
         </div>
         <div class="styles">
             <div class="wrap">
@@ -149,7 +149,7 @@
         </div>
         <footer>
             <div class="map">
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150222.09383780422!2d27.661514719726558!3d53.96335703934027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1497045554003" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d150222.09383780422!2d27.661514719726558!3d53.96335703934027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1497045554003" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="right-side">
                 <div class="bottom">
@@ -173,8 +173,9 @@
                 </div>
             </div>
         </footer>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/lodash.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
         <script src="js/script.js"></script>
     </app>
 </body>
