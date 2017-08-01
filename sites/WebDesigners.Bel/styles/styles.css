@@ -90,14 +90,13 @@ body .pop-up-bg {
   display: none;
   opacity: 0;
 }
-body .pop-up-bg .pop-up-form,
-body .pop-up-bg form {
+body .pop-up-bg .pop-up-form {
   display: flex;
   flex-direction: column;
 }
 body .pop-up-bg .pop-up-form {
-  background: #fff;
   position: relative;
+  background: #fff;
   padding: 40px;
   top: 100vh;
 }
@@ -111,6 +110,13 @@ body .pop-up-bg .pop-up-form .title {
   font-size: 24px;
   color: #4d4d49;
   margin: 0 auto 30px;
+}
+body .pop-up-bg .pop-up-form .box {
+  overflow: auto;
+}
+body .pop-up-bg .pop-up-form form {
+  height: 100%;
+  padding: 0 25px 0 0;
 }
 body .pop-up-bg .pop-up-form form .row {
   width: 100%;
@@ -228,6 +234,7 @@ body .free-consultation-window-bg .free-consultation-window {
   background: #fff;
   padding: 40px;
   position: relative;
+  top: 100vh;
 }
 body .free-consultation-window-bg .free-consultation-window .close {
   position: absolute;
@@ -464,21 +471,6 @@ body header .square {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
 }
-body header .square-1 {
-  top: 20%;
-  left: 60%;
-  animation: squareFirstAnimation 5s ease-in-out infinite;
-}
-body header .square-2 {
-  top: 50%;
-  left: 20%;
-  animation: squareSecondAnimation 3s ease infinite;
-}
-body header .square-3 {
-  right: 10%;
-  bottom: 0;
-  animation: squareThirdAnimation 4s ease infinite;
-}
 @keyframes squareFirstAnimation {
   from {
     opacity: 0;
@@ -567,17 +559,18 @@ body .projects {
 body .projects .grid {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 body .projects .grid .grid-row {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 body .projects .grid .grid-row:not(:last-child) {
   margin-bottom: 4px;
 }
 body .projects .grid .grid-row .col-1 {
   display: flex;
-  width: 182px;
+  flex: 1;
   height: 182px;
   margin: 0 4px 4px 0;
 }
@@ -617,8 +610,7 @@ body .projects .grid .grid-row .col-1 .block:hover .image {
 }
 body .projects .grid .grid-row .col-2 {
   display: flex;
-  width: 370px;
-  height: 182px;
+  flex: 2;
 }
 body .projects .grid .grid-row .add {
   display: flex;
@@ -1350,5 +1342,31 @@ body footer .right-side .bottom .copyright {
     flex-direction: column;
     align-items: flex-start !important;
     margin: 0 !important;
+  }
+  .pop-up-bg {
+    overflow: scroll;
+  }
+  .pop-up-bg .pop-up-form {
+    width: 100%;
+    height: 100%;
+    justify-conent: flex-start !important;
+    padding-left: 15px !important;
+    padding-right: 0 !important;
+  }
+  .pop-up-bg .pop-up-form .close {
+    right: 10px !important;
+    top: 10px !important;
+  }
+  .pop-up-bg .pop-up-form .close img {
+    mix-blend-mode: difference;
+  }
+  .pop-up-bg .pop-up-form .row {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .pop-up-bg .pop-up-form .row input,
+  .pop-up-bg .pop-up-form .row select {
+    margin: 0 !important;
+    width: 100% !important;
   }
 }

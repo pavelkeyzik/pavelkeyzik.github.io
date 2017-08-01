@@ -102,14 +102,14 @@ body {
     height: 100vh;
     display: none;
     opacity: 0;
-    .pop-up-form, form {
+    .pop-up-form{
       display: flex;
       flex-direction: column;
     }
     .pop-up-form {
-      // FIXME: paddings, margins and sizes of objects
-      background: #fff;
       position: relative;
+      // max-height: 500px;
+      background: #fff;
       padding: 40px;
       top: 100vh;
       .close {
@@ -123,7 +123,12 @@ body {
         color: #4d4d49;
         margin: 0 auto 30px;
       }
+      .box {
+        overflow: auto;
+      }
       form {
+        height: 100%;
+        padding: 0 25px 0 0;
         .row {
           width: 100%;
           display: flex;
@@ -138,7 +143,6 @@ body {
             width: 300px;
             margin-left: 20px;
             height: 35px;
-            // FIXME COLOR
             border: none;
             background: #f1f1f1;
             box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.16);
@@ -242,6 +246,7 @@ body {
       background: #fff;
       padding: 40px;
       position: relative;
+      top: 100vh;
       .close {
         position: absolute;
         right: -23px;
@@ -274,7 +279,6 @@ body {
           select, input:not([type="file"]), textarea, .file {
             width: 300px;
             margin-left: 20px;
-            // FIXME COLOR
             border: none;
             background: #f1f1f1;
             box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.16);
@@ -479,21 +483,21 @@ body {
       background: rgba(255, 255, 255, 0.3);
       position: absolute;
     }
-    .square-1 {
-      top: 20%;
-      left: 60%;
-      animation: squareFirstAnimation 5s ease-in-out infinite;
-    }
-    .square-2 {
-      top: 50%;
-      left: 20%;
-      animation: squareSecondAnimation 3s ease infinite;
-    }
-    .square-3 {
-      right: 10%;
-      bottom: 0;
-      animation: squareThirdAnimation 4s ease infinite;
-    }
+    // .square-1 {
+    //   top: 20%;
+    //   left: 60%;
+    //   animation: squareFirstAnimation 5s ease-in-out infinite;
+    // }
+    // .square-2 {
+    //   top: 50%;
+    //   left: 20%;
+    //   animation: squareSecondAnimation 3s ease infinite;
+    // }
+    // .square-3 {
+    //   right: 10%;
+    //   bottom: 0;
+    //   animation: squareThirdAnimation 4s ease infinite;
+    // }
     @keyframes squareFirstAnimation {
       from { opacity: 0; }
       60% { opacity: 1; }
@@ -564,16 +568,16 @@ body {
     .grid {
       display: flex;
       flex-direction: column;
+      width: 100%;
       .grid-row {
         display: flex;
-        flex-wrap: wrap;
-        //justify-content: space-between;
+        width: 100%;
         &:not(:last-child) {
           margin-bottom: 4px;
         }
         .col-1 {
           display: flex;
-          width: 182px;
+          flex: 1;
           height: 182px;
           margin: 0 4px 4px 0;
           .block {
@@ -613,8 +617,7 @@ body {
         }
         .col-2 {
           display: flex;
-          width: 370px;
-          height: 182px;
+          flex: 2;
         }
         .add {
           display: flex;
@@ -696,7 +699,6 @@ body {
         justify-content: flex-start;
         font-size: 12px;
         font-family: Roboto-Medium;
-        //margin-right: 20px;
         margin: 24px 0px 0 0;
       }
       .button-white {
@@ -839,7 +841,6 @@ body {
             .text {
               display: flex;
               flex-direction: column;
-              // justify-content: space-between;
               .article-title {
                 font-family: Aria-Bold;
                 font-size: 24px;
@@ -912,7 +913,6 @@ body {
               margin-top: -1px;  // А ФИЧА
               border: 1px solid #ddd;
               width: 186px;
-              // height: 186px;
             }
           }
         }
@@ -945,7 +945,6 @@ body {
       padding: 85px 0;
       .left-side {
         width: 20%;
-        // margin-right: 20px;
         .title {
           color: @grey;
         }
@@ -1277,7 +1276,6 @@ body {
               flex-basis: 25%;
               height: 45px;
               display: flex;
-              //border: 1px solid green;
               a {
                 width: 100%;
                 height: 100%;
@@ -1363,6 +1361,31 @@ body {
         flex-direction: column;
         align-items: flex-start !important;
         margin: 0 !important;
+      }
+    }
+  }
+  .pop-up-bg {
+    overflow: scroll;
+    .pop-up-form {
+      width: 100%;
+      height: 100%;
+      justify-conent: flex-start !important;
+      padding-left: 15px !important;
+      padding-right: 0 !important;
+      .close {
+        right: 10px !important;
+        top: 10px !important;
+        img {
+          mix-blend-mode: difference;
+        }
+      }
+      .row {
+        flex-direction: column;
+        align-items: flex-start !important;
+        input, select {
+          margin: 0 !important;
+          width: 100% !important;
+        }
       }
     }
   }

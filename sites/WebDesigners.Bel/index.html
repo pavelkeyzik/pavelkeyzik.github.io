@@ -4,60 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- TODO: Add icon-->
     <link rel="stylesheet" href="styles/styles.css">
     <title>WebDesigners.bel</title>
-    <!-- TODO: Check all alt="" in HTML -->
 </head>
 <body>
     <div class="spinner">
         <img src="img/icons/spinner.gif" alt="Loading...">
     </div>
     <app>
-        <div class="pop-up-bg">
-            <div class="pop-up-form">
-                <div class="close">
-                    <img src="img/icons/close.png" alt="X">
-                </div>
-                <div class="title">Внесите свои данные</div>
-                <form>
-                    <div class="row">
-                        <label for="country">Страна</label>
-                        <select name="country" id="country">
-                            <option value="1">Беларусь</option>
-                            <option value="2">Россия</option>
-                            <option value="3">Украина</option>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <label for="city">Город</label>
-                        <select name="city" id="city">
-                            <option value="1">Минск</option>
-                            <option value="2">Борисов</option>
-                            <option value="3">Солигорск</option>
-                        </select>
-                    </div>
-                    <div class="row">
-                        <label for="title">Название</label>
-                        <input type="text" id="title">
-                    </div>
-                    <div class="row">
-                        <label for="site">Сайт</label>
-                        <input type="text" id="site">
-                    </div>
-                    <div class="row">
-                        <label for="mobile">Телефон</label>
-                        <input type="text" id="mobile">
-                    </div>
-                    <div class="row">
-                        <label for="photos">Фотографии</label>
-                        <input type="text" id="photos">
-                    </div>
-                    <button class="button-dark">Добавить</button>
-                </form>
-            </div>
-        </div> 
-        <!-- ОКОШКА ДЛЯ ПЛЮСИКА. УБРАТЬ В AJAX -->
         <header>
             <!-- <div class="square square-1"></div>
             <div class="square square-2"></div>
@@ -81,7 +35,6 @@
                 </nav>
             </nav-wrap>
             <div class="info">
-                <!-- TODO: Animation squares... -->
                 <div class="logo">
                     <img src="img/icons/logo.png" alt="D">
                     <div class="logo-description">Студии дизайна Республики Беларусь</div>
@@ -92,26 +45,7 @@
         </header>
         <div class="projects">
             <div class="wrap">
-                <div class="grid">
-                    <div class="grid-row">
-                        <div class="col-2">
-                            <div class="info">
-                                <div>
-                                    <div class="title">Проекты</div>
-                                    <div class="description">Наши дизайнеры профессионалы своего дела</div>
-                                    <div class="line"></div>
-                                </div>
-                                <div class="arrows">
-                                    <img src="img/icons/arrow-left.png" alt="<" onclick="prevProjectPage()">
-                                    <img src="img/icons/arrow-right.png" alt=">" onclick="nextProjectPage()">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add" onclick="togglePopUp('.pop-up-form')">
-                            <img src="img/icons/add.png" alt="Добавить">
-                        </div>
-                    </div>
-                </div>
+                <div class="grid"></div>
             </div>
         </div>
         <div class="best-works">

@@ -32,21 +32,12 @@ $(document).ready(function () {
 
     $(".spinner").hide();
     $("app").fadeIn(200);
-
-    $(".pop-up-form .close").click(function () {
-        $(".pop-up-form").animate({"top": "-100vh"}, 300, function() {
-            $(".pop-up-bg").animate({"opacity" : 0}, 100, function() {
-                $(".pop-up-bg").css({"display" : "none"});
-                $(".pop-up-form").css({"top" : "100vh"});
-            });
-        })
-    });
 });
 
 function togglePopUp(windowName) {
-    $(windowName).parent().css({"display" : "flex"});
-    $(windowName).parent().animate({"opacity" : 1}, 100, function () {
-        $(windowName).animate({"top": 0}, 300);
+    $("." + windowName).parent().css({"display" : "flex"});
+    $("." + windowName).parent().animate({"opacity" : 1}, 100, function () {
+        $("." + windowName).animate({"top": 0}, 300);
     });
 }
 
@@ -179,12 +170,13 @@ function loadProjects() {
                 success: function (data) {
                     var newData = data.projects.slice(currentPageOfProjects*9, currentPageOfProjects*9+9);
                     countPagesOfProjects = Math.ceil(data.projects.length / 9);
-                    $(".projects .col-1").hide(function () {
-                      $(this).remove();
+                    $(".projects .grid").fadeOut(function(){
+                        $(this).empty();
+                        var tmpl = _.template(html_file);
+                        $(".projects .grid").append(tmpl({"data" : newData})).fadeIn();
                     });
-                    var tmpl = _.template(html_file);
-                    $(".projects .col-2").after(tmpl({"data" : newData}));
-                    $(".projects .col-1").hide().fadeIn(500);
+                    // $(".projects .col-2").after(tmpl({"data" : newData}));
+                    // $(".projects .col-1").hide().fadeIn(500);
                 }
             });
         }
@@ -315,12 +307,13 @@ function prevWorkPage() {
     loadBestWorks(currentPageOfWorks);
 }
 
-function freeConsult() {
+function loadPopUp(windowName) {
     $.ajax({
         type: 'GET',
-        url: 'js/templates/free-consultation.html',
+        url: 'js/templates/' + windowName + '.html',
         success: function (data) {
-            $("body").append(data);
+            $("app").prepend(data);
+            togglePopUp(windowName);
         }
     });
 }
@@ -416,16 +409,15 @@ function loadCities() {
                     $("footer menu li").click(function () {
                         var element = $(this);
                         $(this).children(".description").toggle("fast", function () {
-                            // TODO: Add rotate arrow
                             if(element.attr("class") == "opened") {
                                 element.attr({"class" : "closed"});
-                                element.children("img").replaceWith("<img src='img/icons/sub-closed.png' alt='▶'>");
+                                element.children("img").css({transform: "rotate(0)"});
                             }
                             else {
                                 element.siblings("[class]").attr( { "class": "closed" }).children(".description").hide("fast");
-                                element.siblings("[class]").attr( { "class": "closed" }).children("img").replaceWith("<img src='img/icons/sub-closed.png' alt='▶'>")
+                                element.siblings("[class]").attr( { "class": "closed" }).children("img").css({transform: "rotate(0)"});
                                 element.attr({"class" : "opened"});
-                                element.children("img").replaceWith("<img src='img/icons/sub-opened.png' alt='▼'>");
+                                element.children("img").css({transform: "rotate(90deg)"});
                             }
                         });
                     });
