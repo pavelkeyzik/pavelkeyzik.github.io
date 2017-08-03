@@ -191,6 +191,7 @@ function viewImages(array) {
             var tmpl = _.template(html_file);
             images = JSON.parse(array);
             $("body").append(tmpl(JSON.parse(array)));
+
             currentImage = 0;
             $(".view-images-window .pagination div").click(function() {
                 var element = $(this);
@@ -199,8 +200,31 @@ function viewImages(array) {
                     element.siblings("[class]").attr( { "class": "" });
                 }
             });
+
+            resizeImg();
         }
     });
+}
+
+$(window).resize(function() {
+    resizeImg();
+});
+
+function resizeImg() {
+    var img = $(".view-images-window .img img");
+    var imgWindow = $(".view-images-window");
+
+    if(img.prop('naturalWidth') + 60 > $(window).width()) {
+        imgWindow.css({"width" : "100%"});
+    } else {
+        imgWindow.css({"width" : img.prop('naturalWidth') + 60 + 'px'});
+    }
+
+    if(img.prop('naturalHeight') + 60 > $(window).height()) {
+        imgWindow.css({"height" : "100%", "width" : img.width() + 60 + 'px'});
+    } else {
+        imgWindow.css({"height" : img.prop('naturalHeight') + 60 + 'px'});
+    }
 }
 
 function viewStyle(array) {
@@ -230,6 +254,7 @@ function nextImage() {
     $(".view-images-window .pagination div").siblings("[class]").attr( { "class": "" });
     var el = ".view-images-window .pagination div:eq(" + currentImage + ")";
     $(el).attr({"class": "current"});
+    resizeImg();
 }
 
 function prevImage() {
@@ -240,11 +265,13 @@ function prevImage() {
     $(".view-images-window .pagination div").siblings("[class]").attr( { "class": "" });
     var el = ".view-images-window .pagination div:eq(" + currentImage + ")";
     $(el).attr({"class": "current"});
+    resizeImg();
 }
 
 function viewImage(page) {
     $(".view-images-window .img").empty().append("<img src=" + images.images[page] + ">");
     currentImage = page;
+    resizeImg();
 }
 
 function closeWindow(window) {

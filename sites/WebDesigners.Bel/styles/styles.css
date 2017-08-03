@@ -93,8 +93,6 @@ body .pop-up-bg {
 body .pop-up-bg .pop-up-form {
   display: flex;
   flex-direction: column;
-}
-body .pop-up-bg .pop-up-form {
   position: relative;
   background: #fff;
   padding: 40px;
@@ -112,7 +110,7 @@ body .pop-up-bg .pop-up-form .title {
   margin: 0 auto 30px;
 }
 body .pop-up-bg .pop-up-form .box {
-  overflow: auto;
+  overflow-y: auto;
 }
 body .pop-up-bg .pop-up-form form {
   height: 100%;
@@ -158,6 +156,9 @@ body .view-images-window-bg .view-images-window {
   background: #fff;
   padding: 30px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body .view-images-window-bg .view-images-window .close {
   color: #fff;
@@ -193,6 +194,18 @@ body .view-images-window-bg .view-images-window .right {
   width: 80%;
   right: 0;
   padding-right: 9px;
+}
+body .view-images-window-bg .view-images-window .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+body .view-images-window-bg .view-images-window .img img {
+  max-width: 100%;
+  max-height: 100%;
 }
 body .view-images-window-bg .view-images-window .pagination {
   position: absolute;
@@ -563,6 +576,7 @@ body .projects .grid {
 }
 body .projects .grid .grid-row {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 body .projects .grid .grid-row:not(:last-child) {
@@ -616,7 +630,7 @@ body .projects .grid .grid-row .add {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 182px;
+  flex: 1;
   height: 182px;
   cursor: pointer;
 }
