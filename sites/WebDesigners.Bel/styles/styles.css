@@ -524,9 +524,16 @@ body header nav-wrap {
   top: 20px;
   left: 0;
   width: 100%;
+  font-family: Aria-Bold;
 }
 body header nav-wrap nav.mobile {
   display: none;
+}
+body header nav-wrap nav.mobile .mobile__icon {
+  width: 70px;
+}
+body header nav-wrap nav.mobile .mobile__icon img {
+  width: 100%;
 }
 body header nav-wrap nav.desktop {
   width: 932px;
@@ -544,7 +551,6 @@ body header nav-wrap nav.desktop a {
   height: 49px;
   padding: 0 20px;
   font-size: 12px;
-  font-family: Aria-Bold;
 }
 body header .info {
   display: flex;
@@ -669,7 +675,6 @@ body .best-works {
   flex-direction: column;
   padding: 83px 0 0;
   color: #fff;
-  position: relative;
 }
 body .best-works .top {
   display: flex;
@@ -687,55 +692,58 @@ body .best-works .top .line {
   width: 45px;
   margin-top: 16px;
 }
-body .best-works .info {
+body .best-works .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body .best-works .content .info {
   width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 47px;
 }
-body .best-works .info .info-title {
+body .best-works .content .info .info-title {
   text-transform: uppercase;
   font-family: Aria-Bold;
   font-size: 25px;
 }
-body .best-works .info .info-params {
+body .best-works .content .info .info-params {
   color: #9d9c9c;
   font-family: Roboto-Medium;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 13px;
 }
-body .best-works .info .info-params b {
+body .best-works .content .info .info-params b {
   font-size: 16px;
 }
-body .best-works .info .info-description {
+body .best-works .content .info .info-description {
   display: flex;
   justify-content: flex-start;
   font-size: 12px;
   font-family: Roboto-Medium;
   margin: 24px 0px 0 0;
 }
-body .best-works .info .button-white {
+body .best-works .content .info .button-white {
   margin-top: 27px;
 }
-body .best-works .info .arrows {
+body .best-works .content .info .arrows {
   margin: 42px 0 62px;
   cursor: pointer;
 }
-body .best-works .info .arrows img:first-child {
+body .best-works .content .info .arrows img:first-child {
   margin-right: 9px;
 }
-body .best-works .image {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  right: 0;
-  bottom: 0;
+body .best-works .content .image {
+  display: flex;
   width: 60%;
+  height: 100%;
 }
-body .best-works .image img {
+body .best-works .content .image img {
   max-width: 100%;
+  object-fit: cover;
 }
 body .advantages .wrap {
   display: flex;
@@ -1190,6 +1198,15 @@ body footer .right-side .bottom .copyright {
   body header nav-wrap nav.desktop {
     display: none;
   }
+  body header .title {
+    text-align: center;
+  }
+  body .advantages .title,
+  body .advantages .description,
+  body .advantages .line {
+    text-align: center;
+    margin: 0 auto;
+  }
   body .advantages .arrows img {
     margin: 0;
     width: 30px;
@@ -1253,6 +1270,15 @@ body footer .right-side .bottom .copyright {
     flex-direction: column;
     align-items: center;
   }
+  body .styles .wrap .left-side .title,
+  body .styles .wrap .left-side .description,
+  body .styles .wrap .left-side .line {
+    margin: 0 auto;
+    text-align: center;
+  }
+  body .styles .wrap .left-side .description {
+    margin-bottom: 16px;
+  }
   body .styles .wrap .left-side,
   body .styles .wrap .right-side {
     width: 90%;
@@ -1311,6 +1337,20 @@ body footer .right-side .bottom .copyright {
   }
 }
 @media screen and (max-width: 600px) {
+  .projects .col-2 {
+    text-align: center;
+    width: 100%;
+  }
+  .projects .col-2 .info {
+    width: 100%;
+  }
+  .projects .col-2 .arrows,
+  .projects .col-2 .line {
+    margin: 0 auto;
+  }
+  .projects .col-2 .line {
+    margin-bottom: 16px;
+  }
   .pop-up-order {
     background: #fff !important;
     padding: 0 !important;
@@ -1408,5 +1448,20 @@ body footer .right-side .bottom .copyright {
   }
   .grid-row .add {
     height: 80px !important;
+  }
+  .best-works .top {
+    text-align: center;
+    align-items: center;
+  }
+  .best-works .content {
+    padding: 0 20px;
+  }
+  .best-works .content .info {
+    width: 100% !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .best-works .content .image {
+    display: none !important;
   }
 }

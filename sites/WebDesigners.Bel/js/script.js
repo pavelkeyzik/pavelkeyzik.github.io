@@ -34,6 +34,11 @@ $(document).ready(function () {
     $("app").fadeIn(200);
 });
 
+$(window).resize(function() {
+    $(".best-works .content .info").css({"margin-left" : $(".wrap").css("margin-left")});
+    resizeImg();
+});
+
 function togglePopUp(windowName) {
     $("." + windowName).parent().css({"display" : "flex"});
     $("." + windowName).parent().animate({"opacity" : 1}, 100, function () {
@@ -206,10 +211,6 @@ function viewImages(array) {
     });
 }
 
-$(window).resize(function() {
-    resizeImg();
-});
-
 function resizeImg() {
     var img = $(".view-images-window .img img");
     var imgWindow = $(".view-images-window");
@@ -313,7 +314,8 @@ function loadBestWorks() {
                     var newData = data.bestWorks.slice(currentPageOfWorks, currentPageOfWorks + 1);
                     countPagesOfWorks = data.bestWorks.length;
                     var tmpl = _.template(html_file);
-                    $(".best-works .wrap").empty().append(tmpl({"data" : newData[0] })).hide().fadeIn();
+                    $(".best-works .content").empty().append(tmpl({"data" : newData[0] })).hide().fadeIn();
+                    $(".best-works .content .info").css({"margin-left" : $(".wrap").css("margin-left")});
                 }
             });
         }

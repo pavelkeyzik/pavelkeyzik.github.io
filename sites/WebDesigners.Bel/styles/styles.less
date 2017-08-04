@@ -536,8 +536,15 @@ body {
       top: 20px;
       left: 0;
       width: 100%;
+        font-family: Aria-Bold;
       nav.mobile {
         display: none;
+        .mobile__icon {
+          width: 70px;
+          img {
+            width: 100%;
+          }
+        }
       }
       nav.desktop {
         width: 932px;
@@ -554,7 +561,6 @@ body {
           height: 49px;
           padding: 0 20px;
           font-size: 12px;
-          font-family: Aria-Bold;
         }
       }
     }
@@ -679,7 +685,6 @@ body {
     flex-direction: column;
     padding: 83px 0 0;
     color: #fff;
-    position: relative;
     .top {
       display: flex;
       flex-direction: column;
@@ -692,54 +697,57 @@ body {
         .line(@light-grey);
       }
     }
-    .info {
-      width: 300px;
+    .content {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 47px;
-      .info-title {
-        text-transform: uppercase;
-        font-family: Aria-Bold;
-        font-size: 25px;
-      }
-      .info-params {
-        color: #9d9c9c;
-        font-family: Roboto-Medium;
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 13px;
-        b {
-          font-size: 16px;
-        }
-      }
-      .info-description {
+      justify-content: space-between;
+      align-items: flex-end;
+      .info {
+        width: 300px;
         display: flex;
-        justify-content: flex-start;
-        font-size: 12px;
-        font-family: Roboto-Medium;
-        margin: 24px 0px 0 0;
-      }
-      .button-white {
-        margin-top: 27px;
-      }
-      .arrows {
-        margin: 42px 0 62px;
-        cursor: pointer;
-        img:first-child {
-          margin-right: 9px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 47px;
+        .info-title {
+          text-transform: uppercase;
+          font-family: Aria-Bold;
+          font-size: 25px;
+        }
+        .info-params {
+          color: #9d9c9c;
+          font-family: Roboto-Medium;
+          text-transform: uppercase;
+          font-weight: normal;
+          font-size: 13px;
+          b {
+            font-size: 16px;
+          }
+        }
+        .info-description {
+          display: flex;
+          justify-content: flex-start;
+          font-size: 12px;
+          font-family: Roboto-Medium;
+          margin: 24px 0px 0 0;
+        }
+        .button-white {
+          margin-top: 27px;
+        }
+        .arrows {
+          margin: 42px 0 62px;
+          cursor: pointer;
+          img:first-child {
+            margin-right: 9px;
+          }
         }
       }
-    }
-    .image {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      right: 0;
-      bottom: 0;
-      width: 60%;
-      img {
-        max-width: 100%;
+      .image {
+        display: flex;
+        width: 60%;
+        height: 100%;
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -1196,8 +1204,15 @@ body {
           display: none;
         }
       }
+      .title {
+        text-align: center;
+      }
     }
     .advantages {
+      .title, .description, .line {
+        text-align: center;
+        margin: 0 auto;
+      }
       .arrows {
         img {
           margin: 0;
@@ -1274,6 +1289,15 @@ body {
       .wrap {
         flex-direction: column;
         align-items: center;
+        .left-side {
+          .title, .description, .line {
+            margin: 0 auto;
+            text-align: center;
+          }
+          .description {
+            margin-bottom: 16px;
+          }
+        }
         .left-side,
         .right-side {
           width: 90%;
@@ -1338,6 +1362,21 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .projects {
+    .col-2 {
+      text-align: center;
+      width: 100%;
+      .info {
+        width: 100%;
+      }
+      .arrows, .line {
+        margin: 0 auto;
+      }
+      .line {
+        margin-bottom: 16px;
+      }
+    }
+  }
   .pop-up-order {
     background: #fff !important;
     padding: 0 !important;
@@ -1431,6 +1470,23 @@ body {
     }
     .add {
       height: 80px !important;
+    }
+  }
+  .best-works {
+    .top {
+      text-align: center;
+      align-items: center;
+    }
+    .content {
+      padding: 0 20px;
+      .info {
+        width: 100% !important;
+        align-items: center !important;
+        text-align: center;
+      }
+      .image {
+        display: none !important;
+      }
     }
   }
 }
