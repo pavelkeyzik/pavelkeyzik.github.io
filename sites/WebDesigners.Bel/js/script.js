@@ -89,7 +89,7 @@ function loadData(category, page) {
                                 newData = data;
 
                             var tmpl = _.template(html_file);
-                            content.empty().append("<div class='close' onclick='closeContent()'>CLOSE</div>").append( tmpl(newData) ).slideDown(200);
+                            content.empty().append("<div class='close' onclick='closeContent()'><img src='img/icons/close.svg' alt='Close'></div>").append( tmpl(newData) ).slideDown(200);
 
                             if(paginationShow)
                                 showPagination(category, currentPageOfNews);

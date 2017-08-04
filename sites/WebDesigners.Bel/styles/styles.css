@@ -749,6 +749,23 @@ body .advantages .wrap {
   display: flex;
   flex-direction: column;
 }
+body .advantages .wrap .close {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  transition: .2s;
+}
+body .advantages .wrap .close img {
+  transition: .2s;
+}
+body .advantages .wrap .close:hover {
+  background: #fafafa;
+}
+body .advantages .wrap .close:hover img {
+  opacity: 0.5;
+}
 body .advantages .wrap .title {
   margin-top: 80px;
   color: #7a7a7a;

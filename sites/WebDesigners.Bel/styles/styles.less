@@ -755,6 +755,23 @@ body {
     .wrap {
       display: flex;
       flex-direction: column;
+      .close {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        transition: .2s;
+        img {
+          transition: .2s;
+        }
+        &:hover {
+          background: #fafafa;
+          img {
+            opacity: 0.5;
+          }  
+        }
+      }
       .title {
         margin-top: 80px;
         color: @light-grey;
