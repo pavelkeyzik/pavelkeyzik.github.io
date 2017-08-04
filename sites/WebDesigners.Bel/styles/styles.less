@@ -589,23 +589,22 @@ body {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        &:not(:last-child) {
-          margin-bottom: 4px;
-        }
         .col-1 {
           display: flex;
           flex: 1;
-          // width: 182;
           height: 182px;
-          margin: 0 4px 4px 0;
+          &:not(:last-child) {
+            margin: 0 4px 4px 0;
+          }
           .block {
             display: flex;
-            width: 100%;
             align-items: flex-end;
+            width: 100%;
             position: relative;
             overflow: hidden;
             cursor: pointer;
             .image {
+              display: flex;
               position: absolute;
               filter: brightness(0.4);
               top: 0;
@@ -635,14 +634,14 @@ body {
         }
         .col-2 {
           display: flex;
-          // flex-wrap: wrap;
           flex: 2;
+          margin: 0 8px 4px 0;
+
         }
         .add {
           display: flex;
           justify-content: center;
           align-items: center;
-          // width: 182px;
           flex: 1;
           height: 182px;
           cursor: pointer;
@@ -1407,6 +1406,31 @@ body {
           width: 100% !important;
         }
       }
+    }
+  }
+  .grid-row {
+    flex-direction: column;
+    .col-1 {
+      margin: 0 0 6px !important;
+      height: 80px !important;
+      .image {
+        width: 100% !important;
+        height: 80px !important;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover !important;
+        }
+      }
+      &:empty {
+        display: none !important;
+      }
+    }
+    .col-2 {
+      padding: 0 10px;
+    }
+    .add {
+      height: 80px !important;
     }
   }
 }
