@@ -31,7 +31,7 @@ $(document).ready(function () {
     loadCities();
 
     $(".spinner").hide();
-    $("app").fadeIn(200);
+    $("main").fadeIn(200);
 });
 
 $(window).resize(function() {
@@ -341,7 +341,7 @@ function loadPopUp(windowName) {
         type: 'GET',
         url: 'js/templates/' + windowName + '.html',
         success: function (data) {
-            $("app").prepend(data);
+            $("main").prepend(data);
             togglePopUp(windowName);
         }
     });
