@@ -1,0 +1,46 @@
+.window {
+	disply: flex;
+	flex-direction: column;
+	.window__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 45px;
+		background: #fff;
+	}
+	.messages {
+		display: flex;
+		flex-direction: column;
+		.message {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&.me {
+				justify-content: flex-end;
+			}
+			.message__content {
+				display: flex;
+				flex-direction: column;
+				background: #fff;
+				margin: 5px;
+				padding: 5px 10px;
+				border: 1px solid #ddd;
+				.message__title {
+					display: flex;
+					justify-content: space-between;
+					.message__user-name {
+						font-weight: bold;
+					}
+					.message__date {
+						margin-left: 5px;
+						font-size: 11pt;
+						color: #aaa;
+					}
+				}
+				.text {
+					color: #666;
+				}
+			}
+		}
+	}
+}

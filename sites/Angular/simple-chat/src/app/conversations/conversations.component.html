@@ -1,0 +1,5 @@
+<div class="conversation" *ngFor="let conversation of conversations" [routerLink]="['/messages', user.login, conversation.user_login]">
+	<div class="title">{{ conversation.title }}</div>
+	<div class="message">{{ conversation.latest_message }}</div>
+	<div class="date">{{ conversation.date }}</div>
+</div>

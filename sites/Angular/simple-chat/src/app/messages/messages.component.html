@@ -1,0 +1,18 @@
+<div class="window">
+	<div class="window__title" *ngIf="friend_user">{{ friend_user.login }}</div>
+	<div class="messages" *ngIf="friend_user && me_user">
+		<div class="message" *ngFor="let message of messages" [class.me]="message.message_from == me_user.login">
+			<div class="message__content">
+				<div class="message__title">
+					<div class="message__user-name">{{ message.user_name }}</div>
+					<div class="message__date">{{ message.date | date:'shortTime' }}</div>
+				</div>
+				<div class="text">{{ message.text }}</div>
+			</div>
+		</div>
+	</div>
+	<form (ngSubmit)="sendMessage();" #messageForm="ngForm">
+		<input type="text" name="message" [(ngModel)]="newMessage" placeholder="Your message..." autocomplete="off" required>
+		<button type="submit">Отправить</button>
+	</form>
+</div>
