@@ -46,7 +46,6 @@ function togglePopUp(windowName) {
     });
 }
 
-// FIXME: RemoveMe and change all popUp windows to AJAX requests
 function loadData(category, page) {
     if(oldCategory != category) {
         oldCategory = category;
@@ -180,8 +179,6 @@ function loadProjects() {
                         var tmpl = _.template(html_file);
                         $(".projects .grid").append(tmpl({"data" : newData})).fadeIn();
                     });
-                    // $(".projects .col-2").after(tmpl({"data" : newData}));
-                    // $(".projects .col-1").hide().fadeIn(500);
                 }
             });
         }
@@ -228,9 +225,9 @@ function resizeImg() {
     }
 }
 
-function viewStyle(array) {
+function viewStyle(event) {
     if(viewStyleImageOpened) {
-        $(".styles .images a").animate({"width": "230px", "opacity" : "1", "display" : "flex"}, 300, function() {
+        $(".styles .images a").animate({"width": "230px", "opacity" : "1"}, 300, function() {
             $(".styles .images a img").css({"filter" : "brightness(0.7)"});
         });
         viewStyleImageOpened = false;
@@ -383,6 +380,9 @@ function loadStylesImages(section) {
                     if(!section) section = Object.keys(data)[0];
 
                     $(".styles .right-side").empty().append(tmpl({"images" : data[section] })).hide().fadeIn();
+                    $(".styles .images a").on('click', function(event) {
+                        viewStyle(event);
+                    })
                 }
             });
         }

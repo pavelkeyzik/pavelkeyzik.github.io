@@ -1,44 +1,90 @@
+.messages__window {
+	display: flex;
+}
+
 .window {
-	disply: flex;
+	display: flex;
 	flex-direction: column;
-	.window__title {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 45px;
+	justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+	.window__top {
 		background: #fff;
-	}
-	.messages {
+		box-shadow: 0 1px 2px #eee;
+		z-index: 1;
 		display: flex;
-		flex-direction: column;
-		.message {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			&.me {
-				justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
+		height: 55px;
+		.go-back {
+			color: #ddd;
+			img {
+				height: 16px;
 			}
-			.message__content {
+		}
+		.window__title {
+			font-weight: bold;
+		}
+	}
+	.window__middle {
+		overflow-y: auto;
+		.messages {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			.message {
 				display: flex;
-				flex-direction: column;
-				background: #fff;
-				margin: 5px;
-				padding: 5px 10px;
-				border: 1px solid #ddd;
-				.message__title {
+				align-items: center;
+				justify-content: space-between;
+				&.me {
+					justify-content: flex-end;
+				}
+				.message__content {
 					display: flex;
-					justify-content: space-between;
-					.message__user-name {
-						font-weight: bold;
+					flex-direction: column;
+					background: #fff;
+					margin: 5px;
+					padding: 5px 10px;
+					border: 1px solid #ddd;
+					.message__title {
+						display: flex;
+						justify-content: space-between;
+						.message__user-name {
+							font-weight: bold;
+						}
+						.message__date {
+							margin-left: 5px;
+							font-size: 11pt;
+							color: #aaa;
+						}
 					}
-					.message__date {
-						margin-left: 5px;
-						font-size: 11pt;
-						color: #aaa;
+					.text {
+						color: #666;
 					}
 				}
-				.text {
-					color: #666;
+			}
+		}
+	}
+	.window__bottom {
+		.message-form {
+			display: flex;
+			height: 45px;
+			box-shadow: 0 -1px 1px #eee;
+			.message-input {
+				width: 100%;
+				border: none;
+				padding: 0 20px;
+			}
+			button {
+				background: #009fff;
+				border: none;
+				color: #fff;
+				padding: 0 30px;
+				cursor: pointer;
+				transition: .2s;
+				&[disabled] {
+					background: #fff;
+					color: #ddd;
 				}
 			}
 		}

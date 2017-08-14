@@ -8,13 +8,20 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ConversationsComponent } from './conversations/conversations.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+
+import { SortPipe } from './shared/pipes/sort.pipe';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MessagesComponent,
-    ConversationsComponent
+    ConversationsComponent,
+    SideMenuComponent,
+    SortPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

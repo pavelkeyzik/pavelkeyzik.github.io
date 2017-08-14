@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { MessagesService } from '../shared/services/messages.service';
+import { ConversationsService } from '../shared/services/conversations.service';
 import { UsersService } from '../shared/services/users.service';
 
 @Component({
@@ -13,6 +14,7 @@ import { UsersService } from '../shared/services/users.service';
 	],
 	providers: [
 		MessagesService,
+		ConversationsService,
 		UsersService
 	]
 })
@@ -25,6 +27,7 @@ export class MessagesComponent implements OnInit {
 
 	constructor(private route: ActivatedRoute,
 				private messagesService: MessagesService,
+				private conversationsService: ConversationsService,
 				private usersService: UsersService) {}
 
 	ngOnInit() {
@@ -70,9 +73,18 @@ export class MessagesComponent implements OnInit {
 								.subscribe(success => {
 												message["message_from"] = this.me_user.login;
 												this.messages.push(message);
+												this.upgradeConversations(this.me_user.login, this.friend_user.login);
 										   },
 										   error => console.log('Плохо всё'));
 		}
+	}
+
+	private upgradeConversations(me_login, user_login) {
+		let message = {
+			latest_message: this.newMessage,
+			date: new Date().toString()
+		}
+		this.conversationsService.updateConversations(message, me_login, user_login).subscribe();
 	}
 
 }

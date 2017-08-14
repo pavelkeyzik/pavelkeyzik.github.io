@@ -1,0 +1,37 @@
+.side-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	background: #fff;
+	box-shadow: 1px 0 2px #eee;
+	z-index: 2;
+	&>div {
+		width: 100%;
+	}
+	.side-menu__item {
+		width: 100%;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		width: 70px;
+		height: 70px;
+		cursor: pointer;
+		transition: .2s;
+		border-left: 4px solid #fff;
+		.main-svg {
+			transition: .2s;
+		}
+		&:hover {
+			background: #fafafa;
+			border-left: 4px solid #00ccff;
+			.main-svg {
+				fill: #444;
+			}
+		}
+	}
+	svg {
+		width: 30px;
+	}
+}

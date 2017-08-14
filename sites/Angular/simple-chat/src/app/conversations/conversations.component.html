@@ -1,5 +1,11 @@
-<div class="conversation" *ngFor="let conversation of conversations" [routerLink]="['/messages', user.login, conversation.user_login]">
-	<div class="title">{{ conversation.title }}</div>
-	<div class="message">{{ conversation.latest_message }}</div>
-	<div class="date">{{ conversation.date }}</div>
+<div class="conversation__window">
+	<app-side-menu></app-side-menu>
+	<div class="conversation__items">
+		<input type="text" placeholder="Find conversation..." [(ngModel)]="searchConversation" name="search-conversation">
+		<div class="conversation__item" *ngFor="let conversation of conversations | sort | filter:searchConversation" [routerLink]="['/messages', user.login, conversation.user_login]">
+			<div class="title">{{ conversation.user_login }}</div>
+			<div class="message">{{ conversation.latest_message }}</div>
+			<div class="date">{{ conversation.date | date:'mediumDate' }}</div>
+		</div>
+	</div>
 </div>
