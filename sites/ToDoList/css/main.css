@@ -1,0 +1,115 @@
+@import 'colors.css';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--darkGrey);
+	font-family: 'Josefin Sans'
+}
+
+.container {
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+#todos-form {
+	display: flex;
+	margin-top: 80px;
+}
+
+#todos-form input[type=submit] {
+	visibility: hidden;
+	display: none;
+}
+
+#todos-form input {
+	all: unset;
+	display: flex;
+	height: 61px;
+	font-size: 2rem;
+	border-bottom: 1px dotted var(--dottedGrey);
+	padding: 0 0 5px 0;
+	color: var(--white);
+	width: 100%;
+}
+
+.tabs {
+	display: flex;
+	margin: 20px 0 55px;
+}
+
+.tabs span {
+	margin: 0 12px;
+	color: var(--grey);
+}
+
+.tab--item {
+	color: var(--grey);
+	cursor: pointer;
+}
+
+.tab--item__active {
+	color: var(--white);
+}
+
+.todos {
+	display: flex;
+	flex-direction: column;
+	border-top: 1px dotted var(--dottedGrey);
+}
+
+#todos-list li {
+	list-style: none;
+}
+
+.todos-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	border-bottom: 1px dotted var(--dottedGrey);
+	color: var(--white);
+}
+
+.todos-item i {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background: var(--buttonGrey);
+	border-radius: 50%;
+	color: var(--buttonTextColor);
+	cursor: pointer;
+}
+
+.todos-item__completed .todos-task {
+	color: var(--dottedGrey);
+}
+
+.todos-item__completed .todos-task:after {
+	content: '';
+	border-bottom: 2px solid var(--green);
+	position: absolute;
+	width: 100%;
+	top: 15px;
+	left: 0;
+}
+
+.todos-item__completed .done {
+	color: var(--green);
+}
+
+.todos-task {
+	margin-left: 20px;
+	font-size: 1.5rem;
+	position: relative;
+}
+
+.todos-item:not(.todos-item__completed) i:hover {
+	color: var(--grey);
+}

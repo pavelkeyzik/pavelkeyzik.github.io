@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicInfoComponent implements OnInit {
 
+  trackName = '...';
+
   constructor() { }
 
   ngOnInit() {

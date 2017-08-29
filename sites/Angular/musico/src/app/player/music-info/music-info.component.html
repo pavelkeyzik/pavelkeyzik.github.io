@@ -3,7 +3,7 @@
     <img src="https://e-cdns-images.dzcdn.net/images/cover/2e018122cb56986277102d2041a592c8/120x120-000000-80-0-0.jpg" alt="title">
   </div>
   <div class="info">
-    <div class="track">One More Time</div>
+    <div class="track" *ngIf="trackName">{{ trackName }}</div>
     <div class="artist">Daft Punk</div>
   </div>
 </div>

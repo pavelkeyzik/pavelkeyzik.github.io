@@ -12,6 +12,19 @@
   background: @player-background;
   height: @player-height;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  app-music-info,
+  app-volume-controll{
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+  app-music-info {
+    left: 0;
+  }
+  app-volume-controll {
+    right: 0;
+  }
 }
