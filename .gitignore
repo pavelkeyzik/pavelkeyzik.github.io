@@ -1,1 +1,2 @@
-sites/**/node_modules/
+sites/**/node_modules/**/README.md
+sites/**/.idea/
