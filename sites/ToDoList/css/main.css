@@ -64,6 +64,8 @@ body {
 
 #todos-list li {
 	list-style: none;
+	display: flex;
+	align-items: center;
 }
 
 .todos-item {
@@ -112,4 +114,18 @@ body {
 
 .todos-item:not(.todos-item__completed) i:hover {
 	color: var(--grey);
+}
+
+#editForm {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+#editForm input {
+	all: unset;
+	display: flex;
+	width: 100%;
+	font-size: 1.5rem;
+	color: #fff;
 }

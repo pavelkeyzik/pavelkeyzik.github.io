@@ -10,6 +10,7 @@ let done, deleteItems, edit;
 
 let filteredTodos;
 let filterBool;
+let editing = false;
 
 let todos$ = new Rx.Subject().subscribe(() => {
 	todosList.innerHTML = "";
@@ -69,25 +70,41 @@ let todos$ = new Rx.Subject().subscribe(() => {
 	for(let i = 0; i < edit.length; i++) {
 		Rx.Observable.fromEvent(edit[i], 'click')
 			.subscribe((e) => {
-				let id = e.target.parentElement.parentElement.id;
-				let task = document.getElementById(id);
-				let text = task.firstElementChild.children[1].innerText;
-				
-				task.innerHTML = `
+				if(editing === false) {
+                    let id = e.target.parentElement.parentElement.id;
+                    let _id = e.target.parentElement.parentElement.id.split('-')[1];
+                    let task = document.getElementById(id);
+                    task.className += " editing";
+                    editing = true;
+                    let text = task.firstElementChild.children[1].innerText;
+
+                    task.innerHTML = `
 					<form id="editForm">
-						<input type="text" value="${text}" id="">
+						<input type="text" value="${text}" id="editTask-${_id}">
+						<i class="material-icons" id="editClose">close</i>
 					</form>
 				`;
 
-				let editForm = document.getElementById("editForm");
+                    let input = document.getElementById(`editTask-${_id}`);
+                    input.select();
+                    let editForm = document.getElementById("editForm");
+                    let editClose = document.getElementById('editClose');
 
-				Rx.Observable.fromEvent(editForm, 'submit')
-					.subscribe((event) => {
-						event.preventDefault(); 
-						console.log(id);
-						
-				});
-			// todos$.next();
+                    Rx.Observable.fromEvent(editForm, 'submit')
+                        .subscribe((event) => {
+                            event.preventDefault();
+                            todos[_id].text = text;
+                            todos[_id].text = input.value;
+                            todos$.next();
+                            editing = false;
+                        });
+
+                    Rx.Observable.fromEvent(editClose, 'click')
+                       .subscribe((event) => {
+                           todos$.next();
+                           editing = false;
+                    });
+                }
 		});
 	}
 
