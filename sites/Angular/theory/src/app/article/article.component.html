@@ -1,0 +1,16 @@
+<form>
+  <input type="text" placeholder="search" [(ngModel)]="search" name="searcher">
+</form>
+<div class="sort">
+  Show firstly:
+  <input type="radio" id="new" name="sort" value="new" (click)="toggleSort()" checked>
+  <label for="new">new</label>
+  <input type="radio" id="old" name="sort" value="old" (click)="toggleSort()">
+  <label for="old">old</label>
+</div>
+<article *ngFor="let article of articles | filter:search | sort:sort">
+  <div class="title">{{ article.title }}</div>
+  <div class="author">{{ article.author }}</div>
+  <div class="date">{{ article.publishedAt }} <button (click)="showImage(article.urlToImage)">Show Image</button></div>
+  <app-show-image></app-show-image>
+</article>
