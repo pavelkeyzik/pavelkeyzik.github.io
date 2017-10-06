@@ -1,0 +1,36 @@
+.user {
+  margin-bottom: 25px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  border: 1px solid white;
+  &:hover {
+    border: 1px solid white;
+    -webkit-box-shadow: 0 0 3px #ddd;
+    -moz-box-shadow: 0 0 3px #ddd;
+    box-shadow: 0 0 3px #ddd;
+    opacity: 0.7;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+  }
+  &--avatar {
+    background: #000;
+    width: 65px;
+    height: 65px;
+    margin-right: 15px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

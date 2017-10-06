@@ -8,23 +8,36 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
     trigger('showImageState', [
       state('closed', style({
-        visibility: 'hidden',
-        opacity: '0'
+        visibility: 'hidden'
+        // opacity: '0'
       })),
       state('opened', style({
-        visibility: 'visible',
-        opacity: '1'
+        visibility: 'visible'
+        // opacity: '0'
       })),
-      transition('closed => opened', animate('100ms ease-in')),
-      transition('opened => closed', animate('100ms ease-out'))
+      transition(':enter', [
+        style({
+          visibility: 'hidden',
+          opacity: 0
+        }),
+        animate('100ms ease-in', style({
+          visibility: 'visible',
+          opacity: '0.5'
+        }))
+      ]),
+      transition(':leave', [
+        animate('100ms ease-out', style({
+          opacity: 0.2
+        }))
+      ])
     ])
   ]
 })
 export class ShowImageComponent implements OnInit {
 
-  imgUrl:string = 'https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/05/Facebook_TNW-1.jpg';
-  private hidden: boolean = true;
-  imageState:string = 'closed';
+  imgUrl;
+  private hidden = true;
+  imageState = 'closed';
 
   constructor() { }
 

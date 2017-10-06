@@ -5,7 +5,33 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
+  &--blackout {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  &--close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    color: #fff;
+    z-index: 3;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  &--content {
+    z-index: 2;
+    position: relative;
+  }
 }

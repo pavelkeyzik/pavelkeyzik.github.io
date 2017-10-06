@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ArticlesService } from '../articles.service';
-import {ShowImageComponent} from './show-image/show-image.component';
+import { ShowImageComponent } from './show-image/show-image.component';
 
 @Component({
   selector: 'app-article',
@@ -11,7 +11,7 @@ import {ShowImageComponent} from './show-image/show-image.component';
 export class ArticleComponent implements OnInit {
   public articles;
   public search;
-  public sort: string = 'new';
+  public sort = 'new';
 
   @ViewChild(ShowImageComponent) showFullImage: ShowImageComponent;
 
@@ -27,10 +27,11 @@ export class ArticleComponent implements OnInit {
   }
 
   toggleSort() {
-    if(this.sort == 'new')
+    if (this.sort === 'new') {
       this.sort = 'old';
-    else
+    } else {
       this.sort = 'new';
+    }
   }
 
 }

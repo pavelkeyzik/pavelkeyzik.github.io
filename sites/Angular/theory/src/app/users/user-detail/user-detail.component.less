@@ -1,0 +1,40 @@
+.user {
+  background: #fff;
+  padding: 20px;
+  margin: 35px 35px 0 0;
+  &--name {
+    display: flex;
+    justify-content: center;
+  }
+  &>section:nth-child(2n) {
+    background: #fbfbfb;
+  }
+}
+
+b {
+  margin-right: 5px;
+}
+
+section {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-display: column;
+  height: 35px;
+  padding: 0 5px;
+  align-items: center;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  &:hover {
+    background: #eee;
+  }
+}
+
+.section--drop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}

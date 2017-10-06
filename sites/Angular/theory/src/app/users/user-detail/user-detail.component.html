@@ -1,0 +1,38 @@
+<div *ngIf="user" class="user">
+  <h3 class="user--name">{{ user.name.first }}</h3>
+  <section>
+    <b>Registered:</b>
+    <span>{{ user.registered }}</span>
+  </section>
+  <section>
+    <b>Phone:</b>
+    <span>{{ user.phone }}</span>
+  </section>
+  <section>
+    <div class="section--drop" (click)="toggleDropped()">
+      <div class="section--left">Location</div>
+      <i class="material-icons" [@rotateIcon]="rotateIconState">keyboard_arrow_right</i>
+      <!--<i class="material-icons" *ngIf="!dropped; else elseDropped">keyboard_arrow_right</i>-->
+      <!--<ng-template #elseDropped>-->
+        <!--<i class="material-icons">keyboard_arrow_down</i>-->
+      <!--</ng-template>-->
+    </div>
+  </section>
+  <!--<div *ngIf="dropped; then droppedLocation"></div>-->
+  <!--<ng-template #droppedLocation>-->
+    <div [@droppedState]="dropped">
+      <section>
+        <b>Street:</b>
+        <span>{{ user.location.street }}</span>
+      </section>
+      <section>
+        <b>City:</b>
+        <span>{{ user.location.city }}</span>
+      </section>
+    </div>
+  <!--</ng-template>-->
+  <section>
+    <b>E-mail:</b>
+    <span>{{ user.email }}</span>
+  </section>
+</div>

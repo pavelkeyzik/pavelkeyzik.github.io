@@ -15,6 +15,9 @@ import { BtnDirective } from './btn.directive';
 import { ModalComponent } from './modal/modal.component';
 import { ShowImageComponent } from './article/show-image/show-image.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     BtnDirective,
     ModalComponent,
     ShowImageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    UsersComponent,
+    UserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +53,14 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
       {
         path: 'articles',
         component: ArticleComponent
+      },
+      {
+        path: 'users',
+        component: UsersComponent
+      },
+      {
+        path: 'users/:name',
+        component: UserDetailComponent
       },
       {
         path: '**',
