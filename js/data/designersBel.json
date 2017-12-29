@@ -1,0 +1,8 @@
+{
+  "title": "WebDesignersBel",
+  "full_image": "images/projects/webdesigners_full.jpg",
+  "link": "https://pavelkeyzik.github.io/sites/WebDesigners.Bel/",
+  "technologies": [
+    "HTML5", "LESS", "jQuery", "AJAX", "loDash"
+  ]
+}
