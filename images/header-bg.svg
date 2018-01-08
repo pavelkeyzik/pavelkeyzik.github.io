@@ -1,0 +1,144 @@
+<?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 600 200" width="600" height="200">
+  <style>
+    #main {
+      fill: transparent;
+    }
+    .tr1 {
+      transform-origin: 50% 50%;
+      animation: tr1_anim 15s linear infinite;
+    }
+    #tr1_stroke {
+      animation: tr1_stroke_anim 1s linear infinite;
+    }
+
+    @keyframes tr1_stroke_anim {
+      from {fill: red;}
+      50% {fill: yellow;}
+      to {fill: red;}
+    }
+    @keyframes tr1_anim {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(-360deg);}
+    }
+    .kr1 {
+      fill: red;
+      transform-origin: 8.9% 8.9%;
+      animation: tr1_anim 15s linear infinite;
+    }
+    .ln1 {
+      stroke: #ff0040;
+      animation: ln1_anim 3s linear infinite;
+    }
+    .ln2 {
+      stroke: #ff144f;
+      animation: ln1_anim 4s linear infinite;
+    }
+    .ln3 {
+      stroke: #00ffff;
+      animation: ln1_anim 2s linear infinite;
+    }
+    .ln4 {
+      stroke: #00ffff;
+      animation: ln1_anim 1s linear 3s infinite;
+    }
+    @keyframes ln1_anim {
+      from {
+        transform: translateX(200px) translateY(-200px);
+        opacity: 0;
+      }
+      20% {
+        transform: translateX(-200px) translateY(200px);
+      }
+      30% {
+        opacity: 1;
+      }
+      to {
+        transform: translateX(-200px) translateY(200px);
+      }
+    }
+  </style>
+  <defs><clipPath id="_clipPath_0eZcWo08RyNe6LPtiVIqtbCGfEC8pG4X">
+  <rect width="600" height="200"/></clipPath></defs>
+  <g clip-path="url(#_clipPath_0eZcWo08RyNe6LPtiVIqtbCGfEC8pG4X)">
+    <rect width="600" height="200" id="main"/>
+    <g id="Group">
+      <path d=" M 25 125.964 L 31.667 122.964 L 38.333 125.964 L 45 122.964 L 51.667 125.964 L 58.333 122.964 L 65 125.964" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.894" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 25 127.964 L 31.667 124.964 L 38.333 127.964 L 45 124.964 L 51.667 127.964 L 58.333 124.964 L 65 127.964" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.894" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 25 129.964 L 31.667 126.964 L 38.333 129.964 L 45 126.964 L 51.667 129.964 L 58.333 126.964 L 65 129.964" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.894" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <path d=" M 504 27 L 514 24 L 524 27 L 534 24 L 544 27 L 554 24 L 564 27" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.612" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 504 29 L 514 26 L 524 29 L 534 26 L 544 29 L 554 26 L 564 29" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.612" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 504 31 L 514 28 L 524 31 L 534 28 L 544 31 L 554 28 L 564 31" fill="none" vector-effect="non-scaling-stroke" stroke-width="0.612" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group" fill="red">
+      <mask id="_mask_fu83RekPTDatArKJcMoQ5kurlNeoucy7">
+        <polygon points="404.883,156.831,390.875,160.584,394.629,146.577" fill="white" stroke="none"/>
+      </mask>
+        <polygon points="404.883,156.831,390.875,160.584,394.629,146.577" fill="none" mask="url(#_mask_fu83RekPTDatArKJcMoQ5kurlNeoucy7)" vector-effect="non-scaling-stroke" stroke-width="2.322" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <mask id="_mask_lIVvqPwCCDitWj0uaVM6qjSVkO4VIIS4">
+        <polygon points="388.463,173.25,374.456,177.004,378.209,162.996" fill="white" stroke="none"/>
+      </mask>
+        <polygon points="388.463,173.25,374.456,177.004,378.209,162.996" fill="none" mask="url(#_mask_lIVvqPwCCDitWj0uaVM6qjSVkO4VIIS4)" vector-effect="non-scaling-stroke" stroke-width="2.322" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <mask id="_mask_bVbgqzkPQJjLHeG41uEQi6jJd871z9mZ">
+        <polygon points="372.043,189.67,358.036,193.423,361.789,179.416" fill="white" stroke="none"/>
+      </mask>
+      <polygon points="372.043,189.67,358.036,193.423,361.789,179.416" fill="none" mask="url(#_mask_bVbgqzkPQJjLHeG41uEQi6jJd871z9mZ)" vector-effect="non-scaling-stroke" stroke-width="2.322" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <mask id="_mask_m07d6AQA96ylmUolJiB9EQ82QSceezqo">
+        <polygon points="76.494,29.584,62.1,31.346,67.771,18" fill="white" stroke="none"/>
+      </mask>
+        <polygon points="76.494,29.584,62.1,31.346,67.771,18" fill="none" mask="url(#_mask_m07d6AQA96ylmUolJiB9EQ82QSceezqo)" vector-effect="non-scaling-stroke" stroke-width="4" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <mask id="_mask_rNE9uHq0KfMh9SUSQbAwL2rtSCVqG3HE">
+        <polygon points="57.944,43.552,43.55,45.314,49.221,31.968" fill="white" stroke="none"/>
+      </mask>
+        <polygon points="57.944,43.552,43.55,45.314,49.221,31.968" fill="none" mask="url(#_mask_rNE9uHq0KfMh9SUSQbAwL2rtSCVqG3HE)" vector-effect="non-scaling-stroke" stroke-width="4" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <mask id="_mask_BQuDHTMHCkbqLBwFn4SOV6FJB3YQejyA">
+        <polygon points="39.394,57.52,25,59.282,30.671,45.936" id="tr1_stroke" stroke="none"/>
+      </mask>
+      <polygon points="39.394,57.52,25,59.282,30.671,45.936" class="tr1" fill="none" mask="url(#_mask_BQuDHTMHCkbqLBwFn4SOV6FJB3YQejyA)" vector-effect="non-scaling-stroke" stroke-width="4" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group" class="kr1">
+      <line x1="50.747" y1="18.732" x2="54.211" y2="20.732" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="51.479" y1="21.464" x2="53.479" y2="18" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="106.104" y1="67.732" x2="109.569" y2="69.732" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="106.837" y1="70.464" x2="108.837" y2="67" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="481" y1="45.732" x2="484.464" y2="47.732" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="481.732" y1="48.464" x2="483.732" y2="45" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="323" y1="145.577" x2="326.464" y2="147.577" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="323.732" y1="148.309" x2="325.732" y2="144.845" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="532.584" y1="174.257" x2="531.951" y2="178.207" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="530.293" y1="175.916" x2="534.243" y2="176.549" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="139" y1="123.732" x2="142.464" y2="125.732" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="139.732" y1="126.464" x2="141.732" y2="123" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+    <g id="Group">
+      <line x1="233.363" y1="147.888" x2="233.363" y2="154.613" vector-effect="non-scaling-stroke" stroke-width="1.681" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="230" y1="151.251" x2="236.726" y2="151.251" vector-effect="non-scaling-stroke" stroke-width="1.681" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+    </g>
+      <line x1="91" y1="156.464" x2="151" y2="96.464" vector-effect="non-scaling-stroke" stroke-width="1" class="ln1" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="106.104" y1="138.36" x2="131.017" y2="113.447" vector-effect="non-scaling-stroke" stroke-width="0.5" class="ln2" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="354" y1="168.36" x2="463.078" y2="59.282" vector-effect="non-scaling-stroke" stroke-width="1.818" class="ln4" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="381.459" y1="135.446" x2="447.394" y2="69.512" vector-effect="non-scaling-stroke" stroke-width="0.909" class="ln5" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="374" y1="152.949" x2="419.969" y2="106.98" vector-effect="non-scaling-stroke" stroke-width="0.909" class="ln6" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <line x1="134" y1="116.464" x2="149.207" y2="101.257" vector-effect="non-scaling-stroke" stroke-width="0.5" class="ln3" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+      <path d=" M 36 174.5 C 36 172.016 38.016 170 40.5 170 C 42.984 170 45 172.016 45 174.5 C 45 176.984 42.984 179 40.5 179 C 38.016 179 36 176.984 36 174.5 Z " fill="rgb(255,255,255)"/>
+      <path d=" M 175 48.464 C 175 45.98 177.016 43.964 179.5 43.964 C 181.984 43.964 184 45.98 184 48.464 C 184 50.948 181.984 52.964 179.5 52.964 C 177.016 52.964 175 50.948 175 48.464 Z " fill="rgb(255,255,255)"/>
+      <path d=" M 484.464 113.361 C 484.464 110.877 486.48 108.861 488.964 108.861 C 491.448 108.861 493.464 110.877 493.464 113.361 C 493.464 115.844 491.448 117.861 488.964 117.861 C 486.48 117.861 484.464 115.844 484.464 113.361 Z " fill="rgb(255,255,255)"/>
+      <path d=" M 570 152.949 C 570 148.158 573.889 144.269 578.68 144.269 C 583.47 144.269 587.36 148.158 587.36 152.949 C 587.36 157.739 583.47 161.628 578.68 161.628 C 573.889 161.628 570 157.739 570 152.949 Z " fill="none" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 125.32 176.232 C 125.32 172.792 128.113 170 131.552 170 C 134.992 170 137.784 172.792 137.784 176.232" fill="none" vector-effect="non-scaling-stroke" stroke-width="2" stroke-dasharray="0,0" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 446.976 30.223 C 443.998 31.943 440.183 30.921 438.463 27.942 C 436.743 24.963 437.765 21.149 440.744 19.429" fill="none" vector-effect="non-scaling-stroke" stroke-width="2" stroke-dasharray="0,0" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+      <path d=" M 305.64 29.5 C 305.64 26.464 308.105 24 311.14 24 C 314.176 24 316.64 26.464 316.64 29.5 C 316.64 32.536 314.176 35 311.14 35 C 308.105 35 305.64 32.536 305.64 29.5 Z " fill="none" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(255,255,255)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+    </g>
+  </svg>

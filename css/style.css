@@ -15,10 +15,10 @@ body {
 header {
 	display: flex;
 	flex-direction: column;
-	background: var(--dark);
+	background: var(--dark) url('../images/header-bg.svg') 50% 50%;
 	background-size: cover;
 	color: #eee;
-	height: 250px;
+	height: 550px;
 }
 
 .header__top {
@@ -30,7 +30,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	height: 30px;
-	width: 1140px;
+	max-width: 1140px;
 	margin: 0 auto;
 	color: #ccc;
 	font-size: 10pt;
