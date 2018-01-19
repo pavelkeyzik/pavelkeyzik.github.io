@@ -1,5 +1,71 @@
-@color: #f6f6f6;
+@import './colors';
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background: @color;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: white;
+    background: @red;
+}
+
+.navigation {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+
+    a {
+        display: flex;
+        opacity: .3;
+        transition: .2s;
+        box-shadow: 0;
+        border-radius: 50%;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, .2);
+        }
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        svg {
+            height: 32px;
+            fill: @light-grey;
+        }
+    }
+    
+}
+
+.header {
+    background: @dark-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    height: 100vh;
+    color: @light-grey;
+    font-family: 'Dosis', sans-serif;
+
+    p {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 2.75em;
+        font-weight: normal;
+        margin: 0;
+    }
 }
