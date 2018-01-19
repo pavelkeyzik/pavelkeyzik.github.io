@@ -1,2 +1,4 @@
 sites/**/node_modules/**/README.md
 sites/**/.idea/
+.vscode/
+node_modules/
