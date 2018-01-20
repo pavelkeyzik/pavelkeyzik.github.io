@@ -2,10 +2,10 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     concat = require('gulp-concat')
     sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync').create()
-    LessAutoprefix = require('less-plugin-autoprefix')
-    autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] })
-    cssmin = require('gulp-cssmin')
+    browserSync = require('browser-sync').create(),
+    LessAutoprefix = require('less-plugin-autoprefix'),
+    autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] }),
+    cssmin = require('gulp-cssmin'),
     rename = require('gulp-rename');
 
 gulp.task('less', function() {
@@ -31,7 +31,7 @@ gulp.task('server', ['less'], function() {
     });
 
     gulp.watch('./styles/less/*.less', ['less']);
-    gulp.watch('*.html').on('change', browserSync.reload)
+    gulp.watch('*.html').on('change', browserSync.reload);
 
 });
 
