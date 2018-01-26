@@ -81,6 +81,36 @@ body {
         font-weight: normal;
         margin: 0;
     }
+
+    &__lamp {
+        border: none;
+        background: none;
+        color: @light-grey;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        @size: 50px;
+        width: @size;
+        height: @size;
+        border-radius: @size;
+        transition: .3s;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            background: @dark-middle-grey;
+            box-shadow: 0 0 10px @middle-grey;
+        }
+
+        &_on {
+            color: @orange;
+            text-shadow: 0 0 20px @yellow;
+        }
+
+        &_off {
+            color: @light-grey;
+        }
+    }
 }
 
 .container {
