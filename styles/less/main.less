@@ -28,6 +28,9 @@ body {
     padding: 0 30px;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
 
     a {
         display: flex;
@@ -72,6 +75,8 @@ body {
     min-height: 600px;
     height: 100vh;
     color: @light-grey;
+    position: relative;
+    overflow: hidden;
 
     p {
         font-size: 1.2em;
@@ -110,6 +115,66 @@ body {
 
         &_off {
             color: @dark-middle-grey;
+        }
+    }
+
+    .triangle {
+        position: absolute;
+        left: 7%;
+        bottom: 20%;
+        transform: rotate(45deg);
+
+        &__start {
+            stop-color: #00bfff;
+        }
+
+        &__end {
+            stop-color: #8005fa;
+        }
+    }
+
+    .triangle-1 {
+        position: absolute;
+        right: 2%;
+        top: 13%;
+        transform: rotate(90deg);
+ 
+        &__start {
+            stop-color: #ff00aa;
+        }
+
+        &__end {
+            stop-color: #05c9fa;
+        }
+    }
+
+    .circle {
+        position: absolute;
+        left: 20%;
+        top: -20px;
+        transform: scale(4) rotate(-25deg);
+
+        &__start {
+            stop-color:#1e90ff;
+        }
+
+        &__end {
+            stop-color: #1eff8d;
+        }
+    }
+
+    .line {
+        position: absolute;
+        right: 15%;
+        bottom: 7%;
+        transform: scale(2) rotate(-35deg);
+
+        &__start {
+            stop-color:#4dafff;
+        }
+
+        &__end {
+            stop-color: #00e63e;
         }
     }
 }
