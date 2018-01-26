@@ -1,0 +1,60 @@
+@import './colors';
+
+.light-theme {
+    
+    .navigation {
+
+        a {
+            color: @dark-grey;
+        
+            &:focus svg {
+                box-shadow: 0 0 0 6px rgba(0, 0, 0, .2);
+            }
+        }
+
+        svg {
+            fill: @dark-middle-grey;
+        }
+    }
+
+    .header {
+        background: @light-grey;
+        color: @dark-middle-grey;
+
+        &__lamp {
+            
+            &:focus,
+            &:hover {
+                background: @light-grey;
+            }
+        }
+    }
+
+    .skills {
+        background: @light-middle-grey;
+
+        &__title {
+            color: @dark-grey;
+        }
+    }
+
+    .hire {
+        background: @light-grey;
+
+        &__title {
+            color: @dark-grey;
+        }
+
+        &__description {
+            color: @dark-middle-grey;
+        }
+    }
+
+    .footer {
+        background: @light-middle-grey;
+
+        &__content {
+            color: @dark-middle-grey;
+        }
+    }
+}
