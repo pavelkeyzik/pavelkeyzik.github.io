@@ -151,6 +151,52 @@ body {
     }
 }
 
+.hire {
+    background: @dark-middle-grey;
+    padding-bottom: 40px;
+
+    &__title {
+        display: flex;
+        color: @light-grey;
+        align-items: center;
+
+        i {
+            margin-left: 5px;
+            color: @green;
+        }
+    }
+    
+    &__description {
+        text-align: center;
+        color: @middle-grey;
+        margin: 0 0 30px;
+        max-width: 420px;
+    }
+
+    &__button {
+        background: @red;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        @height: 45px;
+        height: @height;
+        border-radius: @height;
+        text-transform: uppercase;
+        color: @light-grey;
+        transition: .3s;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: sans-serif;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 0 6px fadeout(@red, 60%);
+        }
+    }
+}
+
 .footer {
     background: @dark-grey;
     
@@ -195,6 +241,13 @@ body {
             svg {
                 height: 50px;
             }
+        }
+    }
+
+    .hire {
+
+        &__description {
+            padding: 0 20px;
         }
     }
 }
