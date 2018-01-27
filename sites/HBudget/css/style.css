@@ -134,6 +134,7 @@ header {
 	background-position: top center;
 	background-size: cover;
 	height: 621px;
+	overflow: hidden;
 }
 header .title {
 	font-size: 51.25pt;
@@ -147,7 +148,7 @@ header .title {
 }
 .headerHandle {
 	position: absolute;
-	bottom: -7px;
+	bottom: -6px;
 	right: 0;
 }
 .download {
