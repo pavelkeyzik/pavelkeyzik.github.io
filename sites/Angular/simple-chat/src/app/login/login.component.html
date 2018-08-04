@@ -1,8 +1,0 @@
-<b *ngIf="errorMessage">{{ errorMessage }}</b>
-<div class="login">
-	<form class="login__form" (ngSubmit)="validateForm();" #loginForm="ngForm">
-		<input type="text" [(ngModel)]="newLogin" name="login" placeholder="Your login" autocomplete="off" required>
-		<input type="password" [(ngModel)]="newPassword" name="password" placeholder="Your password" autocomplete="off" required>
-		<button type="submit" [disabled]="loginForm.form.invalid">Login</button>
-	</form>
-</div>
