@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iTechArt | 01_creating_layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/css/main.css">
+</head>
+<body>
+  <div class="l-container">
+    <nav class="navigation">
+      <div class="navigation__with-hamburger">
+        <a href="/" class="logo">
+          <img class="logo__image" src="images/logo.png" alt="Logotype image">
+          <div class="logo__info">
+            <div class="logo__title">
+              <span class="logo__title_dark_bold">Site</span>
+              <span class="logo__title_orange_light">Name</span>
+            </div>
+            <div class="logo__caption">your caption here</div>
+          </div>
+        </a>
+        <button class="js-navigation__hamburger navigation__hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="menu js-menu menu_closed">
+        <a href="#" class="menu__link menu__link_selected">Home</a>
+        <a href="#" class="menu__link">About</a>
+        <a href="#" class="menu__link">Services</a>
+        <a href="#" class="menu__link">Portfolio</a>
+        <a href="#" class="menu__link">Contact</a>
+      </div>
+    </nav>
+    <header class="header">
+      <img src="images/phone.png" alt="Phone image" class="header__image">
+      <div class="header__info">
+        <div class="header__pre-title">Lorem ipsum dolor sit amet</div>
+        <div class="header__title">Donec nec justo eget</div>
+        <div class="header__description">Morbi in sem quis dui placerat ornare. Pellentesque odio euismod in, pharetra a, ultricies in, diam.</div>
+        <button class="button button_large">More info</button>
+      </div>
+    </header>
+    <main>
+      <section class="info-list">
+        <article class="info-list__item">
+          <div class="info-list__block">
+            <div class="info-list__icon">
+              <img src="images/icons/flag.png" alt="Flag icon">
+            </div>
+            <div class="info-list__content">
+              <div class="info-list__title">Ausce Cellentes</div>
+              <div class="info-list__description">Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique</div>
+              <button class="button button__more button__more_light">Read More <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+          </div>
+        </article>
+        <article class="info-list__item">
+          <div class="info-list__block">
+            <div class="info-list__icon">
+            <img src="images/icons/camera.png" alt="Camera icon">
+            </div>
+            <div class="info-list__content">
+              <div class="info-list__title">Vestibul auctor</div>
+              <div class="info-list__description">Loasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique</div>
+              <button class="button button__more button__more_light">Read More <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+          </div>
+        </article>
+        <article class="info-list__item">
+          <div class="info-list__block">
+            <div class="info-list__icon">
+              <img src="images/icons/house.png" alt="House icon">
+            </div>
+            <div class="info-list__content">
+              <div class="info-list__title">Cras ornare</div>
+              <div class="info-list__description">Simasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique</div>
+              <button class="button button__more button__more_light">Read More <i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="l-about-us">
+        <div class="reviews">
+          <article class="reviews__item">
+            <div class="reviews__image">
+              <img src="images/women.jpg" alt="Women photo">
+            </div>
+            <div class="reviews__content">
+              <div class="reviews__title">Lorem ipsum dolor sit amet</div>
+              <div class="reviews__text">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus tpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu</div>
+              <button class="button button_small">More</button>
+            </div>
+          </article>
+          <article class="reviews__item">
+            <div class="reviews__image">
+              <img src="images/men.jpg" alt="Men photo">
+            </div>
+            <div class="reviews__content">
+              <div class="reviews__title">Sed egestas ante et vulpu</div>
+              <div class="reviews__text">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus tpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu</div>
+              <button class="button button_small">More</button>
+            </div>
+          </article>
+        </div>
+        <div class="tabs">
+          <div class="tabs__row">
+            <button class="tabs__tab tabs__tab_active">Eronped</button>
+            <button class="tabs__tab">Centro</button>
+          </div>
+          <div class="tabs__current-info">
+            <div class="tabs__title">Sedegin libero commo</div>
+            <div class="tabs__description">Simasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique sem tris</div>
+          </div>
+          <ul class="tabs__list">
+            <li class="tabs__list-item"><i class="tabs__list-arrow fas fa-long-arrow-alt-right"></i>Cras ornare tristique elit  sinto sum</li>
+            <li class="tabs__list-item"><i class="tabs__list-arrow fas fa-long-arrow-alt-right"></i>Integer vitae libero ac risus egestas</li>
+            <li class="tabs__list-item"><i class="tabs__list-arrow fas fa-long-arrow-alt-right"></i>Vestibulum commodo felis quis tortor</li>
+            <li class="tabs__list-item"><i class="tabs__list-arrow fas fa-long-arrow-alt-right"></i>Donec quis dui at dolor tempor interd</li>
+            <li class="tabs__list-item"><i class="tabs__list-arrow fas fa-long-arrow-alt-right"></i>Fusce lobortis lorem at ipsum semper</li>
+          </ul>
+        </div>
+      </section>
+      <section class="present">
+        <div class="present__title">Praesent Clacerat</div>
+        <div class="present__description">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet lectus arcu pulvinar risus</div>
+      </section>
+      <section class="vestibul">
+        <div class="vestibul__title">Vestibulum Commodo Felis</div>
+        <div class="vestibul__description">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna</div>
+        <div class="vestibul__content">
+          <div class="articles-with-date">
+            <article class="articles-with-date__article">
+              <div class="articles-with-date__date">
+                <div class="articles-with-date__day">07</div>
+                <div class="articles-with-date__month">Jan</div>
+              </div>
+              <div class="articles-with-date__content">
+                <div class="articles-with-date__title">Gravida Ultrice</div>
+                <a href="#" class="articles-with-date__count-of-coments">14 Comments</a>
+                <div class="articles-with-date__text">
+                  Suspendisse ac urna. Etiam pellentesque mauris ut lectus nunc tellus ante, mattis eget, gravida vitae, ultricies atinvio
+                  <button class="button button__more button__more_orange"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="articles-with-date__article">
+              <div class="articles-with-date__date">
+                <div class="articles-with-date__day">06</div>
+                <div class="articles-with-date__month">Jan</div>
+              </div>
+              <div class="articles-with-date__content">
+                <div class="articles-with-date__title">Tellus Mattis Pelle</div>
+                <a href="#" class="articles-with-date__count-of-coments">07 Comments</a>
+                <div class="articles-with-date__text">
+                  Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu
+                  <button class="button button__more button__more_orange"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="articles-with-date__article">
+              <div class="articles-with-date__date">
+                <div class="articles-with-date__day">05</div>
+                <div class="articles-with-date__month">Jan</div>
+              </div>
+              <div class="articles-with-date__content">
+                <div class="articles-with-date__title">Phasellus Lacina</div>
+                <a href="#" class="articles-with-date__count-of-coments">22 Comments</a>
+                <div class="articles-with-date__text">
+                  Lospendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies atinvio
+                  <button class="button button__more button__more_orange"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="comments">
+            <article class="comments__item">
+              <div class="comments__info">
+                <div class="comments__text">“ Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing’</div>
+                <div class="comments__user">- John Doe</div>
+              </div>
+              <div class="comments__image">
+                <img src="images/comment-image.png" alt="Comment image">
+              </div>
+            </article>
+            <article class="comments__item">
+              <div class="comments__info">
+                <div class="comments__text">“ Ced egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing’</div>
+                <div class="comments__user">- Kate Doe</div>
+              </div>
+              <div class="comments__image">
+                <img src="images/comment-image.png" alt="Comment image">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__top">
+        <article class="footer__item">
+          <div class="footer__title">Vitae lin</div>
+          <div class="footer__description">Phasellus ultrices Sed adipiscing lipsum Nulla sed leoniton</div>
+        </article>
+        <article class="footer__item">
+          <div class="footer__title">Luctrus</div>
+          <div class="footer__description">Lorem ipsum Donec nec justo Morbi in se</div>
+        </article>
+        <article class="footer__item">
+          <div class="footer__title">Consetu</div>
+          <div class="footer__description">Quisque a lectus Donec consecte Nulla sed leoniton</div>
+        </article>
+        <article class="footer__item">
+          <div class="footer__title">Vitae lin</div>
+          <div class="footer__description">Phasellus ultrices Sed adipiscing lipsum Nulla sed leoniton</div>
+        </article>
+        <article class="footer__item">
+          <div class="footer__title">Luctrus</div>
+          <div class="footer__description">Lorem ipsum Donec nec justo Morbi in se</div>
+        </article>
+        <article class="footer__item">
+          <div class="footer__title">Consetu</div>
+          <div class="footer__description">Quisque a lectus Donec consecte Nulla sed leoniton</div>
+        </article>
+      </section>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© Sitename. All rights Reserved. Designed By <a href="www.alltemplateneeds.com" class="footer__link">www.alltemplateneeds.com</a> / Photos from : <a href="www.photorack.net" class="footer__link">www.photorack.net</a></div>
+        <div class="footer__social">
+          <a href="#" class="footer__social-item"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__social-item"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
