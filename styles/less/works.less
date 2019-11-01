@@ -18,7 +18,7 @@
         align-items: center;
         justify-content: center;
         height: 300px;
-        
+
         h1 {
             color: @light-grey;
         }
@@ -51,7 +51,7 @@
         min-height: 100vh;
         background: @dark-middle-grey;
         position: relative;
-    
+
         &__share-link {
             position: absolute;
             top: 0;
@@ -63,22 +63,22 @@
             height: 50px;
             cursor: pointer;
             color: @light-grey;
-    
+
             i {
                 opacity: 0.5;
                 transition: .3s;
                 transform: rotate(-45deg);
             }
-    
+
             &:hover i {
                 opacity: 1;
             }
         }
-    
+
         &__title {
             color: @light-grey;
         }
-    
+
         &__info {
             display: flex;
             flex-direction: column;
@@ -86,47 +86,47 @@
             flex: 1;
             color: @light-grey;
             position: relative;
-            
+
             &-top {
                 margin: 40px 60px 0;
             }
-    
+
             &-footer {
                 margin: 0 60px 40px;
             }
         }
-    
+
         &__description {
             line-height: 1.6;
             color: @middle;
         }
-    
+
         &__technologies {
             display: flex;
             padding: 0;
             list-style: none;
-    
+
             li {
                 font-size: 36px;
                 display: flex;
                 align-items: center;
                 color: @middle;
-    
+
                 &:not(:last-child) {
                     margin-right: 10px;
                 }
             }
         }
-    
+
         &__slider {
-            width: 50vw;
+            flex: 1;
 
             &-image {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
             }
-            
+
             img {
                 object-fit: cover;
                 height: 100%;
@@ -137,7 +137,7 @@
 }
 
 @media screen and (max-width: 640px) {
-    
+
     .section .work,
     .section:nth-child(2n) .work {
         flex-direction: column-reverse;
@@ -153,12 +153,12 @@
                 margin-right: 30px;
                 margin-left: 30px;
             }
-    
+
         }
 
         &__slider {
             width: 100%;
-            
+
         }
     }
 }
